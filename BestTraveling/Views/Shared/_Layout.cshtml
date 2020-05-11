@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+</head>
+<body class="bg-primary">
+    @*<div class="container-fluid" style="margin:0; padding:0">
+        <div class="panel panel-blue">
+          <div>@RenderBody()</div>
+            <div>test</div>
+        </div>
+    </div>*@
+
+
+    <div class="panel">
+        <div class="panel-heading panel-red">
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <div class="col-md-6 col-sm-6 col-6">
+                            <img src="@Url.Content("~/Content/images/profile_image.jpg")" alt="Sashia" class="rounded-image" />
+                        </div>
+                        <div>
+                            @Session["CurrentUser"]
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <div class="panel-title">
+                            <h2 style="text-align:center; margin-top:1%; padding:0; margin-bottom:0"><b>Best Traveling</b></h2>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <a class="white-link pull-right" href="@Url.Action("Index","Home")"> <span><i class="fa fa-sign-out"></i></span> Logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body bg-primary" style="padding:0; margin:0">
+            </div>
+        </div>
+        <div class="panel-body bg-primary" style="padding:0">
+            @RenderBody()
+        </div>
+
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

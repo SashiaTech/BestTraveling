@@ -173,8 +173,44 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Css\adminlte.min.css" />
+    <Content Include="Content\Css\all.min.css" />
     <Content Include="Content\Custom.css" />
+    <Content Include="Content\images\AdminLTELogo.png" />
+    <Content Include="Content\images\avatar.png" />
+    <Content Include="Content\images\avatar04.png" />
+    <Content Include="Content\images\avatar2.png" />
+    <Content Include="Content\images\avatar3.png" />
+    <Content Include="Content\images\avatar5.png" />
+    <Content Include="Content\images\boxed-bg.jpg" />
+    <Content Include="Content\images\boxed-bg.png" />
+    <Content Include="Content\images\credit\american-express.png" />
+    <Content Include="Content\images\credit\cirrus.png" />
+    <Content Include="Content\images\credit\mastercard.png" />
+    <Content Include="Content\images\credit\mestro.png" />
+    <Content Include="Content\images\credit\paypal.png" />
+    <Content Include="Content\images\credit\paypal2.png" />
+    <Content Include="Content\images\credit\visa.png" />
+    <Content Include="Content\images\default-150x150.png" />
+    <Content Include="Content\images\icons.png" />
+    <Content Include="Content\images\photo1.png" />
+    <Content Include="Content\images\photo2.png" />
+    <Content Include="Content\images\photo3.jpg" />
+    <Content Include="Content\images\photo4.jpg" />
+    <Content Include="Content\images\prod-1.jpg" />
+    <Content Include="Content\images\prod-2.jpg" />
+    <Content Include="Content\images\prod-3.jpg" />
+    <Content Include="Content\images\prod-4.jpg" />
+    <Content Include="Content\images\prod-5.jpg" />
     <Content Include="Content\images\profile_image.jpg" />
+    <Content Include="Content\images\user1-128x128.jpg" />
+    <Content Include="Content\images\user2-160x160.jpg" />
+    <Content Include="Content\images\user3-128x128.jpg" />
+    <Content Include="Content\images\user4-128x128.jpg" />
+    <Content Include="Content\images\user5-128x128.jpg" />
+    <Content Include="Content\images\user6-128x128.jpg" />
+    <Content Include="Content\images\user7-128x128.jpg" />
+    <Content Include="Content\images\user8-128x128.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -189,6 +225,8 @@
       <DependentUpon>BestTraveling.edmx</DependentUpon>
       <LastGenOutput>BestTraveling.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\adminlte.min.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\BestTraveling.edmx">
@@ -199,12 +237,16 @@
       <DependentUpon>BestTraveling.edmx</DependentUpon>
     </Content>
     <Content Include="Areas\College\Views\web.config" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\adminlte.min.js.map" />
+    <Content Include="Content\Css\adminlte.min.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -224,6 +266,9 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutNew.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -20,6 +20,10 @@ namespace BestTraveling.Controllers
             return View();
         }
 
+        public ActionResult Test()
+        {
+            return View();
+        }
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

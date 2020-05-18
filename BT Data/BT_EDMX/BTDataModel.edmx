@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BestTravelingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="bt_City">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="40" />
+          <Property Name="DistrictId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="bt_College">
+          <Key>
+            <PropertyRef Name="CollegeId" />
+          </Key>
+          <Property Name="CollegeId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="300" />
+          <Property Name="DistrictId" Type="uniqueidentifier" />
+          <Property Name="CityId" Type="uniqueidentifier" />
+          <Property Name="DirecotrName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Code" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="bt_CollegeBranches">
+          <Key>
+            <PropertyRef Name="BranchId" />
+          </Key>
+          <Property Name="BranchId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="CollegeId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="bt_District">
+          <Key>
+            <PropertyRef Name="DistrictId" />
+          </Key>
+          <Property Name="DistrictId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="bt_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="bt_User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="30" />
+          <Property Name="Code" Type="nvarchar" MaxLength="10" />
+          <Property Name="RoleId" Type="uniqueidentifier" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Contact" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <Association Name="FK__bt_Colleg__Colle__1DE57479">
+          <End Role="bt_College" Type="Self.bt_College" Multiplicity="1" />
+          <End Role="bt_CollegeBranches" Type="Self.bt_CollegeBranches" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_College">
+              <PropertyRef Name="CollegeId" />
+            </Principal>
+            <Dependent Role="bt_CollegeBranches">
+              <PropertyRef Name="CollegeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_bt_City_bt_District">
+          <End Role="bt_District" Type="Self.bt_District" Multiplicity="0..1" />
+          <End Role="bt_City" Type="Self.bt_City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_District">
+              <PropertyRef Name="DistrictId" />
+            </Principal>
+            <Dependent Role="bt_City">
+              <PropertyRef Name="DistrictId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_bt_College_bt_City">
+          <End Role="bt_City" Type="Self.bt_City" Multiplicity="0..1" />
+          <End Role="bt_College" Type="Self.bt_College" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_City">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="bt_College">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_bt_College_bt_District">
+          <End Role="bt_District" Type="Self.bt_District" Multiplicity="0..1" />
+          <End Role="bt_College" Type="Self.bt_College" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_District">
+              <PropertyRef Name="DistrictId" />
+            </Principal>
+            <Dependent Role="bt_College">
+              <PropertyRef Name="DistrictId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_bt_User_bt_User">
+          <End Role="bt_Roles" Type="Self.bt_Roles" Multiplicity="0..1" />
+          <End Role="bt_User" Type="Self.bt_User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="bt_User">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BestTravelingModelStoreContainer">
+          <EntitySet Name="bt_City" EntityType="Self.bt_City" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="bt_College" EntityType="Self.bt_College" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="bt_CollegeBranches" EntityType="Self.bt_CollegeBranches" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="bt_District" EntityType="Self.bt_District" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="bt_Roles" EntityType="Self.bt_Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="bt_User" EntityType="Self.bt_User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__bt_Colleg__Colle__1DE57479" Association="Self.FK__bt_Colleg__Colle__1DE57479">
+            <End Role="bt_College" EntitySet="bt_College" />
+            <End Role="bt_CollegeBranches" EntitySet="bt_CollegeBranches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bt_City_bt_District" Association="Self.FK_bt_City_bt_District">
+            <End Role="bt_District" EntitySet="bt_District" />
+            <End Role="bt_City" EntitySet="bt_City" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bt_College_bt_City" Association="Self.FK_bt_College_bt_City">
+            <End Role="bt_City" EntitySet="bt_City" />
+            <End Role="bt_College" EntitySet="bt_College" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bt_College_bt_District" Association="Self.FK_bt_College_bt_District">
+            <End Role="bt_District" EntitySet="bt_District" />
+            <End Role="bt_College" EntitySet="bt_College" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bt_User_bt_User" Association="Self.FK_bt_User_bt_User">
+            <End Role="bt_Roles" EntitySet="bt_Roles" />
+            <End Role="bt_User" EntitySet="bt_User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BestTravelingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="bt_City">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="DistrictId" Type="Guid" />
+          <NavigationProperty Name="bt_District" Relationship="Self.FK_bt_City_bt_District" FromRole="bt_City" ToRole="bt_District" />
+          <NavigationProperty Name="bt_College" Relationship="Self.FK_bt_College_bt_City" FromRole="bt_City" ToRole="bt_College" />
+        </EntityType>
+        <EntityType Name="bt_College">
+          <Key>
+            <PropertyRef Name="CollegeId" />
+          </Key>
+          <Property Name="CollegeId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="DistrictId" Type="Guid" />
+          <Property Name="CityId" Type="Guid" />
+          <Property Name="DirecotrName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="bt_City" Relationship="Self.FK_bt_College_bt_City" FromRole="bt_College" ToRole="bt_City" />
+          <NavigationProperty Name="bt_CollegeBranches" Relationship="Self.FK__bt_Colleg__Colle__1DE57479" FromRole="bt_College" ToRole="bt_CollegeBranches" />
+          <NavigationProperty Name="bt_District" Relationship="Self.FK_bt_College_bt_District" FromRole="bt_College" ToRole="bt_District" />
+        </EntityType>
+        <EntityType Name="bt_CollegeBranches">
+          <Key>
+            <PropertyRef Name="BranchId" />
+          </Key>
+          <Property Name="BranchId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CollegeId" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="bt_College" Relationship="Self.FK__bt_Colleg__Colle__1DE57479" FromRole="bt_CollegeBranches" ToRole="bt_College" />
+        </EntityType>
+        <EntityType Name="bt_District">
+          <Key>
+            <PropertyRef Name="DistrictId" />
+          </Key>
+          <Property Name="DistrictId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="bt_City" Relationship="Self.FK_bt_City_bt_District" FromRole="bt_District" ToRole="bt_City" />
+          <NavigationProperty Name="bt_College" Relationship="Self.FK_bt_College_bt_District" FromRole="bt_District" ToRole="bt_College" />
+        </EntityType>
+        <EntityType Name="bt_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="bt_User" Relationship="Self.FK_bt_User_bt_User" FromRole="bt_Roles" ToRole="bt_User" />
+        </EntityType>
+        <EntityType Name="bt_User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="RoleId" Type="Guid" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Contact" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="bt_Roles" Relationship="Self.FK_bt_User_bt_User" FromRole="bt_User" ToRole="bt_Roles" />
+        </EntityType>
+        <Association Name="FK_bt_City_bt_District">
+          <End Role="bt_District" Type="Self.bt_District" Multiplicity="0..1" />
+          <End Role="bt_City" Type="Self.bt_City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_District">
+              <PropertyRef Name="DistrictId" />
+            </Principal>
+            <Dependent Role="bt_City">
+              <PropertyRef Name="DistrictId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_bt_College_bt_City">
+          <End Role="bt_City" Type="Self.bt_City" Multiplicity="0..1" />
+          <End Role="bt_College" Type="Self.bt_College" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_City">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="bt_College">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__bt_Colleg__Colle__1DE57479">
+          <End Role="bt_College" Type="Self.bt_College" Multiplicity="1" />
+          <End Role="bt_CollegeBranches" Type="Self.bt_CollegeBranches" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_College">
+              <PropertyRef Name="CollegeId" />
+            </Principal>
+            <Dependent Role="bt_CollegeBranches">
+              <PropertyRef Name="CollegeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_bt_College_bt_District">
+          <End Role="bt_District" Type="Self.bt_District" Multiplicity="0..1" />
+          <End Role="bt_College" Type="Self.bt_College" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_District">
+              <PropertyRef Name="DistrictId" />
+            </Principal>
+            <Dependent Role="bt_College">
+              <PropertyRef Name="DistrictId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_bt_User_bt_User">
+          <End Role="bt_Roles" Type="Self.bt_Roles" Multiplicity="0..1" />
+          <End Role="bt_User" Type="Self.bt_User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="bt_User">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BestTravelingEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="bt_City" EntityType="Self.bt_City" />
+          <EntitySet Name="bt_College" EntityType="Self.bt_College" />
+          <EntitySet Name="bt_CollegeBranches" EntityType="Self.bt_CollegeBranches" />
+          <EntitySet Name="bt_District" EntityType="Self.bt_District" />
+          <EntitySet Name="bt_Roles" EntityType="Self.bt_Roles" />
+          <EntitySet Name="bt_User" EntityType="Self.bt_User" />
+          <AssociationSet Name="FK_bt_City_bt_District" Association="Self.FK_bt_City_bt_District">
+            <End Role="bt_District" EntitySet="bt_District" />
+            <End Role="bt_City" EntitySet="bt_City" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bt_College_bt_City" Association="Self.FK_bt_College_bt_City">
+            <End Role="bt_City" EntitySet="bt_City" />
+            <End Role="bt_College" EntitySet="bt_College" />
+          </AssociationSet>
+          <AssociationSet Name="FK__bt_Colleg__Colle__1DE57479" Association="Self.FK__bt_Colleg__Colle__1DE57479">
+            <End Role="bt_College" EntitySet="bt_College" />
+            <End Role="bt_CollegeBranches" EntitySet="bt_CollegeBranches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bt_College_bt_District" Association="Self.FK_bt_College_bt_District">
+            <End Role="bt_District" EntitySet="bt_District" />
+            <End Role="bt_College" EntitySet="bt_College" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bt_User_bt_User" Association="Self.FK_bt_User_bt_User">
+            <End Role="bt_Roles" EntitySet="bt_Roles" />
+            <End Role="bt_User" EntitySet="bt_User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BestTravelingModelStoreContainer" CdmEntityContainer="BestTravelingEntities">
+          <EntitySetMapping Name="bt_City">
+            <EntityTypeMapping TypeName="BestTravelingModel.bt_City">
+              <MappingFragment StoreEntitySet="bt_City">
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bt_College">
+            <EntityTypeMapping TypeName="BestTravelingModel.bt_College">
+              <MappingFragment StoreEntitySet="bt_College">
+                <ScalarProperty Name="CollegeId" ColumnName="CollegeId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="DirecotrName" ColumnName="DirecotrName" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bt_CollegeBranches">
+            <EntityTypeMapping TypeName="BestTravelingModel.bt_CollegeBranches">
+              <MappingFragment StoreEntitySet="bt_CollegeBranches">
+                <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CollegeId" ColumnName="CollegeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bt_District">
+            <EntityTypeMapping TypeName="BestTravelingModel.bt_District">
+              <MappingFragment StoreEntitySet="bt_District">
+                <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bt_Roles">
+            <EntityTypeMapping TypeName="BestTravelingModel.bt_Roles">
+              <MappingFragment StoreEntitySet="bt_Roles">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bt_User">
+            <EntityTypeMapping TypeName="BestTravelingModel.bt_User">
+              <MappingFragment StoreEntitySet="bt_User">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

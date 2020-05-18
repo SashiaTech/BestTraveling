@@ -26,10 +26,10 @@ namespace BestTraveling.Models
         }
     
         public virtual DbSet<bt_City> bt_City { get; set; }
-        public virtual DbSet<bt_College> bt_College { get; set; }
         public virtual DbSet<bt_District> bt_District { get; set; }
         public virtual DbSet<bt_Roles> bt_Roles { get; set; }
         public virtual DbSet<bt_User> bt_User { get; set; }
         public virtual DbSet<bt_CollegeBranches> bt_CollegeBranches { get; set; }
+        public virtual DbSet<bt_College> bt_College { get; set; }
     }
 }

@@ -6,16 +6,16 @@
     <edmx:Diagrams>
       <Diagram DiagramId="5bdb5469a8144f41ae6b8036296c8cfc" Name="Diagram1">
         <EntityTypeShape EntityType="BestTravelingModel.bt_City" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BestTravelingModel.bt_College" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_District" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_Roles" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_User" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_City_bt_District" ManuallyRouted="false" />
-        <AssociationConnector Association="BestTravelingModel.FK_bt_College_bt_City" ManuallyRouted="false" />
-        <AssociationConnector Association="BestTravelingModel.FK_bt_College_bt_District" ManuallyRouted="false" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_User_bt_User" ManuallyRouted="false" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_CollegeBranches" Width="1.5" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="BestTravelingModel.bt_College" Width="1.5" PointX="5.25" PointY="0.75" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_College_bt_City" />
         <AssociationConnector Association="BestTravelingModel.FK__bt_Colleg__Colle__1DE57479" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_College_bt_District" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

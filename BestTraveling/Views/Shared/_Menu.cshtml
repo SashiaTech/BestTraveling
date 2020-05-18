@@ -2,9 +2,9 @@
 <nav class="mt-2">
     <ul class="nav nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
-             with font-awesome or any other icon font library -->
+         with font-awesome or any other icon font library -->
         <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link">
                 <i class="fa fa-desktop"></i>
                 <p>
                     Starter Pages
@@ -13,26 +13,30 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">
+                    <a href="#" class="nav-link">
                         <i class="fa fa-desktop"></i>
                         <p>Active Page</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="fa fa-circle nav-icon"></i>
+                        <i class="fa fa-desktop"></i>
                         <p>Inactive Page</p>
                     </a>
                 </li>
             </ul>
+            <a href="#" class="nav-link">
+                <i class="fa fa-desktop"></i>
+                <p>
+                    Starter Pages
+                    <i class="right fa fa-angle-left"></i>
+                </p>
+            </a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fa fa-th"></i>
-                <p>
-                    Simple Link
-                    <span class="right badge badge-danger">New</span>
-                </p>
+            <a href="@Url.Action("Create","College",new { @Area = "College"})" class="nav-link">
+                <i class="fa fa-university"></i>
+                <p>Register Colledge</p>
             </a>
         </li>
     </ul>

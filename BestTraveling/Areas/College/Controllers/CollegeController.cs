@@ -11,6 +11,7 @@ namespace BestTraveling.Areas.College.Controllers
     public class CollegeController : Controller
     {
         ICollegeService _collegeService = null;
+        
 
         public CollegeController(ICollegeService _collegeService)
         {
@@ -22,6 +23,7 @@ namespace BestTraveling.Areas.College.Controllers
         {
             CollegeModel model = new CollegeModel();
             model.Name = _collegeService.Create();
+
             return View(model);
         }
         

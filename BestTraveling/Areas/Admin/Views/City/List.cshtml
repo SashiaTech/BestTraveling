@@ -1,0 +1,165 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutNew.cshtml";
+}
+
+<div class="panel panel-blue">
+    <div class="panel-heading">
+        Cities
+    </div>
+    <div class="panel-body">
+        <div class="btn-group pull-right">
+            <input type="button" class="btn-primary pull-right" value="Add New"/>
+        </div>
+        <div style="border:solid black 2px;">
+            <table id="myTable" class="colorful-rows" border="1" style=" height:40%; word-wrap: break-word;">
+                <thead>
+                    <tr>
+                        <th>City Code</th>
+                        <th>Name</th>
+                        <th>City Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    table tr th {
+        background-color: #00203FFF;
+        color: white;
+    }
+
+    .colorful-rows tbody tr:nth-child(even) {
+        background: #CCC;
+        line-height: 5px;
+    }
+
+    .no-footer {
+        background-color: #00203FFF;
+    }
+
+    .colorful-rows tr:nth-child(odd) {
+        background: #FFF;
+        line-height: 5px;
+    }
+
+    #myTable_info {
+        color: white;
+        font-size: 12px;
+    }
+</style>
+
+
+@section scripts{
+    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                "scrollY": "200px",
+                "scrollX": false,
+                //"scrollCollapse": true,
+                "paging": false,
+                "searching": false,
+                //fixedHeader: {
+                //    header: true,
+                //    footer: true,
+                //}
+            });
+        });
+    </script>
+}

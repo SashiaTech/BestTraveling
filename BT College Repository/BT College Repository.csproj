@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,9 +47,17 @@
     <Compile Include="Repository\CollegeRepo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BT Data\BT Data.csproj">
+      <Project>{861DDF51-B59F-4CC8-AD91-581F20ACACCB}</Project>
+      <Name>BT Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BT Model\BT Model.csproj">
       <Project>{7679F68A-9BD1-4677-AB35-662D38B66D74}</Project>
       <Name>BT Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BT.Repositories\BT.Repositories.csproj">
+      <Project>{7E6A07D4-99BC-4F00-B3B2-0C9000CCDDFE}</Project>
+      <Name>BT.Repositories</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

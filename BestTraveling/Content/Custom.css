@@ -2,6 +2,12 @@
     margin: 0;
 }
 
+.test{
+    color:orange;
+    background-color:green;
+    font-weight:900;
+}
+
 .panel-blue {
     background-color: #00203FFF;
     color: #fcfdff;
@@ -25,12 +31,15 @@
         padding-top: 8px;
         margin: 0;
         padding-left: 30px;
+        border-bottom:solid #fff 2px;
         /*padding-right: 30px;*/
     }
 
 .panel-blue > .panel.panel-body {
     background-color: #00203FFF;
     color: #fcfdff;
+    height:100%;
+    margin:0px;
 }
 
 .finish_padding{

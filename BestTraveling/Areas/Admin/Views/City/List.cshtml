@@ -1,16 +1,17 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutNew.cshtml";
 }
-
 <div class="panel panel-blue">
     <div class="panel-heading">
         Cities
     </div>
     <div class="panel-body">
-        <div class="btn-group pull-right">
-            <input type="button" class="btn-primary pull-right" value="Add New"/>
+        <div class="col-sm-12 col-sm-12 col-xs-12 pull-right">
+            <a href="@Url.Action("Create","City")" id="btnAddNew" class="btn btn-primary pull-right">Add New</a>
+            @*<input type="button" id="btnAddNew" class="btn btn-primary pull-right" value="Add New"/>*@
         </div>
-        <div style="border:solid black 2px;">
+        <div class="col-sm-12 col-md-12 col-xs-12" style="border:solid black 2px;">
+            <input type="button" id="toastrTest" value="Test" class="btn btn-primary" />
             <table id="myTable" class="colorful-rows" border="1" style=" height:40%; word-wrap: break-word;">
                 <thead>
                     <tr>
@@ -117,6 +118,7 @@
 </div>
 
 
+
 <style>
     table tr th {
         background-color: #00203FFF;
@@ -146,6 +148,8 @@
 
 @section scripts{
     <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <link href="~/Content/toastr.min.css" rel="stylesheet" />
+    <script src="~/Scripts/toastr.min.js"></script>
     <link type="text/css" rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
     <script>
         $(document).ready(function () {
@@ -159,6 +163,10 @@
                 //    header: true,
                 //    footer: true,
                 //}
+            });
+
+            $('#toastrTest').click(function () {
+                toastr.success('test');
             });
         });
     </script>

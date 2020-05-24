@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link href="~/Content/Custom.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @Scripts.Render("~/bundles/modernizr")
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -193,6 +196,9 @@
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="~/Scripts/adminlte.min.js"></script>
-    @RenderSection("Scripts",required:false)
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

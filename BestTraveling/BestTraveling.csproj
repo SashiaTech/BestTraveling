@@ -228,6 +228,7 @@
     <Content Include="Content\images\user6-128x128.jpg" />
     <Content Include="Content\images\user7-128x128.jpg" />
     <Content Include="Content\images\user8-128x128.jpg" />
+    <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -294,6 +295,7 @@
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\Shared\_Menu2.cshtml" />
+    <Content Include="Scripts\toastr.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -25,12 +25,18 @@ namespace BestTraveling
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css",
-                       "~/Content/toastr.min.css"));
+                      "~/Content/site.css"
+                   ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                    "~/Content/bootstrap.css",
                    "~/Content/Custom.css"));
+
+            bundles.Add(new StyleBundle("~/Content/toastr").Include(
+                  "~/Content/toastr.min.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/toastr").Include(
+                       "~/Scripts/toastr.min.js"));
         }
     }
 }

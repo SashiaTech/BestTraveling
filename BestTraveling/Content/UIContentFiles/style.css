@@ -30,7 +30,7 @@ header {
 
     header .navBg {
         background: #1b1c25;
-        height:15vh;
+        padding: 35px;
     }
 
     header .logo {
@@ -49,7 +49,7 @@ header {
     .sideBarDashboard .leftSideBar {
         width: 235px;
         /* flex-basis: 50%; */
-        height: 90vh;
+        height: 100vh;
         background: #222d32;
         position: relative;
         /* left:-235px; */

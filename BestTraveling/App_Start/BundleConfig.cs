@@ -37,6 +37,16 @@ namespace BestTraveling
 
             bundles.Add(new ScriptBundle("~/bundles/toastr").Include(
                        "~/Scripts/toastr.min.js"));
+
+            bundles.Add(new StyleBundle("~/bundles/DataTableStyles").Include(
+                      "~/Content/DataTables/css/jquery.dataTables.min.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/DataTableJs").Include(
+                      "~/Scripts/DataTables/jquery.dataTables.min.js"));
+
+
+
+
         }
     }
 }

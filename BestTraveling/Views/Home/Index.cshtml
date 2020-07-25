@@ -1,3 +1,78 @@
-﻿@{ 
+﻿@{
     Layout = "~/Views/Shared/BT_Layout.cshtml";
 }
+
+
+<script>
+    $(document).ready(function () {
+        $('#myTable').dataTable();
+
+        $('#btn').click(function () {
+            toastr.success("test");
+        });
+    });
+
+    $('#btn').click(function () {
+        toastr.success("test");
+    });
+</script>
+
+<style>
+    table thead tr {
+        background-color: cadetblue;
+    }
+
+    table tbody tr td {
+        height: 5px;
+    }
+
+    #footer a {
+        background: yellow;
+    }
+
+    tr {
+        height: 10px
+    }
+</style>
+<div>
+    <input type="button" class="btn btn-primary" id="btn" value="click" />
+</div>
+<div>
+    <table id="myTable" class="display">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Avtar</td>
+                <td>Sunam</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Avtar</td>
+                <td>Sunam</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Avtar</td>
+                <td>Sunam</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Avtar</td>
+                <td>Sunam</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Avtar</td>
+                <td>Sunam</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

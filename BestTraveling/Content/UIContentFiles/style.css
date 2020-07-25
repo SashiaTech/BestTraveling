@@ -1,0 +1,105 @@
+﻿/*****styling for adminPanel Side bar********/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
+
+/* universal operator  for all selectors */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* header styling... */
+header {
+    width: 100%;
+    height: auto;
+    background: #1b262c;
+    position: relative;
+}
+
+    header .toggle {
+        position: absolute;
+        left: 15%;
+        top: 17px;
+        z-index: 1;
+    }
+
+        header .toggle i {
+            color: #fff;
+        }
+
+    header .navBg {
+        background: #1b1c25;
+        height:15vh;
+    }
+
+    header .logo {
+        margin: auto;
+    }
+
+        header .logo img {
+            border-radius: 50%;
+        }
+
+/* styling leftSideBar... */
+.sideBarDashboard {
+    display: flex;
+}
+
+    .sideBarDashboard .leftSideBar {
+        width: 235px;
+        /* flex-basis: 50%; */
+        height: 90vh;
+        background: #222d32;
+        position: relative;
+        /* left:-235px; */
+        transition: all .2s cubic-bezier(.17,.67,.83,.67);
+    }
+
+        .sideBarDashboard .leftSideBar ul {
+            list-style: none;
+            text-align: left;
+        }
+
+            .sideBarDashboard .leftSideBar ul li {
+                padding: 15px 15px;
+                letter-spacing: 1px;
+                border-bottom: 1px solid #ebecf1;
+                position: relative;
+            }
+
+                .sideBarDashboard .leftSideBar ul li .icon {
+                    margin-right: 12px;
+                }
+
+                .sideBarDashboard .leftSideBar ul li a {
+                    text-decoration: none;
+                    color: #fff;
+                    font-family: 'Roboto', sans-serif;
+                }
+
+        .sideBarDashboard .leftSideBar #subMenu {
+            display: none;
+            transition: all .8s ease-in;
+        }
+
+#subMenu li {
+    border: none;
+    padding: 12px 28px;
+}
+
+.lftArrowBtn {
+    position: absolute;
+    right: 8px;
+    top: 25px;
+}
+
+@media(max-width: 768px) {
+    header .toggle {
+        left: 8px;
+    }
+
+    .sideBarDashboard {
+        flex-direction: column;
+    }
+}

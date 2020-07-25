@@ -230,6 +230,12 @@
     <Content Include="Content\images\user8-128x128.jpg" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
+    <Content Include="Content\UIContentFiles\bootstrap.css" />
+    <Content Include="Content\UIContentFiles\Font-awsome\css\all.css" />
+    <Content Include="Content\UIContentFiles\js\bootstrap.js" />
+    <Content Include="Content\UIContentFiles\js\index.js" />
+    <Content Include="Content\UIContentFiles\js\jquery.js" />
+    <Content Include="Content\UIContentFiles\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -296,10 +302,13 @@
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\Shared\_Menu2.cshtml" />
     <Content Include="Scripts\toastr.js.map" />
+    <Content Include="Views\Shared\_Layout3.cshtml" />
+    <Content Include="Views\Shared\BT_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\College\Models\" />
+    <Folder Include="Content\UIContentFiles\images\" />
     <Folder Include="Scripts\View js\" />
   </ItemGroup>
   <ItemGroup>

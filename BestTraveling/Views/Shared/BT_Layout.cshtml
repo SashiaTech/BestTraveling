@@ -1,0 +1,155 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- required meta information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <!-- add font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link href="~/Content/UIContentFiles/style.css" rel="stylesheet" />
+    <link href="~/Content/Custom.css" rel="stylesheet" />
+
+    <!-- add bootstrap css -->
+    <link href="~/Content/UIContentFiles/bootstrap.css" rel="stylesheet" />
+    
+    <!-- add jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+
+
+
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/toastr")
+    @Scripts.Render("~/bundles/toastr")
+    @Styles.Render("~/bundles/DataTableStyles")
+    @Scripts.Render("~/bundles/DataTableJs")
+    <title>adminPanel</title>
+</head>
+
+<body>
+    <!-- header starting -->
+    <header>
+        <div class="toggle" id="toggle1">
+            <i class="fa fa-bars fa-2x"></i>
+        </div>
+
+        <nav class="navbar navBg">
+            <div class="logo">
+                @*<img src="images/admin.png" width="50px" alt="no image">*@
+            </div>
+        </nav>
+
+        <section class="sideBarDashboard">
+            <div class="leftSideBar" id="menuBar">
+                <ul>
+                    <li><a href="#"><i class="fab fa-buromobelexperte icon"></i>Dashboard</a></li>
+
+                    <li>
+                        <a href="#" id="eds">
+                            <i class="fa fa-buromobelexperte icon"></i>Services
+                            <i class="fa fa-angle-left lftArrowBtn"></i>
+                        </a>
+                        <ul id="subMenu" class="submenu1">
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Contact121</a></li>
+                            <li><a href="#">About us</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" id="eds">
+                            <i class="fa fa-buromobelexperte icon"></i>Services
+                            <i class="fa fa-angle-left lftArrowBtn"></i>
+                        </a>
+                        <ul id="subMenu" class="submenu1">
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Contact121</a></li>
+                            <li><a href="#">About us</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" id="eds">
+                            <i class="fa fa-buromobelexperte icon"></i>Services
+                            <i class="fa fa-angle-left lftArrowBtn"></i>
+                        </a>
+                        <ul id="subMenu" class="submenu1">
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Contact121</a></li>
+                            <li><a href="#">About us</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#" id="eds">
+                            <i class="fa fa-buromobelexperte icon"></i>Services
+                            <i class="fa fa-angle-left lftArrowBtn"></i>
+                        </a>
+                        <ul id="subMenu" class="submenu1">
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Contact121</a></li>
+                            <li><a href="#">About us</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" id="eds">
+                            <i class="fa fa-buromobelexperte icon"></i>About
+                            <i class="fa fa-angle-left lftArrowBtn"></i>
+                        </a>
+                        <ul id="subMenu" class="submenu1">
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Contact121</a></li>
+                            <li><a href="#">About us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" id="eds">
+                            <i class="fa fa-buromobelexperte icon"></i>About
+                            <i class="fa fa-angle-left lftArrowBtn"></i>
+                        </a>
+                        <ul id="subMenu" class="submenu1">
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Contact121</a></li>
+                            <li><a href="#">About us</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <div class="w-100 p-1">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                    </ol>
+                </nav>
+
+                <div class="jumbotron" style="height:100vh;padding:0;margin:0">
+                        @RenderBody()
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- header closing -->
+    <!-- <script src="js/jquery.js"></script> -->
+    @*<script src="js/index.js"></script>*@
+    <script src="~/Content/UIContentFiles/js/index.js"></script>
+</body>
+
+</html>

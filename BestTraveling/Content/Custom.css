@@ -106,3 +106,18 @@ a.white-link {
     a.white-link:visited {
         color: #fcfdff
     }
+table thead tr th {
+    background-color: #3d4752;
+    color: #fff;
+}
+
+table {
+    padding: 0;
+    margin: 0;
+    background-color: red;
+}
+
+.listGrid {
+    height: 50vh;
+}
+

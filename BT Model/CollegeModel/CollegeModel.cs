@@ -17,5 +17,6 @@ namespace BT_Model
         public string DirectorName { get; set; }
         public string Contact { get; set; }
         public string Email { get; set; }
+        public string State { get; set; }
     }
 }

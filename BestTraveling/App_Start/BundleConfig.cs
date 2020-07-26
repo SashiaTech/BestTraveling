@@ -32,6 +32,10 @@ namespace BestTraveling
                    "~/Content/bootstrap.css",
                    "~/Content/Custom.css"));
 
+
+            bundles.Add(new StyleBundle("~/Content1/css").Include(
+                   "~/Content/Custom.css"));
+
             bundles.Add(new StyleBundle("~/Content/toastr").Include(
                   "~/Content/toastr.min.css"));
 

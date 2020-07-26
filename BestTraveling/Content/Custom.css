@@ -2,42 +2,54 @@
     margin: 0;
 }
 
+.test2{
+    margin-top:50%;
+}
 .test{
     color:orange;
     background-color:green;
     font-weight:900;
 }
 
+
 .panel-blue {
     background-color: #00203FFF;
-    color: #fcfdff;
+/*    color: #fcfdff;*/
     border: none;
     padding: 0px;
+    height:100vh;
+    
+}
+    .panel-blue  label {
+        color: white;
+    }
+
+    .panel-blue  .panel-body {
+        background-color: #337ab7;
+       /* color: #fcfdff;*/
+        margin: 0;
+    }
+
+
+.panel-blue  .panel-heading {
+    background-color: #00203FFF;
+    /*color: #fcfdff;*/
+    /*border-bottom: solid #FFFFFF 2px;*/
+    font-size: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    /* margin: 0;*/
+    padding-left: 30px;
+    border-bottom: solid #fff 2px;
+    /*padding-right: 30px;*/
+    width: 100%;
 }
 
-    .panel-blue > .panel-body {
-        background-color: #337ab7;
-        color: #fcfdff;
-        margin: 0;
-    }
-
-
-    .panel-blue > .panel-heading {
-        background-color: #00203FFF;
-        color: #fcfdff;
-        /*border-bottom: solid #FFFFFF 2px;*/
-        font-size: 20px;
-        padding-bottom: 8px;
-        padding-top: 8px;
-        margin: 0;
-        padding-left: 30px;
-        border-bottom:solid #fff 2px;
-        /*padding-right: 30px;*/
-    }
+.panel-blue > .panel-body{}
 
 .panel-blue > .panel.panel-body {
     background-color: #00203FFF;
-    color: #fcfdff;
+   /* color: #fcfdff;*/
     height:100%;
     margin:0px;
 }
@@ -50,7 +62,7 @@
 }
 .panel-red {
     background-color: #d90404;
-    color: #fcfdff;
+   /* color: #fcfdff;*/
     padding-top: 0;
     padding-bottom: 0;
     margin-bottom:0;
@@ -62,9 +74,9 @@
     background-color: #00203FFF;
     padding-left: 10px;
     margin: 0;
-    color: white;
+   /* color: white;*/
     font-size: 20px;
-    color: #FFFFFF;
+   /* color: #FFFFFF;*/
 }
 
 .rounded-image {
@@ -108,7 +120,7 @@ a.white-link {
     }
 table thead tr th {
     background-color: #3d4752;
-    color: #fff;
+   /* color: #fff;*/
 }
 
 table {

@@ -1,9 +1,71 @@
 ﻿@model BT_Model.CollegeModel
 @{
     ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_LayoutNew.cshtml";
+    Layout = "~/Views/Shared/BT_Layout.cshtml";
 }
+<style>
+        .titleHeader {
+            color: white;
+            font-size: 25px;
+        }
 
-<h2>Create</h2>
-<h1>@Model.Name</h1>
+        fieldset {
+            /*        background-color: #eeeeee;*/
+            border: 1px solid white;
+            margin-left: 30px;
+            padding:30px;
+            border-radius:30px;
+        }
 
+        
+
+      
+</style>
+
+<div class="panel-blue" style="height:100vh">
+    <div class="row panel-heading">
+        <div class="col-md-6 col-sm-6">
+            <b class="px-2 titleHeader">College</b>
+        </div>
+        <div class="col-md-6 col-sm-6 pr-4">
+            <div class="pull-right px-2 titleHeader" style="">
+                <a href="#" class="white-link" onclick="location.href='@Url.Action("List","College",new {Area = "College" })'"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-5">
+
+        <div class="col-md-5 col-sm-5">
+
+            <fieldset>
+                <div class="row">
+                    @*<div class="form-group">*@
+                    <div class="col-md-6 col-sm-12"><label>College Name</label></div>
+                    <div class="col-md-6 col-sm-12">@Html.TextBoxFor(x => x.Name, new { @class = "form-control",@placeholder="College Name" })</div>
+                    @*</div>*@
+                    @*<div class="form-group-lg">*@
+                    <div class="col-md-6 col-sm-12"><label>Code</label></div>
+                    <div class="col-md-6 col-sm-12 my-2">@Html.TextBoxFor(x => x.Code,new {@class="form-control",@placeholder="Code" })</div>
+                    @*</div>*@
+                    <div class="col-md-6 col-sm-12"><label>State</label></div>
+                    <div class="col-md-6 col-sm-12 my-2">@Html.DropDownListFor(x => x.State, new SelectList(Enum.GetValues(typeof(BestTraveling.Areas.College.Controllers.Gender))), "Select State", new { @class = "form-control" })</div>
+
+                    <div class="col-md-6 col-sm-12"><label>District</label></div>
+                    <div class="col-md-6 col-sm-12 my-2">@Html.DropDownListFor(x => x.District, new SelectList(Enum.GetValues(typeof(BestTraveling.Areas.College.Controllers.Gender))), "Select District", new { @class = "form-control" })</div>
+
+                    <div class="col-md-6 col-sm-12"><label>City</label></div>
+                    <div class="col-md-6 col-sm-12 my-2">@Html.DropDownListFor(x => x.City, new SelectList(Enum.GetValues(typeof(BestTraveling.Areas.College.Controllers.Gender))), "Select City", new { @class = "form-control" })</div>
+                </div>
+                <div class="row">
+                    <div></div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="col-md-6 col-sm-6">
+        </div>
+    </div>
+
+
+</div>

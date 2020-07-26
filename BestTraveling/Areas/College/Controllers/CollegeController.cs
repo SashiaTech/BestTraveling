@@ -21,15 +21,18 @@ namespace BestTraveling.Areas.College.Controllers
         // GET: College/College
         public ActionResult Create()
         {
-            CollegeModel model = new CollegeModel();
-            model.Name = _collegeService.Create();
-
-            return View(model);
+            return View(new CollegeModel());
         }
         
         public ActionResult index()
         {
             return View();
         }
+    }
+
+    public enum Gender
+    {
+        Male,
+        Female
     }
 }

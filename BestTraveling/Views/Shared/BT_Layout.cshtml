@@ -25,7 +25,7 @@
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous"></script>
 
-
+    <link href="~/Content/Custom.css" rel="stylesheet" />
 
 
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -35,6 +35,7 @@
     @Scripts.Render("~/bundles/toastr")
     @Styles.Render("~/bundles/DataTableStyles")
     @Scripts.Render("~/bundles/DataTableJs")
+    @Styles.Render("~/Content1/css")
     <title>adminPanel</title>
 </head>
 
@@ -54,15 +55,15 @@
         <section class="sideBarDashboard">
             <div class="leftSideBar" id="menuBar">
                 <ul>
-                    <li><a href="#"><i class="fab fa-buromobelexperte icon"></i>Dashboard</a></li>
+                    <li><a href="#" class="button" onclick="location.href='@Url.Action("Index","Home",new { Area=""})'"><i class="fab fa-buromobelexperte icon"></i>Dashboard</a></li>
 
                     <li>
                         <a href="#" id="eds">
-                            <i class="fa fa-buromobelexperte icon"></i>Services
+                            <i class="fa fa-buromobelexperte icon lftArrowBtn"></i>College Operations
                             <i class="fa fa-angle-left lftArrowBtn"></i>
                         </a>
                         <ul id="subMenu" class="submenu1">
-                            <li><a href="#">Product</a></li>
+                            <li><a href="#" onclick="location.href='@Url.Action("Create","College",new { Area ="College" })'">College</a></li>
                             <li><a href="#">Contact121</a></li>
                             <li><a href="#">About us</a></li>
                         </ul>
@@ -133,14 +134,14 @@
 
 
             <div class="w-100 p-1">
-                <nav aria-label="breadcrumb">
+                @*<nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                     </ol>
-                </nav>
+                </nav>*@
 
-                <div class="jumbotron" style="height:100vh;padding:0;margin:0">
+                <div class="jumbotron bg-primary" style="height:100vh;padding:0;margin:0">
                         @RenderBody()
                 </div>
             </div>

@@ -4,68 +4,228 @@
     Layout = "~/Views/Shared/BT_Layout.cshtml";
 }
 <style>
-        .titleHeader {
-            color: white;
-            font-size: 25px;
+    fieldset{
+        border-radius: 15px;
+        border: 1px solid #84a9ac;
+        padding-bottom:17px;
+    }
+   fieldset legend{
+        border:none;
+        color:white;
+        font-size:14px;
+
+    }
+    .btnDesign {
+        border: none;
+        outline: none;
+        background: #222d32;
+        color: #fff;
+        padding: 8px;
+        width: 80px;
+        border-radius: 10px;
+        transition: all .5s ease-in;
+    }
+        .btnDesign:hover {
+            background: rgba(60,141,188,.8);
         }
-
-        fieldset {
-            /*        background-color: #eeeeee;*/
-            border: 1px solid white;
-            margin-left: 30px;
-            padding:30px;
-            border-radius:30px;
-        }
-
-        
-
-      
+    .marginTop{
+        margin-top:-15px;
+    }
+    .form-control {
+        height: 25px !important;
+        padding: 2px 12px;
+        font-size: 12px;
+    }
+   .rowH{
+       height: 84.50vh;
+   }
 </style>
 
-<div class="panel-blue" style="height:100vh">
-    <div class="row panel-heading">
-        <div class="col-md-6 col-sm-6">
-            <b class="px-2 titleHeader">College</b>
-        </div>
-        <div class="col-md-6 col-sm-6 pr-4">
-            <div class="pull-right px-2 titleHeader" style="">
-                <a href="#" class="white-link" onclick="location.href='@Url.Action("List","College",new {Area = "College" })'"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+@*<div class="panel-blue" style="height:100vh">
+     <div class="row panel-heading">
+         <div class="col-md-6 col-sm-6">
+             <b class="px-2 titleHeader">College</b>
+         </div>
+         <div class="col-md-6 col-sm-6 pr-4">
+             <div class="pull-right px-2 titleHeader" style="">
+                 <a href="#" class="white-link" onclick="location.href='@Url.Action("List","College",new {Area = "College" })'"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+             </div>
+         </div>
+     </div>*@
+    
+
+
+@* mainContainer starting *@
+<div class="container-fluid p-0">
+    <div class="bg-danger">
+        <div class="row p-4 mr-0">
+            <div class="col-md-6 col-6">
+               <span class="text-white">HI, THERE</span>
+            </div>
+            <div class="col-md-6 col-6 text-right">
+                <i class="fa fa-arrow-left text-white"></i>
             </div>
         </div>
     </div>
 
-    <div class="row my-5">
-
-        <div class="col-md-5 col-sm-5">
-
-            <fieldset>
-                <div class="row">
-                    @*<div class="form-group">*@
-                    <div class="col-md-6 col-sm-12"><label>College Name</label></div>
-                    <div class="col-md-6 col-sm-12">@Html.TextBoxFor(x => x.Name, new { @class = "form-control",@placeholder="College Name" })</div>
-                    @*</div>*@
-                    @*<div class="form-group-lg">*@
-                    <div class="col-md-6 col-sm-12"><label>Code</label></div>
-                    <div class="col-md-6 col-sm-12 my-2">@Html.TextBoxFor(x => x.Code,new {@class="form-control",@placeholder="Code" })</div>
-                    @*</div>*@
-                    <div class="col-md-6 col-sm-12"><label>State</label></div>
-                    <div class="col-md-6 col-sm-12 my-2">@Html.DropDownListFor(x => x.State, new SelectList(Enum.GetValues(typeof(BestTraveling.Areas.College.Controllers.Gender))), "Select State", new { @class = "form-control" })</div>
-
-                    <div class="col-md-6 col-sm-12"><label>District</label></div>
-                    <div class="col-md-6 col-sm-12 my-2">@Html.DropDownListFor(x => x.District, new SelectList(Enum.GetValues(typeof(BestTraveling.Areas.College.Controllers.Gender))), "Select District", new { @class = "form-control" })</div>
-
-                    <div class="col-md-6 col-sm-12"><label>City</label></div>
-                    <div class="col-md-6 col-sm-12 my-2">@Html.DropDownListFor(x => x.City, new SelectList(Enum.GetValues(typeof(BestTraveling.Areas.College.Controllers.Gender))), "Select City", new { @class = "form-control" })</div>
+    @* horiZental Form layout Starting One row with two column merge.... *@
+<form method="get">
+        <div class="row m-0 p-5 rowH" style="background:#00203f; color:white;">
+            @* First Column Starts *@
+            <div class="col-lg-6 col-sm-12">
+                <fieldset class="px-3">
+                    <legend class="w-auto"><b>College Details</b></legend>
+                <div class="form-group row">
+                <label for="clgname" class="col-sm-5 offset-sm-1 col-form-label">College Name</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="clgname" name="clgname">
                 </div>
-                <div class="row">
-                    <div></div>
+            </div>
+            <div class="form-group row">
+                <label for="code" class="col-sm-5 offset-sm-1 col-form-label">Code</label>
+                <div class="col-sm-5">
+                    <input type="number" class="form-control" id="code" name="code">
                 </div>
-            </fieldset>
+            </div>
+            <div class="form-group row">
+                <label for="code" class="col-sm-5 offset-sm-1 col-form-label">State</label>
+                <div class="col-sm-5">
+                    <select class="form-control" id="code">
+                        <option>Select state</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="code" class="col-sm-5 offset-sm-1 col-form-label">District</label>
+                <div class="col-sm-5">
+                    <select class="form-control" id="code">
+                        <option>Select District</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="code" class="col-sm-5 offset-sm-1 col-form-label">City</label>
+                <div class="col-sm-5">
+                    <select class="form-control" id="code">
+                        <option>Select City</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+
+                </fieldset>
+                @* FOR CHECKBOXES *@
+                <h4 class="mt-5"><strong>Qualifications</strong></h4>
+                <div class="form-group col-md-12">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value=""><span><b>BCOM</b></span>
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value=""><span><b>BCOM</b></span>
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value=""><span><b>BCOM</b></span>
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value=""><span><b>BCOM</b></span>
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value=""><span><b>BCOM</b></span>
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value=""><span><b>BCOM</b></span>
+                    </label>
+                   
+                </div>
+            </div>
+       
+            @* Second Column Starts *@
+            <div class="col-lg-6  col-12 marginTop">
+                <h3 class="mb-5 offset-sm-1" style="font-size:20px;"><b>Director details</b></h3>
+                <div class="form-group row">
+                    <label for="fName" class="col-sm-4 offset-sm-1 col-form-label">FirstName</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="fName" name="fName">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="lName" class="col-sm-4  offset-sm-1 col-form-label">LastName</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="lName" name="lName">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4  offset-sm-1 col-form-label">Status</label>
+                    <div class="col-sm-6 mt-2">
+                        <input type="radio" id="gender" name="gender">
+                        <label for="gender">Male</label>
+                        <input type="radio" id="gender1" name="gender">
+                        <label for="gender1">Female</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="contactNo" class="col-sm-4  offset-sm-1 col-form-label">ContactNo</label>
+                    <div class="col-sm-7">
+                        <input type="Number" class="form-control" id="contactNo" name="contactNo">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="code" class="col-sm-4 offset-sm-1 col-form-label">State</label>
+                    <div class="col-sm-7">
+                        <select class="form-control" id="code">
+                            <option>Select state</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="code" class="col-sm-4 offset-sm-1 col-form-label">District</label>
+                    <div class="col-sm-7">
+                        <select class="form-control" id="code">
+                            <option>Select District</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="code" class="col-sm-4 offset-sm-1 col-form-label">City</label>
+                    <div class="col-sm-7">
+                        <select class="form-control" id="code">
+                            <option>Select City</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                @* CUSTOM BUTTON DESIGN *@
+                <div class="row mt-5">
+                    <div class="col-md-12 text-right">
+                <input class="btnDesign" type="submit" value="Close">
+                <input class="btnDesign" type="submit" value="Save">
+                </div>
+                </div>
+            </div>
         </div>
-
-        <div class="col-md-6 col-sm-6">
-        </div>
-    </div>
-
-
+    </form>
 </div>
+
+

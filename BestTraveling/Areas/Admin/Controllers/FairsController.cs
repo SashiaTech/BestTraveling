@@ -7,17 +7,17 @@ using BT_Model;
 
 namespace BestTraveling.Areas.Admin
 {
-    public class CityController : Controller
+    public class FairsController : Controller
     {
-        // GET: Admin/City
-        public ActionResult List()
+        // GET: Admin/Fairs
+        public ActionResult Index()
         {
             return View();
         }
 
-        //public IEnumerable<CityModel> Read_Cities()
-        //{
-            
-        //}
+        public ActionResult AddFair()
+        {
+            return View(new FairsModel());
+        }
     }
 }

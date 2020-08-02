@@ -1,105 +1,190 @@
 ﻿/*****styling for adminPanel Side bar********/
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
 
+:root {
+    --color: white;
+    user-select: none;
+}
 /* universal operator  for all selectors */
 * {
     margin: 0;
     padding: 0;
-    box-sizing:initial;
+    box-sizing: border-box;
 }
 /* header styling... */
 header {
     width: 100%;
-    height: auto;
-    background: #1b262c;
     position: relative;
 }
 
     header .toggle {
         position: absolute;
-        left: 15%;
-        top: 17px;
-        z-index: 1;
+        top: 15px;
+        left: 250px;
+        transition: all .3s;
+        cursor: pointer;
     }
 
         header .toggle i {
-            color: #fff;
+            color: var(--color);
+            position: relative;
         }
 
     header .navBg {
-        background: #1b1c25;
-        padding: 35px;
+        background: #3c8dbc;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 8vh;
     }
 
-    header .logo {
-        margin: auto;
-    }
-
-        header .logo img {
-            border-radius: 50%;
+        header .navBg .navBar_logo img {
+            width: 110px;
+            margin: 0px 35px;
         }
+
+        header .navBg .someIcon {
+            display: flex;
+            position: absolute;
+            top: 15px;
+            right: 30px;
+        }
+
+            header .navBg .someIcon a {
+                border-radius: 50%;
+                padding: 3px;
+                margin: 0 4px;
+                width: 30px;
+                text-align: center;
+            }
+
+                header .navBg .someIcon a i {
+                    color: var(--color);
+                }
 
 /* styling leftSideBar... */
 .sideBarDashboard {
     display: flex;
+    justify-content: start;
 }
 
     .sideBarDashboard .leftSideBar {
-        width: 235px;
-        /* flex-basis: 50%; */
-        height: 100vh;
+        width: 300px;
+        height: 92vh;
         background: #222d32;
         position: relative;
-        /* left:-235px; */
-        transition: all .2s cubic-bezier(.17,.67,.83,.67);
+        transition: all .3s cubic-bezier(.17,.67,.83,.67);
     }
 
-        .sideBarDashboard .leftSideBar ul {
-            list-style: none;
-            text-align: left;
+        .sideBarDashboard .leftSideBar .menuIcons {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
         }
 
-            .sideBarDashboard .leftSideBar ul li {
-                padding: 15px 15px;
+            .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons {
+                width: 80px;
+                text-align: center;
+                display: none;
+            }
+
+                .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons a {
+                    display: block;
+                    padding: 16px 8px;
+                }
+
+                    .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons a:hover {
+                        background-color: #576574;
+                    }
+
+                    .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons a i {
+                        color: #fff;
+                        font-size: 18px;
+                    }
+
+        .sideBarDashboard .leftSideBar .navBar {
+            list-style: none;
+            text-align: left;
+            width: auto;
+        }
+
+            .sideBarDashboard .leftSideBar .navBar li {
+                line-height: 50px;
                 letter-spacing: 1px;
                 border-bottom: 1px solid #ebecf1;
                 position: relative;
+                cursor: pointer;
+                transition: all .4s ease-in;
             }
 
-                .sideBarDashboard .leftSideBar ul li .icon {
-                    margin-right: 12px;
+                .sideBarDashboard .leftSideBar .navBar li:hover {
+                    background-color: #4e5c69;
                 }
 
-                .sideBarDashboard .leftSideBar ul li a {
+                .sideBarDashboard .leftSideBar .navBar li .icon {
+                    padding: 0 8px;
+                }
+
+                .sideBarDashboard .leftSideBar .navBar li a {
                     text-decoration: none;
                     color: #fff;
                     font-family: 'Roboto', sans-serif;
                 }
 
-        .sideBarDashboard .leftSideBar #subMenu {
-            display: none;
-            transition: all .8s ease-in;
+                    .sideBarDashboard .leftSideBar .navBar li a .rytArrowBtn {
+                        position: absolute;
+                        right: 8px;
+                        top: 25px;
+                        transition: 0.8s;
+                    }
+
+        .sideBarDashboard .leftSideBar .submenu {
+            transition: all 1s linear;
         }
 
-#subMenu li {
-    border: none;
-    padding: 12px 28px;
+            .sideBarDashboard .leftSideBar .submenu li {
+                list-style: none;
+                padding: 0px 30px;
+                transition: 0.8s;
+                background: #222d32;
+            }
+
+.borderTop {
+    border-top: 1px solid white;
 }
 
-.lftArrowBtn {
-    position: absolute;
-    right: 9px;
-    top: 25px;
-}
 
-@media(max-width: 768px) {
+
+@media(max-width: 600px) {
     header .toggle {
-        left: 8px;
+        top: 18px;
+        left: 150px;
     }
 
-    .sideBarDashboard {
-        flex-direction: column;
+    header .navBg .someIcon {
+        top: 18px;
+    }
+}
+
+@media(max-width:768px) {
+    .sideBarDashboard .leftSideBar .navBar {
+        display: none;
+    }
+
+    .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons {
+        display: block;
+    }
+
+    .sideBarDashboard .leftSideBar {
+        width: 85px;
+        height: auto;
+    }
+}
+
+@media(max-width:992px) {
+    .sideBarDashboard .leftSideBar {
+        height: auto;
     }
 }

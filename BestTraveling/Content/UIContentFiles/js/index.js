@@ -19,57 +19,24 @@ toggle.addEventListener('click', () => {
     }
 })
 //function for dropdowns and font awesome icon-changer collapse other dwopdowns on single click
-const rytArrowBtn = document.getElementsByClassName('rytArrowBtn');
-Array.from(rytArrowBtn).forEach((Element, index) => {
-    Element.addEventListener('click', (e) => {
+let li_collapse = document.getElementsByClassName('li_collapse');
+Array.from(li_collapse).forEach((Element, index) => {
+    let rytArrowBtn = document.getElementsByClassName('rytArrowBtn');
+    Element.addEventListener('click', () => {
         let submenu = document.getElementsByClassName("submenu");
-        if (e.target.className === "fa fa-angle-right rytArrowBtn") {
+        if (submenu[index].style.display === "none") {
             Array.from(rytArrowBtn).forEach((Element1) => {
                 Element1.className = "fa fa-angle-right rytArrowBtn";
             })
-            e.target.className = "fa fa-angle-down rytArrowBtn";
+            rytArrowBtn[index].className = "fa fa-angle-down rytArrowBtn";
             Array.from(submenu).forEach((Element) => {
                 Element.style.display = "none";
             })
             submenu[index].style.display = "block";
         }
-       else {
-          Array.from(rytArrowBtn).forEach((Element1) => {
-              Element1.className = "fa fa-angle-right rytArrowBtn";
-          })
-            e.target.className = "fa fa-angle-right rytArrowBtn";
-            Array.from(submenu).forEach((Element) => {
-                Element.style.display = "none";
-            })
+        else {
             submenu[index].style.display = "none";
+            rytArrowBtn[index].className = "fa fa-angle-right rytArrowBtn";
         }
     });
 });
-
-//let li_collapse = document.getElementsByClassName('li_collapse');
-//Array.from(li_collapse).forEach((Element, index) => {
-//    let lftArrowBtn = document.getElementsByClassName('lftArrowBtn');
-//    Element.addEventListener('click', () => {
-//        let submenu1 = document.getElementsByClassName("submenu1");
-//        if (submenu1[index].style.display == "none") {
-//            Array.from(lftArrowBtn).forEach((Element1) => {
-//                Element1.className = "fas fa-angle-right lftArrowBtn";
-//            })
-//            lftArrowBtn[index].className = "fas fa-angle-down lftArrowBtn";
-//            console.log(submenu1[index]);
-//            Array.from(submenu1).forEach((Element) => {
-//                Element.style.display = "none";
-//            })
-//            submenu1[index].style.display = "block";
-//        }
-//        else {
-//            Array.from(lftArrowBtn).forEach((Element1) => {
-//                Element1.className = "fas fa-angle-right lftArrowBtn";
-//            })
-
-//            Array.from(submenu1).forEach((Element) => {
-//                Element.style.display = "none";
-//            })
-//        }
-//    });
-//});

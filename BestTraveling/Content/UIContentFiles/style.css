@@ -10,7 +10,11 @@
 * {
     margin: 0;
     padding: 0;
+<<<<<<< .mine
     box-sizing:border-box;
+=======
+    box-sizing:initial;
+>>>>>>> .theirs
 }
 /* header styling... */
 header {
@@ -154,6 +158,19 @@ header {
     border-top:1px solid white;
 }
 
+<<<<<<< .mine
+
+
+
+
+
+=======
+.lftArrowBtn {
+    position: absolute;
+    right: 9px;
+    top: 25px;
+}
+>>>>>>> .theirs
 
 
 @media(max-width: 600px) {

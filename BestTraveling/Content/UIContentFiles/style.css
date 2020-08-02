@@ -10,7 +10,15 @@
 * {
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     box-sizing: border-box;
+=======
+<<<<<<< .mine
+    box-sizing:border-box;
+=======
+    box-sizing:initial;
+>>>>>>> .theirs
+>>>>>>> 6366dea5375cb3dd5dce53610bd5c41b8e71a368
 }
 /* header styling... */
 header {
@@ -70,7 +78,11 @@ header {
     justify-content: start;
 }
 
+<<<<<<< HEAD
     .sideBarDashboard .leftSideBar {
+=======
+    .sideBarDashboard .leftSideBar{
+>>>>>>> 6366dea5375cb3dd5dce53610bd5c41b8e71a368
         width: 300px;
         height: 92vh;
         background: #222d32;
@@ -107,7 +119,11 @@ header {
         .sideBarDashboard .leftSideBar .navBar {
             list-style: none;
             text-align: left;
+<<<<<<< HEAD
             width: auto;
+=======
+            width:auto;
+>>>>>>> 6366dea5375cb3dd5dce53610bd5c41b8e71a368
         }
 
             .sideBarDashboard .leftSideBar .navBar li {
@@ -121,12 +137,21 @@ header {
 
                 .sideBarDashboard .leftSideBar .navBar li:hover {
                     background-color: #4e5c69;
+<<<<<<< HEAD
                 }
 
                 .sideBarDashboard .leftSideBar .navBar li .icon {
                     padding: 0 8px;
                 }
 
+=======
+                }
+
+                .sideBarDashboard .leftSideBar .navBar li .icon {
+                   padding:0 8px;
+                }
+
+>>>>>>> 6366dea5375cb3dd5dce53610bd5c41b8e71a368
                 .sideBarDashboard .leftSideBar .navBar li a {
                     text-decoration: none;
                     color: #fff;
@@ -140,8 +165,13 @@ header {
                         transition: 0.8s;
                     }
 
+<<<<<<< HEAD
         .sideBarDashboard .leftSideBar .submenu {
             transition: all 1s linear;
+=======
+        .sideBarDashboard .leftSideBar .submenu{
+            transition:all 1s linear;
+>>>>>>> 6366dea5375cb3dd5dce53610bd5c41b8e71a368
         }
 
             .sideBarDashboard .leftSideBar .submenu li {
@@ -150,13 +180,36 @@ header {
                 transition: 0.8s;
                 background: #222d32;
             }
+<<<<<<< HEAD
 
 .borderTop {
     border-top: 1px solid white;
+=======
+.borderTop{
+    border-top:1px solid white;
 }
 
+<<<<<<< .mine
 
 
+
+
+
+=======
+.lftArrowBtn {
+    position: absolute;
+    right: 9px;
+    top: 25px;
+>>>>>>> 6366dea5375cb3dd5dce53610bd5c41b8e71a368
+}
+>>>>>>> .theirs
+
+
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 6366dea5375cb3dd5dce53610bd5c41b8e71a368
 @media(max-width: 600px) {
     header .toggle {
         top: 18px;
@@ -168,7 +221,11 @@ header {
     }
 }
 
+<<<<<<< HEAD
 @media(max-width:768px) {
+=======
+@media(max-width:700px) {
+>>>>>>> 6366dea5375cb3dd5dce53610bd5c41b8e71a368
     .sideBarDashboard .leftSideBar .navBar {
         display: none;
     }
@@ -179,6 +236,7 @@ header {
 
     .sideBarDashboard .leftSideBar {
         width: 85px;
+<<<<<<< HEAD
         height: auto;
     }
 }
@@ -186,5 +244,8 @@ header {
 @media(max-width:992px) {
     .sideBarDashboard .leftSideBar {
         height: auto;
+=======
+        height:100%;
+>>>>>>> 6366dea5375cb3dd5dce53610bd5c41b8e71a368
     }
 }

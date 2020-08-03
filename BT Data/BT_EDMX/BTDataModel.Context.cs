@@ -31,5 +31,8 @@ namespace BT_Data.BT_EDMX
         public virtual DbSet<bt_Roles> bt_Roles { get; set; }
         public virtual DbSet<bt_User> bt_User { get; set; }
         public virtual DbSet<bt_City> bt_City { get; set; }
+        public virtual DbSet<bt_CollegeDirector> bt_CollegeDirector { get; set; }
+        public virtual DbSet<bt_Gender> bt_Gender { get; set; }
+        public virtual DbSet<bt_State> bt_State { get; set; }
     }
 }

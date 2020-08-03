@@ -16,6 +16,14 @@
         <EntityTypeShape EntityType="BestTravelingModel.bt_City" Width="1.5" PointX="3" PointY="1.25" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_City_bt_District" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_College_bt_City" />
+        <EntityTypeShape EntityType="BestTravelingModel.bt_CollegeDirector" Width="1.5" PointX="10.5" PointY="0.75" />
+        <EntityTypeShape EntityType="BestTravelingModel.bt_Gender" Width="1.5" PointX="8.25" PointY="8.875" />
+        <EntityTypeShape EntityType="BestTravelingModel.bt_State" Width="1.5" PointX="8.25" PointY="6" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_City_CityId" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_College_CollegeId" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_District_DistrictId" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_Gender_GenderId" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_State_StateId" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

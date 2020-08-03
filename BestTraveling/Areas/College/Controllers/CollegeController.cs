@@ -18,6 +18,11 @@ namespace BestTraveling.Areas.College.Controllers
             this._collegeService = _collegeService;
         }
 
+        public ActionResult List()
+        {
+            return View();
+        }
+
         // GET: College/College
         public ActionResult Create()
         {

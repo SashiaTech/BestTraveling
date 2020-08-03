@@ -79,10 +79,19 @@
     <Compile Include="BT_EDMX\bt_CollegeBranches.cs">
       <DependentUpon>BTDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BT_EDMX\bt_CollegeDirector.cs">
+      <DependentUpon>BTDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="BT_EDMX\bt_District.cs">
       <DependentUpon>BTDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BT_EDMX\bt_Gender.cs">
+      <DependentUpon>BTDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="BT_EDMX\bt_Roles.cs">
+      <DependentUpon>BTDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BT_EDMX\bt_State.cs">
       <DependentUpon>BTDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="BT_EDMX\bt_User.cs">

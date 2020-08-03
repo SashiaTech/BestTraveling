@@ -18,6 +18,7 @@ namespace BT_Data.BT_EDMX
         public bt_City()
         {
             this.bt_College = new HashSet<bt_College>();
+            this.bt_CollegeDirector = new HashSet<bt_CollegeDirector>();
         }
     
         public System.Guid CityId { get; set; }
@@ -28,5 +29,7 @@ namespace BT_Data.BT_EDMX
         public virtual bt_District bt_District { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_College> bt_College { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<bt_CollegeDirector> bt_CollegeDirector { get; set; }
     }
 }

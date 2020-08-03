@@ -8,8 +8,8 @@
     <!-- required meta information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    
+
+
     <!-- add font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
@@ -18,12 +18,12 @@
 
     <!-- add bootstrap css -->
     <link href="~/Content/UIContentFiles/bootstrap.css" rel="stylesheet" />
-    
+
     <!-- add jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous"></script>
-     
+
     <link href="~/Content/Custom.css" rel="stylesheet" />
 
 
@@ -81,8 +81,19 @@
                     </li>
                     <li class="li_collapse">
                         <a href="#">
-                            <i class="fa fa-home icon"></i>Our Services
+                            <i class="fa fa-home icon"></i>College
+                            <i class="fa fa-angle-right rytArrowBtn"></i>
+                        </a>
+                        <ul class="submenu" style="display:none;">
+                            <li class="borderTop"><a href="@Url.Action("List","College",new { Area = "College"})"><i class="fa fa-address-book"></i><span class="p-3">College Pass</span></a></li>
+                            @*<li><a href="#">Contact121</a></li>
+                            <li style="border:none;"><a href="#">About us</a></li>*@
+                        </ul>
+                    </li>
 
+                    <li class="li_collapse">
+                        <a href="#">
+                            <i class="fa fa-american-sign-language-interpreting icon"></i>Our Missions
                             <i class="fa fa-angle-right rytArrowBtn"></i>
                         </a>
                         <ul class="submenu" style="display:none;">
@@ -94,23 +105,11 @@
 
                     <li class="li_collapse">
                         <a href="#">
-                            <i class="fa fa-american-sign-language-interpreting icon"></i>Our Missions
-                            <i class="fa fa-angle-right rytArrowBtn"></i>
-                        </a>
-                        <ul class="submenu" style="display:none;">
-                            <li  class="borderTop"><a href="#">Product</a></li>
-                            <li><a href="#">Contact121</a></li>
-                            <li style="border:none;"><a href="#">About us</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="li_collapse">
-                        <a href="#">
                             <i class="fa fa-american-sign-language-interpreting icon"></i>Our College
                             <i class="fa fa-angle-right rytArrowBtn"></i>
                         </a>
                         <ul class="submenu" style="display:none;">
-                            <li  class="borderTop"><a href="#">Product</a></li>
+                            <li class="borderTop"><a href="#">Product</a></li>
                             <li><a href="#">Contact121</a></li>
                             <li style="border:none;"><a href="#">About us</a></li>
                         </ul>
@@ -123,7 +122,7 @@
                             <i class="fa fa-angle-right rytArrowBtn"></i>
                         </a>
                         <ul class="submenu" style="display:none;">
-                            <li  class="borderTop"><a href="#">Product</a></li>
+                            <li class="borderTop"><a href="#">Product</a></li>
                             <li><a href="#">Contact121</a></li>
                             <li style="border:none;"><a href="#">About us</a></li>
                         </ul>
@@ -135,7 +134,7 @@
                             <i class="fa fa-angle-right rytArrowBtn"></i>
                         </a>
                         <ul class="submenu" style="display:none;">
-                            <li  class="borderTop"><a href="#">Product</a></li>
+                            <li class="borderTop"><a href="#">Product</a></li>
                             <li><a href="#">Contact121</a></li>
                             <li style="border:none;"><a href="#">About us</a></li>
                         </ul>
@@ -166,15 +165,14 @@
                     </nav>*@
 
                 <div class="card" style="background: #ecf0f5;">
-                   <div class="cardbody"> 
-                    @RenderBody()
-                      </div>
+                    <div class="cardbody">
+                        @RenderBody()
+                    </div>
                 </div>
             </div>
         </section>
     </header>
     <!-- header closing -->
-
     <!-- <script src="js/jquery.js"></script> -->
     @*<script src="js/index.js"></script>*@
 

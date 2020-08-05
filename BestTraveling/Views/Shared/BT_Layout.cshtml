@@ -1,182 +1,172 @@
 ﻿@{
-    Layout = null;
+	Layout = null;
 }
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
-    <!-- required meta information -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- required meta information -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-    <!-- add font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <link href="~/Content/UIContentFiles/style.css" rel="stylesheet" />
-    <link href="~/Content/Custom.css" rel="stylesheet" />
+	<!-- add font-awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+	<link href="~/Content/UIContentFiles/style.css" rel="stylesheet" />
+	<link href="~/Content/Custom.css" rel="stylesheet" />
 
-    <!-- add bootstrap css -->
-    <link href="~/Content/UIContentFiles/bootstrap.css" rel="stylesheet" />
+	<!-- add bootstrap css -->
+	<link href="~/Content/UIContentFiles/bootstrap.css" rel="stylesheet" />
 
-    <!-- add jquery cdn -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
+	<!-- add jquery cdn -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"></script>
 
-    <link href="~/Content/Custom.css" rel="stylesheet" />
+	<link href="~/Content/Custom.css" rel="stylesheet" />
 
 
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/jquery")
-    @Styles.Render("~/Content/toastr")
-    @Scripts.Render("~/bundles/toastr")
-    @Styles.Render("~/bundles/DataTableStyles")
-    @Scripts.Render("~/bundles/DataTableJs")
-    @Styles.Render("~/Content1/css")
-    <title>adminPanel</title>
+	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/jquery")
+	@Styles.Render("~/Content/toastr")
+	@Scripts.Render("~/bundles/toastr")
+	@Styles.Render("~/bundles/DataTableStyles")
+	@Scripts.Render("~/bundles/DataTableJs")
+	@Styles.Render("~/Content1/css")
+	<title>adminPanel</title>
 </head>
 
 <body>
-    <!-- header starting -->
-    <header>
-        <div class="toggle" id="toggle">
-            <i class="fa fa-bars fa-2x"></i>
-        </div>
-        <nav class="navBg">
-            <div class="navBar_logo">
-                <a href="#">
-                    @*<img src="images/avatar5.png" alt="Image not found">*@
-                    <img src="~/Content/images/best.png" />
-                </a>
-            </div>
-            <div class="someIcon">
-                <a href="#"><i class="fa fa-search"></i></a>
-                <a href="#"><i class="fa fa-bell"></i></a>
-                <a href="#"><i class="fa fa-power-off"></i></a>
-            </div>
-        </nav>
+	<!-- header starting -->
+	<header>
+		<div class="toggle" id="toggle">
+			<i class="fa fa-bars fa-2x"></i>
+		</div>
+		<nav class="navBg">
+			<div class="navBar_logo">
+				<a href="#">
+					@*<img src="images/avatar5.png" alt="Image not found">*@
+					<img src="~/Content/images/best.png" />
+				</a>
+			</div>
+			<div class="someIcon">
+				<a href="#"><i class="fa fa-search"></i></a>
+				<a href="#"><i class="fa fa-bell"></i></a>
+				<a href="#"><i class="fa fa-power-off"></i></a>
+			</div>
+		</nav>
 
-        <!-- LeftSideBarDashBoard Starting -->
-        <section class="sideBarDashboard">
-            <div class="leftSideBar" id="menuBar">
-                <div class="menuIcons">
-                    <div class="sideBarIcons">
-                        <a href="#"><i class="fa fa-home"></i></a>
-                        <a href="#"><i class="fa fa-home"></i></a>
-                        <a href="#"><i class="fa fa-american-sign-language-interpreting"></i></a>
-                        <a href="#"><i class="fa fa-home"></i></a>
-                        <a href="#"><i class="fa fa-home"></i></a>
-                        <a href="#"><i class="fa fa-bell-slash"></i></a>
-                        <a href="#"><i class="fa fa-bitcoin"></i></a>
-                    </div>
-                </div>
+		<!-- LeftSideBarDashBoard Starting -->
+		<section class="sideBarDashboard">
+			<div class="leftSideBar" id="menuBar">
+				<div class="menuIcons">
+					<div class="sideBarIcons">
+						<a href="#"><i class="fa fa-home"></i></a>
+						<a href="#"><i class="fa fa-home"></i></a>
+						<a href="#"><i class="fa fa-american-sign-language-interpreting"></i></a>
+						<a href="#"><i class="fa fa-home"></i></a>
+						<a href="#"><i class="fa fa-home"></i></a>
+						<a href="#"><i class="fa fa-bell-slash"></i></a>
+						<a href="#"><i class="fa fa-bitcoin"></i></a>
+					</div>
+				</div>
 
-                <ul id="ul" class="navBar">
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-home icon"></i>Dashboard
-                        </a>
-                    </li>
-                    <li class="li_collapse">
-                        <a href="#">
-                            <i class="fa fa-home icon"></i>College
-                            <i class="fa fa-angle-right rytArrowBtn"></i>
-                        </a>
-                        <ul class="submenu" style="display:none;">
-                            <li class="borderTop"><a href="@Url.Action("List","College",new { Area = "College"})"><i class="fa fa-address-book"></i><span class="p-3">College Pass</span></a></li>
-                            @*<li><a href="#">Contact121</a></li>
-                            <li style="border:none;"><a href="#">About us</a></li>*@
-                        </ul>
-                    </li>
+				<ul id="ul" class="navBar">
+					<li>
+						<a href="#">
+							<i class="fa fa-home icon"></i>Dashboard
+						</a>
+					</li>
+					<li class="li_collapse">
+						<a href="#">
+							<i class="fa fa-home icon"></i>Our Services
 
-                    <li class="li_collapse">
-                        <a href="#">
-                            <i class="fa fa-american-sign-language-interpreting icon"></i>Our Missions
-                            <i class="fa fa-angle-right rytArrowBtn"></i>
-                        </a>
-                        <ul class="submenu" style="display:none;">
-                            <li class="borderTop"><a href="#">Product</a></li>
-                            <li><a href="#">Contact121</a></li>
-                            <li style="border:none;"><a href="#">About us</a></li>
-                        </ul>
-                    </li>
+							<i class="fa fa-angle-right rytArrowBtn"></i>
+						</a>
+						<ul class="submenu" style="display:none;">
+							<li class="borderTop"><a href="#">Product</a></li>
+							<li><a href="#">Contact121</a></li>
+							<li style="border:none;"><a href="#">About us</a></li>
+						</ul>
+					</li>
 
-                    <li class="li_collapse">
-                        <a href="#">
-                            <i class="fa fa-american-sign-language-interpreting icon"></i>Our College
-                            <i class="fa fa-angle-right rytArrowBtn"></i>
-                        </a>
-                        <ul class="submenu" style="display:none;">
-                            <li class="borderTop"><a href="#">Product</a></li>
-                            <li><a href="#">Contact121</a></li>
-                            <li style="border:none;"><a href="#">About us</a></li>
-                        </ul>
-                    </li>
+					<li class="li_collapse">
+						<a href="#">
+							<i class="fa fa-american-sign-language-interpreting icon"></i>Our Missions
+							<i class="fa fa-angle-right rytArrowBtn"></i>
+						</a>
+						<ul class="submenu" style="display:none;">
+							<li class="borderTop"><a href="#">Product</a></li>
+							<li><a href="#">Contact121</a></li>
+							<li style="border:none;"><a href="#">About us</a></li>
+						</ul>
+					</li>
 
-
-                    <li class="li_collapse">
-                        <a href="#">
-                            <i class="fa fa-home icon"></i>Our Managment
-                            <i class="fa fa-angle-right rytArrowBtn"></i>
-                        </a>
-                        <ul class="submenu" style="display:none;">
-                            <li class="borderTop"><a href="#">Product</a></li>
-                            <li><a href="#">Contact121</a></li>
-                            <li style="border:none;"><a href="#">About us</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="li_collapse">
-                        <a href="#">
-                            <i class="fa fa-bitcoin icon"></i>Bitcoins Currecy
-                            <i class="fa fa-angle-right rytArrowBtn"></i>
-                        </a>
-                        <ul class="submenu" style="display:none;">
-                            <li class="borderTop"><a href="#">Product</a></li>
-                            <li><a href="#">Contact121</a></li>
-                            <li style="border:none;"><a href="#">About us</a></li>
-                        </ul>
-                    </li>
-                    <li class="li_collapse">
-                        <a href="#">
-                            <i class="fa fa-bitcoin icon"></i>Bitcoins
-                            <i class="fa fa-angle-right rytArrowBtn"></i>
-                        </a>
-                        <ul class="submenu" style="display:none;">
-                            <li class="borderTop"><a href="#">Product</a></li>
-                            <li><a href="#">Contact121</a></li>
-                            <li style="border:none;"><a href="#">About us</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- LeftSideBarDashBoard Closed -->
+					<li class="li_collapse">
+						<a href="#">
+							<i class="fa fa-american-sign-language-interpreting icon"></i>Our College
+							<i class="fa fa-angle-right rytArrowBtn"></i>
+						</a>
+						<ul class="submenu" style="display:none;">
+							<li class="borderTop"><a href="#">Product</a></li>
+							<li><a href="#">Contact121</a></li>
+							<li style="border:none;"><a href="#">About us</a></li>
+						</ul>
+					</li>
 
 
+					<li class="li_collapse">
+						<a href="#">
+							<i class="fa fa-home icon"></i>Our Managment
+							<i class="fa fa-angle-right rytArrowBtn"></i>
+						</a>
+						<ul class="submenu" style="display:none;">
+							<li class="borderTop"><a href="#">Product</a></li>
+							<li><a href="#">Contact121</a></li>
+							<li style="border:none;"><a href="#">About us</a></li>
+						</ul>
+					</li>
 
-            <div class="w-100 p-0">
-                @*<nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                        </ol>
-                    </nav>*@
+					<li class="li_collapse">
+						<a href="#">
+							<i class="fa fa-bitcoin icon"></i>Bitcoins Currecy
+							<i class="fa fa-angle-right rytArrowBtn"></i>
+						</a>
+						<ul class="submenu" style="display:none;">
+							<li class="borderTop"><a href="#">Product</a></li>
+							<li><a href="#">Contact121</a></li>
+							<li style="border:none;"><a href="#">About us</a></li>
+						</ul>
+					</li>
+					<li class="li_collapse">
+						<a href="#">
+							<i class="fa fa-bitcoin icon"></i>Bitcoins
+							<i class="fa fa-angle-right rytArrowBtn"></i>
+						</a>
+						<ul class="submenu" style="display:none;">
+							<li class="borderTop"><a href="#">Product</a></li>
+							<li><a href="#">Contact121</a></li>
+							<li style="border:none;"><a href="#">About us</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- LeftSideBarDashBoard Closed -->
 
-                <div class="card" style="background: #ecf0f5;">
-                    <div class="cardbody">
-                        @RenderBody()
-                    </div>
-                </div>
-            </div>
-        </section>
-    </header>
-    <!-- header closing -->
-    <!-- <script src="js/jquery.js"></script> -->
-    @*<script src="js/index.js"></script>*@
 
-    <script src="~/Content/UIContentFiles/js/index.js"></script>
+
+			<div class="container-fluid p-0" style="background:#00203f;">
+				@RenderBody()
+			</div>
+		</section>
+	</header>
+	<!-- header closing -->
+	<!-- <script src="js/jquery.js"></script> -->
+	@*<script src="js/index.js"></script>*@
+
+	<script src="~/Content/UIContentFiles/js/index.js"></script>
 </body>
 
 </html>

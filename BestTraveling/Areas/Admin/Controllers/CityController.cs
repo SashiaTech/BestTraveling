@@ -9,7 +9,7 @@ namespace BestTraveling.Areas.Admin
 {
     public class CityController : Controller
     {
-        // GET: Admin/City
+        // GET: Admin/City..........
         public ActionResult List()
         {
             return View();

@@ -175,10 +175,22 @@
     <Compile Include="Models\bt_CollegeBranches.cs">
       <DependentUpon>BestTraveling.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\bt_CollegeDirector.cs">
+      <DependentUpon>BestTraveling.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bt_Country.cs">
+      <DependentUpon>BestTraveling.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\bt_District.cs">
       <DependentUpon>BestTraveling.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\bt_Gender.cs">
+      <DependentUpon>BestTraveling.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\bt_Roles.cs">
+      <DependentUpon>BestTraveling.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bt_State.cs">
       <DependentUpon>BestTraveling.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bt_User.cs">

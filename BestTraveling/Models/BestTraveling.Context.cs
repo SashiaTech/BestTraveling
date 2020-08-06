@@ -31,5 +31,9 @@ namespace BestTraveling.Models
         public virtual DbSet<bt_User> bt_User { get; set; }
         public virtual DbSet<bt_CollegeBranches> bt_CollegeBranches { get; set; }
         public virtual DbSet<bt_College> bt_College { get; set; }
+        public virtual DbSet<bt_Country> bt_Country { get; set; }
+        public virtual DbSet<bt_State> bt_State { get; set; }
+        public virtual DbSet<bt_Gender> bt_Gender { get; set; }
+        public virtual DbSet<bt_CollegeDirector> bt_CollegeDirector { get; set; }
     }
 }

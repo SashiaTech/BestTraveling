@@ -18,14 +18,20 @@ namespace BestTraveling.Models
         public bt_City()
         {
             this.bt_College = new HashSet<bt_College>();
+            this.bt_CollegeDirector = new HashSet<bt_CollegeDirector>();
         }
     
         public System.Guid CityId { get; set; }
         public string Name { get; set; }
         public Nullable<System.Guid> DistrictId { get; set; }
+        public string Code { get; set; }
+        public Nullable<System.Guid> StateId { get; set; }
     
         public virtual bt_District bt_District { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_College> bt_College { get; set; }
+        public virtual bt_State bt_State { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<bt_CollegeDirector> bt_CollegeDirector { get; set; }
     }
 }

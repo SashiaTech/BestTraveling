@@ -1,0 +1,18 @@
+G:\BestTraveling\BestTraveling\bt_Services\bin\Debug\bt_Services.dll
+G:\BestTraveling\BestTraveling\bt_Services\bin\Debug\bt_Services.pdb
+G:\BestTraveling\BestTraveling\bt_Services\bin\Debug\BT College Repository.dll
+G:\BestTraveling\BestTraveling\bt_Services\bin\Debug\BT Model.dll
+G:\BestTraveling\BestTraveling\bt_Services\bin\Debug\BT.Repositories.dll
+G:\BestTraveling\BestTraveling\bt_Services\bin\Debug\BT Data.dll
+G:\BestTraveling\BestTraveling\bt_Services\bin\Debug\EntityFramework.dll
+G:\BestTraveling\BestTraveling\bt_Services\bin\Debug\BT College Repository.pdb
+G:\BestTraveling\BestTraveling\bt_Services\bin\Debug\BT Model.pdb
+G:\BestTraveling\BestTraveling\bt_Services\bin\Debug\BT.Repositories.pdb
+G:\BestTraveling\BestTraveling\bt_Services\bin\Debug\BT.Repositories.dll.config
+G:\BestTraveling\BestTraveling\bt_Services\bin\Debug\BT Data.pdb
+G:\BestTraveling\BestTraveling\bt_Services\bin\Debug\BT Data.dll.config
+G:\BestTraveling\BestTraveling\bt_Services\obj\Debug\BT College Service.csprojAssemblyReference.cache
+G:\BestTraveling\BestTraveling\bt_Services\obj\Debug\BT College Service.csproj.CoreCompileInputs.cache
+G:\BestTraveling\BestTraveling\bt_Services\obj\Debug\BT College Service.csproj.CopyComplete
+G:\BestTraveling\BestTraveling\bt_Services\obj\Debug\bt_Services.dll
+G:\BestTraveling\BestTraveling\bt_Services\obj\Debug\bt_Services.pdb

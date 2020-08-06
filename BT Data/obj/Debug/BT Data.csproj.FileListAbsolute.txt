@@ -1,0 +1,12 @@
+G:\BestTraveling\BestTraveling\BT Data\bin\Debug\BT Data.dll.config
+G:\BestTraveling\BestTraveling\BT Data\bin\Debug\BT Data.dll
+G:\BestTraveling\BestTraveling\BT Data\bin\Debug\BT Data.pdb
+G:\BestTraveling\BestTraveling\BT Data\bin\Debug\EntityFramework.dll
+G:\BestTraveling\BestTraveling\BT Data\bin\Debug\EntityFramework.SqlServer.dll
+G:\BestTraveling\BestTraveling\BT Data\bin\Debug\EntityFramework.xml
+G:\BestTraveling\BestTraveling\BT Data\bin\Debug\EntityFramework.SqlServer.xml
+G:\BestTraveling\BestTraveling\BT Data\obj\Debug\BT Data.csprojAssemblyReference.cache
+G:\BestTraveling\BestTraveling\BT Data\obj\Debug\BT Data.csproj.CoreCompileInputs.cache
+G:\BestTraveling\BestTraveling\BT Data\obj\Debug\BT Data.csproj.CopyComplete
+G:\BestTraveling\BestTraveling\BT Data\obj\Debug\BT Data.dll
+G:\BestTraveling\BestTraveling\BT Data\obj\Debug\BT Data.pdb

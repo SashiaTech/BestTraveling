@@ -1,0 +1,15 @@
+G:\BestTraveling\BestTraveling\BT College Repository\bin\Debug\BT College Repository.dll
+G:\BestTraveling\BestTraveling\BT College Repository\bin\Debug\BT College Repository.pdb
+G:\BestTraveling\BestTraveling\BT College Repository\bin\Debug\BT Data.dll
+G:\BestTraveling\BestTraveling\BT College Repository\bin\Debug\BT Model.dll
+G:\BestTraveling\BestTraveling\BT College Repository\bin\Debug\BT.Repositories.dll
+G:\BestTraveling\BestTraveling\BT College Repository\bin\Debug\BT Data.pdb
+G:\BestTraveling\BestTraveling\BT College Repository\bin\Debug\BT Data.dll.config
+G:\BestTraveling\BestTraveling\BT College Repository\bin\Debug\BT Model.pdb
+G:\BestTraveling\BestTraveling\BT College Repository\bin\Debug\BT.Repositories.pdb
+G:\BestTraveling\BestTraveling\BT College Repository\bin\Debug\BT.Repositories.dll.config
+G:\BestTraveling\BestTraveling\BT College Repository\obj\Debug\BT College Repository.csprojAssemblyReference.cache
+G:\BestTraveling\BestTraveling\BT College Repository\obj\Debug\BT College Repository.csproj.CoreCompileInputs.cache
+G:\BestTraveling\BestTraveling\BT College Repository\obj\Debug\BT College Repository.csproj.CopyComplete
+G:\BestTraveling\BestTraveling\BT College Repository\obj\Debug\BT College Repository.dll
+G:\BestTraveling\BestTraveling\BT College Repository\obj\Debug\BT College Repository.pdb

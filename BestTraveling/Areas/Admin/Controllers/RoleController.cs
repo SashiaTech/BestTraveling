@@ -11,6 +11,7 @@ namespace BestTraveling.Areas.Admin.Controllers
         // GET: Admin/Role
         public ActionResult List()
         {
+            //......
             return View();
         }
         public ActionResult Add()

@@ -10,3 +10,15 @@ G:\BestTraveling\BestTraveling\BT Data\obj\Debug\BT Data.csproj.CoreCompileInput
 G:\BestTraveling\BestTraveling\BT Data\obj\Debug\BT Data.csproj.CopyComplete
 G:\BestTraveling\BestTraveling\BT Data\obj\Debug\BT Data.dll
 G:\BestTraveling\BestTraveling\BT Data\obj\Debug\BT Data.pdb
+C:\Users\4NONYMOU5\source\repos\BestTraveling\BT Data\bin\Debug\BT Data.dll.config
+C:\Users\4NONYMOU5\source\repos\BestTraveling\BT Data\bin\Debug\BT Data.dll
+C:\Users\4NONYMOU5\source\repos\BestTraveling\BT Data\bin\Debug\BT Data.pdb
+C:\Users\4NONYMOU5\source\repos\BestTraveling\BT Data\bin\Debug\EntityFramework.dll
+C:\Users\4NONYMOU5\source\repos\BestTraveling\BT Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\4NONYMOU5\source\repos\BestTraveling\BT Data\bin\Debug\EntityFramework.xml
+C:\Users\4NONYMOU5\source\repos\BestTraveling\BT Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\4NONYMOU5\source\repos\BestTraveling\BT Data\obj\Debug\BT Data.csprojAssemblyReference.cache
+C:\Users\4NONYMOU5\source\repos\BestTraveling\BT Data\obj\Debug\BT Data.csproj.CoreCompileInputs.cache
+C:\Users\4NONYMOU5\source\repos\BestTraveling\BT Data\obj\Debug\BT Data.csproj.CopyComplete
+C:\Users\4NONYMOU5\source\repos\BestTraveling\BT Data\obj\Debug\BT Data.dll
+C:\Users\4NONYMOU5\source\repos\BestTraveling\BT Data\obj\Debug\BT Data.pdb

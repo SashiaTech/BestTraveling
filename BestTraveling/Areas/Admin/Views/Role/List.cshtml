@@ -1,8 +1,60 @@
 ﻿
 @{
-    ViewBag.Title = "List";
-    Layout = "~/Views/Shared/BT_Layout.cshtml";
+	ViewBag.Title = "List";
+	Layout = "~/Views/Shared/BT_Layout.cshtml";
 }
 
-<h2>List.........</h2>
+
+<link href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
+<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+@* bgDanger Header For City *@
+<div class="bg-danger">
+	<div class="row p-3 mr-0">
+		<div class="col-md-12">
+			<span class="text-white">Role</span>
+		</div>
+	</div>
+</div>
+
+<div class="AddBtn d-flex justify-content-end mr-5 my-4">
+	<button type="button" class="btn btn-primary px-5">Add</button>
+</div>
+
+<script>
+	$(document).ready(function () {
+		$('#example').DataTable({
+			'paging': false,
+			'scrollY': '250px',
+			'searching': false,
+			'autoWidth': true,
+			'scrollCollapse': true,
+			'footerCallback': false
+		});
+	});
+</script>
+
+<div class="container">
+	<table id="example" class="table" style="width:100%">
+		<thead class="bg-danger text-white">
+			<tr>
+				<th>Role</th>
+				<th>Name</th>
+				<th>Gender</th>
+				<th>Active</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>123</td>
+				<td>Manpreet</td>
+				<td>Male</td>
+				<td>Active</td>
+				<td>Action</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
 

@@ -16,3 +16,21 @@ G:\BestTraveling\BestTraveling\bt_Services\obj\Debug\BT College Service.csproj.C
 G:\BestTraveling\BestTraveling\bt_Services\obj\Debug\BT College Service.csproj.CopyComplete
 G:\BestTraveling\BestTraveling\bt_Services\obj\Debug\bt_Services.dll
 G:\BestTraveling\BestTraveling\bt_Services\obj\Debug\bt_Services.pdb
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\bin\Debug\bt_Services.dll
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\bin\Debug\bt_Services.pdb
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\bin\Debug\BT College Repository.dll
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\bin\Debug\BT Model.dll
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\bin\Debug\BT.Repositories.dll
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\bin\Debug\BT Data.dll
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\bin\Debug\EntityFramework.dll
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\bin\Debug\BT College Repository.pdb
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\bin\Debug\BT Model.pdb
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\bin\Debug\BT.Repositories.pdb
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\bin\Debug\BT.Repositories.dll.config
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\bin\Debug\BT Data.pdb
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\bin\Debug\BT Data.dll.config
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\obj\Debug\BT College Service.csprojAssemblyReference.cache
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\obj\Debug\BT College Service.csproj.CoreCompileInputs.cache
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\obj\Debug\BT College Service.csproj.CopyComplete
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\obj\Debug\bt_Services.dll
+C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\obj\Debug\bt_Services.pdb

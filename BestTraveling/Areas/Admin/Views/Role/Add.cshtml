@@ -1,8 +1,124 @@
 ﻿
 @{
-    ViewBag.Title = "Add";
-    Layout = "~/Views/Shared/BT_Layout.cshtml";
+	ViewBag.Title = "Add";
+	Layout = "~/Views/Shared/BT_Layout.cshtml";
 }
 
-<h2>Add...</h2>
+
+<style>
+
+	.btnDesign {
+		border: none;
+		outline: none;
+		color: #000;
+		padding: 8px;
+		width: 100%;
+		border-radius: 10px;
+		transition: all .5s ease-in;
+		/* margin-top:15px; */
+		margin-left: 5px;
+		/* margin-bottom:33.50px; */
+	}
+
+		.btnDesign:hover {
+			background: rgba(60,141,188,.8);
+		}
+
+	.form-control {
+		height: 25px !important;
+		padding: 3px 12px !important;
+		font-size: 11px !important;
+		margin-top: 8px;
+	}
+
+	.mainRow {
+		height: auto;
+		padding: 30px 15px;
+		padding-bottom: 84px;
+		background: #00203f;
+		color: white;
+	}
+
+	#txtarea {
+		width: 100%;
+		height: 60px;
+		overflow: hidden;
+	}
+</style>
+@* bgDanger Header For AddFairView *@
+<div class="bg-danger">
+	<div class="row p-3 mr-0">
+		<div class="col-md-6 col-6">
+			<span class="text-white">Add Fairs</span>
+		</div>
+		<div class="col-md-6 col-6 text-right pr-5">
+			<a href="#"><i class="fa fa-arrow-left text-white"></i></a>
+		</div>
+	</div>
+</div>
+
+<!-- @* horiZental Form layout Starting One row with two column merge.... *@ -->
+<form method="get">
+	<div class="row mainRow m-0">
+		<!-- @* First Column Starts *@ -->
+		<div class="col-lg-4 col-md-12">
+
+			<div class="form-group row">
+				<label for="role" class="col-sm-5 col-form-label">
+					Role
+				</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" id="role" name="code">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="code" class="col-sm-5 col-form-label">
+					Code
+				</label>
+				<div class="col-sm-7">
+					<input type="number" class="form-control" id="code" name="code">
+				</div>
+			</div>
+		</div>
+
+		<!-- Second Column -->
+		<div class="col-lg-4">
+			<div class="form-group row">
+				<label for="desp" class="col-sm-5 col-form-label">
+					Description
+				</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" id="desp" name="desp">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="date" class="col-sm-5 col-form-label">
+					Date
+				</label>
+				<div class="col-sm-7">
+					<input type="date" class="form-control" id="date" name="date">
+				</div>
+			</div>
+
+			@*<h4><strong>Qualifications</strong></h4>*@
+			<div class="form-group row ">
+				<label for="Active" class="col-sm-5 col-form-label">Active</label>
+				<div class="col-sm-7 mt-2">
+					<input type="checkbox" value="" id="Active" checked><span></span>
+				</div>
+			</div>
+
+
+
+			<div class="col-sm-12 text-right my-5 ml-4">
+				<button class="btn btn-danger">save</button>
+				<button class="btn btn-danger">clear</button>
+			</div>
+
+		</div>
+
+	</div>
+</form>
+
+
 

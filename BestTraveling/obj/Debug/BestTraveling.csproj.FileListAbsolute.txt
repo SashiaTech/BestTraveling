@@ -47,31 +47,11 @@ G:\BestTraveling\BestTraveling\BestTraveling\bin\roslyn\vbc.exe.config
 G:\BestTraveling\BestTraveling\BestTraveling\bin\roslyn\vbc.rsp
 G:\BestTraveling\BestTraveling\BestTraveling\bin\roslyn\VBCSCompiler.exe
 G:\BestTraveling\BestTraveling\BestTraveling\bin\roslyn\VBCSCompiler.exe.config
-G:\BestTraveling\BestTraveling\BestTraveling\bin\Antlr3.Runtime.dll
 G:\BestTraveling\BestTraveling\BestTraveling\bin\BT College Repository.dll
 G:\BestTraveling\BestTraveling\BestTraveling\bin\BT Data.dll
 G:\BestTraveling\BestTraveling\BestTraveling\bin\BT Model.dll
 G:\BestTraveling\BestTraveling\BestTraveling\bin\BT.Repositories.dll
 G:\BestTraveling\BestTraveling\BestTraveling\bin\bt_Services.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\EntityFramework.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\EntityFramework.SqlServer.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\EntityFrameworkExtension.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\Microsoft.Web.Infrastructure.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\Newtonsoft.Json.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\System.Data.Entity.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\System.Runtime.CompilerServices.Unsafe.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\System.Web.Helpers.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\System.Web.Mvc.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\System.Web.Optimization.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\System.Web.Razor.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\System.Web.WebPages.Deployment.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\System.Web.WebPages.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\System.Web.WebPages.Razor.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\Unity.Abstractions.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\Unity.Container.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\Unity.Mvc5.dll
-G:\BestTraveling\BestTraveling\BestTraveling\bin\WebGrease.dll
 G:\BestTraveling\BestTraveling\BestTraveling\bin\BT College Repository.pdb
 G:\BestTraveling\BestTraveling\BestTraveling\bin\BT Data.pdb
 G:\BestTraveling\BestTraveling\BestTraveling\bin\BT Data.dll.config

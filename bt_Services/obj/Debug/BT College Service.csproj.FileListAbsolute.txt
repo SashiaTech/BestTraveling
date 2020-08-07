@@ -34,3 +34,21 @@ C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\obj\Debug\BT College S
 C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\obj\Debug\BT College Service.csproj.CopyComplete
 C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\obj\Debug\bt_Services.dll
 C:\Users\4NONYMOU5\source\repos\BestTraveling\bt_Services\obj\Debug\bt_Services.pdb
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\bin\Debug\bt_Services.dll
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\bin\Debug\bt_Services.pdb
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\bin\Debug\BT College Repository.dll
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\bin\Debug\BT Model.dll
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\bin\Debug\BT.Repositories.dll
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\bin\Debug\BT Data.dll
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\bin\Debug\EntityFramework.dll
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\bin\Debug\BT College Repository.pdb
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\bin\Debug\BT Model.pdb
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\bin\Debug\BT.Repositories.pdb
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\bin\Debug\BT.Repositories.dll.config
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\bin\Debug\BT Data.pdb
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\bin\Debug\BT Data.dll.config
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\bin\Debug\EntityFramework.xml
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\obj\Debug\BT College Service.csprojAssemblyReference.cache
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\obj\Debug\BT College Service.csproj.CopyComplete
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\obj\Debug\bt_Services.dll
+C:\Users\rammoudgill\Desktop\BestTraveling\bt_Services\obj\Debug\bt_Services.pdb

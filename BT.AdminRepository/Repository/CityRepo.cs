@@ -49,6 +49,7 @@ namespace BT.AdminRepository
                               Name = x.Name,
                               Code = x.Code,
                               DistrictId = x.DistrictId,
+
                           }).FirstOrDefault(x => x.CityId == CityId);
             return cities;
         }

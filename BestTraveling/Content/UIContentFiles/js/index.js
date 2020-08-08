@@ -5,14 +5,14 @@ toggle.addEventListener('click', () => {
     const menuBar = document.querySelector('#menuBar');
     if (menuBar.style.left === "-1px") {
         menuBar.style.left = "0";
-        toggle.style.left = "250px";
+        //toggle.style.left = "250px";
         ul.style.display = "block";
         sideBarIcons.style.display = "none";
         menuBar.style.width = "300px";
     }
     else {
         menuBar.style.left = "-1px";
-        toggle.style.left = "150px";
+        //toggle.style.left = "150px";
         ul.style.display = "none";
         sideBarIcons.style.display = "block";
         menuBar.style.width = "70px";

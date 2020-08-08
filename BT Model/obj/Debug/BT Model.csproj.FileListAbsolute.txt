@@ -1,6 +1,0 @@
-G:\BestTraveling\BestTraveling\BT Model\bin\Debug\BT Model.dll
-G:\BestTraveling\BestTraveling\BT Model\bin\Debug\BT Model.pdb
-G:\BestTraveling\BestTraveling\BT Model\obj\Debug\BT Model.csprojAssemblyReference.cache
-G:\BestTraveling\BestTraveling\BT Model\obj\Debug\BT Model.csproj.CoreCompileInputs.cache
-G:\BestTraveling\BestTraveling\BT Model\obj\Debug\BT Model.dll
-G:\BestTraveling\BestTraveling\BT Model\obj\Debug\BT Model.pdb

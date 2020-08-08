@@ -1,5 +1,11 @@
-﻿h2{
-     color:white;
+﻿@media(max-width:768px) {
+    .cardBody {
+        padding: 35px 0;
+    }}
+
+
+    /*h2{
+     color:Red;
      font-weight:900;
 }
 
@@ -19,7 +25,7 @@ body {
 
 .panel-blue {
     background-color: #00203FFF;
-/*    color: #fcfdff;*/
+    color: #fcfdff;
     border: none;
     padding: 0px;
     height:100vh;
@@ -31,22 +37,22 @@ body {
 
     .panel-blue  .panel-body {
         background-color: #337ab7;
-       /* color: #fcfdff;*/
+        color: #fcfdff;
         margin: 0;
     }
 
 
 .panel-blue  .panel-heading {
     background-color: #00203FFF;
-    /*color: #fcfdff;*/
-    /*border-bottom: solid #FFFFFF 2px;*/
+    color: #fcfdff;
+    border-bottom: solid #FFFFFF 2px;
     font-size: 20px;
     padding-bottom: 8px;
     padding-top: 8px;
-    /* margin: 0;*/
+     margin: 0;
     padding-left: 30px;
     border-bottom: solid #fff 2px;
-    /*padding-right: 30px;*/
+    padding-right: 30px;
     width: 100%;
 }
 
@@ -54,7 +60,7 @@ body {
 
 .panel-blue > .panel.panel-body {
     background-color: #00203FFF;
-   /* color: #fcfdff;*/
+    color: #fcfdff;
     height:100%;
     margin:0px;
 }
@@ -67,21 +73,21 @@ body {
 }
 .panel-red {
     background-color: #d90404;
-   /* color: #fcfdff;*/
+    color: #fcfdff;
     padding-top: 0;
     padding-bottom: 0;
     margin-bottom:0;
     border-bottom: solid white 2px;
-    /*border: solid #fcfdff 2px;*/
+    border: solid #fcfdff 2px;
 }
 
 .panel-option {
     background-color: #00203FFF;
     padding-left: 10px;
     margin: 0;
-   /* color: white;*/
+    color: white;
     font-size: 20px;
-   /* color: #FFFFFF;*/
+    color: #FFFFFF;
 }
 
 .rounded-image {
@@ -123,18 +129,18 @@ a.white-link {
     a.white-link:visited {
         color: #fcfdff
     }
-/*table thead tr th {
+table thead tr th {
     background-color: #3d4752;
-   /* color: #fff;
+    color: #fff;
 }
 
 table {
     padding: 0;
     margin: 0;
     background-color: red;
-}*/
+}
 
 .listGrid {
     height: 50vh;
-}
+}*/
 

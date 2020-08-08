@@ -261,3 +261,13 @@ __pycache__/
 *.pyc
 /BestTraveling/obj
 /BestTraveling/bin
+/BT College Repository/obj
+/BT College Repository/bin
+/BT Data/obj
+/BT Data/bin
+/BT Model/obj
+/BT Model/bin
+/BT.Repositories/obj
+/BT.Repositories/bin
+/bt_Services/obj
+/bt_Services/bin

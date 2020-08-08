@@ -82,6 +82,9 @@
     <Compile Include="BT_EDMX\bt_CollegeDirector.cs">
       <DependentUpon>BTDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BT_EDMX\bt_Country.cs">
+      <DependentUpon>BTDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="BT_EDMX\bt_District.cs">
       <DependentUpon>BTDataModel.tt</DependentUpon>
     </Compile>

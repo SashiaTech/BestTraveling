@@ -11,21 +11,24 @@
         <EntityTypeShape EntityType="BestTravelingModel.bt_User" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <AssociationConnector Association="BestTravelingModel.FK__bt_Colleg__Colle__1DE57479" ManuallyRouted="false" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_User_bt_User" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="BestTravelingModel.bt_City" Width="1.5" PointX="5" PointY="2.25" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_CollegeDirector" Width="1.5" PointX="12.5" PointY="1.25" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_Country" Width="1.5" PointX="1.25" PointY="9.75" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_District" Width="1.5" PointX="2.75" PointY="2.25" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_Gender" Width="1.5" PointX="10.25" PointY="6.75" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_State" Width="1.5" PointX="0.5" PointY="2.125" />
-        <AssociationConnector Association="BestTravelingModel.FK_bt_City_bt_District" />
         <AssociationConnector Association="BestTravelingModel.fk_bt_City_bt_State_StateId" />
-        <AssociationConnector Association="BestTravelingModel.FK_bt_College_bt_City" />
-        <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_City_CityId" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_College_bt_District" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_College_CollegeId" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_District_DistrictId" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_Gender_GenderId" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_State_StateId" />
+        <AssociationConnector Association="BestTravelingModel.fk_bt_State_bt_Country_CountryId" />
+        <AssociationConnector Association="BestTravelingModel.fk_bt_District_bt_State_StateId" />
+        <EntityTypeShape EntityType="BestTravelingModel.bt_City" Width="1.5" PointX="6" PointY="5.125" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_City_bt_District" />
+        <AssociationConnector Association="BestTravelingModel.fk_bt_City_bt_State_StateId" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_College_bt_City" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_City_CityId" />
         <AssociationConnector Association="BestTravelingModel.fk_bt_State_bt_Country_CountryId" />
         <AssociationConnector Association="BestTravelingModel.fk_bt_District_bt_State_StateId" />
         </Diagram>

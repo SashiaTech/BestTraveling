@@ -12,6 +12,8 @@ namespace BT_Model
         public string Name { get; set; }
         public string Code { get; set; }
         public Guid? DistrictId{ get; set; }
-        
+        public string DistrictName { get; set; }
+        public bool IsDeleted { get; set; }
+
     }
 }

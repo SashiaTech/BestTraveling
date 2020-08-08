@@ -32,8 +32,8 @@ namespace BT_Data.BT_EDMX
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_CollegeBranches> bt_CollegeBranches { get; set; }
         public virtual bt_District bt_District { get; set; }
-        public virtual bt_City bt_City { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_CollegeDirector> bt_CollegeDirector { get; set; }
+        public virtual bt_City bt_City { get; set; }
     }
 }

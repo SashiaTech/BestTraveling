@@ -25,8 +25,11 @@ namespace BT_Data.BT_EDMX
         public string Name { get; set; }
         public Nullable<System.Guid> DistrictId { get; set; }
         public string Code { get; set; }
+        public Nullable<System.Guid> StateId { get; set; }
+        public bool IsDeleted { get; set; }
     
         public virtual bt_District bt_District { get; set; }
+        public virtual bt_State bt_State { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_College> bt_College { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

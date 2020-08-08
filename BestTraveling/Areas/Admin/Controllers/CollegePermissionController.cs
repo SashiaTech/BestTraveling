@@ -16,7 +16,7 @@ namespace BestTraveling.Areas.Admin.Controllers
 
         public ActionResult AddPermission()
         {
-            View();
+           return View();
         }
 
     }

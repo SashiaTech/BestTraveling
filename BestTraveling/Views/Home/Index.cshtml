@@ -9,68 +9,79 @@
     }
 
     .cardBody {
-        padding: 65px 0px;
+        padding: 50px 0px;
         font-weight: 600;
-  
     }
 
     .card-design {
         border: none;
         background: #00c0ef;
         border-radius: 13px;
-        color:#ffff;
+        color: #ffff;
     }
 
-    .dash-color {
-        background: white;
-        color: gray;
-        font-size: 2rem;
-        font-weight: 700;
+    .icon-design {
+        font-size: 6rem;
+        opacity: 0.5;
     }
 </style>
 @*<a href="~/Views/Home/Index.cshtml">~/Views/Home/Index.cshtml</a>*@
 @*--------*@
-<div class="dash-color">
+<header>
     <div class="row p-3 mr-0">
         <div class="col-12 text-center">
             <span><b>DASHBOARD</b></span>
         </div>
     </div>
-</div>
+</header>
 <div class="row m-0 mt-5">
     <div class="col-lg-3 col-md-6  mb-4 mb-lg-0">
-        <a href="#">
-            <div class="card card-design">
+        <a href="#" class="text-decoration-none">
+            <div class="card card-design" style="background: #dd4b39; box-shadow: 0px 0px 5px #dd4b39 ">
                 <div class="card-body cardBody ">
-                    <p class="card-text text-center">permission</p>
+                    <div class="d-flex align-items-center justify-content-around">
+                        <p class="card-text" style="opacity:0.7;">New Pass</p>
+                        <i class="fa fa-address-book icon-design"></i>
+                    </div>
+                </div>
+            </div>
+
+        </a>
+    </div>
+    <div class="col-lg-3 col-md-6  mb-4 mb-lg-0">
+        <a href="#" class="text-decoration-none">
+            <div class="card card-design" style="background:#00a65a;box-shadow:0px 0px 5px #00a65a ;">
+                <div class="card-body cardBody ">
+                    <div class="d-flex align-items-center justify-content-around">
+                        <p class="card-text" style="opacity:0.7;">Renew Pass</p>
+                        <i class="fa fa-edit  icon-design"></i>
+                    </div>
                 </div>
             </div>
         </a>
     </div>
     <div class="col-lg-3 col-md-6  mb-4 mb-lg-0">
-        <a href="#">
-            <div class="card card-design">
+        <a href="#" class="text-decoration-none">
+            <div class="card card-design " style="box-shadow:0px 0px 5px #00c0ef ">
                 <div class="card-body cardBody ">
-                    <p class="card-text text-center">permission</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-lg-3 col-md-6  mb-4 mb-lg-0">
-        <a href="#">
-            <div class="card card-design">
-                <div class="card-body cardBody ">
-                    <p class="card-text text-center">permission</p>
+                    <div class="d-flex align-items-center justify-content-around">
+                        <p class="card-text text-center" style="opacity:0.7;">View Permission</p>
+                        <i class="fa fa-bell-slash icon-design"></i>
+                    </div>
+
                 </div>
             </div>
         </a>
     </div>
 
     <div class="col-lg-3 col-md-6  mb-4 mb-lg-0">
-        <a  href="#" class="deco">
-            <div class="card card-design">
+        <a href="#" class="text-decoration-none">
+            <div class="card card-design" style="background:#f39c12;  box-shadow:0px 0px 5px #f39c12;">
                 <div class="card-body cardBody ">
-                    <p class="card-text text-center">permission</p>
+                    <div class="d-flex align-items-center justify-content-around">
+                        <p class="card-text " style="opacity:0.7;">View Charges</p>
+                        <i class="fa fa-home  icon-design"></i>
+                    </div>
                 </div>
             </div>
         </a>

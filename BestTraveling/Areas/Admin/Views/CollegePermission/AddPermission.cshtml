@@ -3,6 +3,200 @@
     ViewBag.Title = "AddPermission";
     Layout = "~/Views/Shared/BT_Layout.cshtml";
 }
+<style>
 
-<h2>AddPermission</h2>
+    .btnDesign {
+        border: none;
+        outline: none;
+        color: #000;
+        padding: 8px;
+        width: 100%;
+        border-radius: 10px;
+        transition: all .5s ease-in;
+        /* margin-top:15px; */
+        margin-left: 5px;
 
+        /* margin-bottom:33.50px; */
+    }
+
+        .btnDesign:hover {
+            background: rgba(60,141,188,.8);
+        }
+
+    .form-control {
+        height: 25px !important;
+        padding: 3px 12px !important;
+        font-size: 11px !important;
+        margin-top: 8px;
+        border: 0;
+    }
+
+    .mainRow {
+        height: auto;
+        padding: 30px 15px;
+        padding-bottom: 84px;
+    }
+
+    #txtarea {
+        width: 100%;
+        height: 60px;
+        overflow: hidden;
+    }
+    .btn2 {
+        background: #3c8dbc;
+        /*text-shadow: -50px 0px 10px white,-50px 0px 10px white;*/
+        outline: none;
+        border: none;
+        padding: 8px 25px;
+        margin: 0 5px;
+        border-radius: 8px;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+    }
+</style>
+@* bgDanger Header For AddFairView *@
+<header>
+    <div class="row p-3 mr-0">
+        <div class="col-md-6 col-6">
+            <span>College Permission</span>
+        </div>
+        <div class="col-md-6 col-6 text-right pr-5">
+            <a href="#"><i class="fa fa-arrow-left"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- @* horiZental Form layout Starting One row with two column merge.... *@ -->
+<form method="get">
+    <div class="row mainRow m-0">
+        <!-- @* First Column Starts *@ -->
+        <div class="col-lg-6 col-md-12">
+            <div class="form-group row">
+                <label for="code"
+                       class="col-sm-6 col-form-label">College</label>
+                <label for="code"
+                       class="col-sm-6 col-form-label">College</label>
+            </div>
+            <div class="form-group row">
+                <label for="code" class="col-sm-6 col-form-label">
+                    Code
+                </label>
+                <label for="code" class="col-sm-6 col-form-label">
+                    Code
+                </label>
+            </div>
+
+            <div class="form-group row">
+                <label for="code" class="col-sm-6 col-form-label">
+                    Address
+                </label>
+                <label for="code" class="col-sm-6 col-form-label">
+                    Address
+                </label>
+            </div>
+
+
+            <!-- <div class="col-sm-12 d-flex justify-content-center align-items-end" style="margin-top:110px;">
+            <img src="../images/1.jpg" alt="..." class="img-thumbnail">
+        </div> -->
+        </div>
+
+        <!-- Second Column -->
+        <div class="col-lg-6">
+            <div class="form-group row">
+                <label for="code" class="col-sm-6 col-form-label">Number of Students</label>
+                <label for="code" class="col-sm-6 col-form-label">Number of Students</label>
+            </div>
+            <div class="form-group row">
+                <label for="code" class="col-sm-6 col-form-label">
+                    Branches
+                </label>
+                <label for="code" class="col-sm-6 col-form-label">
+                    Branches
+                </label>
+            </div>
+            <div class="form-group row">
+                <label for="code" class="col-sm-6 col-form-label">
+                    Phone
+                </label>
+                <label for="code" class="col-sm-6 col-form-label">
+                    Phone
+                </label>
+            </div>
+            <div class="form-group row">
+                <label for="code" class="col-sm-6 col-form-label">
+                    Branches
+                </label>
+                <label for="code" class="col-sm-6 col-form-label">
+                    Branches
+                </label>
+            </div>
+
+
+
+        </div>
+        <!-- @* Third Column Starts *@ -->
+        @*<div class="col-lg-3  px-0 pb-5 ml-lg-5" style="border: 1px solid black; border-radius: 10px">
+            <h5 class="pt-3 text-center">Director Patel</h5>
+            <hr style="background:black;">
+            <div class="form-group">
+                <label for="fName" class="col-sm-12 col-form-label my-0">
+                    Director
+                </label>
+                   <label for="fName" class="col-sm-12 col-form-label my-2">
+                    Director Name
+                </label>
+
+            </div>
+            <div class="form-group">
+                <label for="fName" class="col-sm-12 col-form-label  my-2">
+                    Address
+                </label>
+                <label for="fName" class="col-sm-12 col-form-label  my-2">
+                    Address
+                </label>
+
+            </div>
+            <div class="form-group">
+                <label for="fName" class="col-sm-12 col-form-label  my-2">
+                    City
+                </label>
+                <label for="fName" class="col-sm-12 col-form-label  my-2">
+                    City
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="fName" class="col-sm-12 col-form-label  my-2">
+                    Gender
+                </label>
+                <label for="fName" class="col-sm-12 col-form-label  my-2">
+                    Gender
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="fName" class="col-sm-12 col-form-label  my-2">
+                    Contact Number
+                </label>
+                <label for="fName" class="col-sm-12 col-form-label  my-2">
+                    Contact Number
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="fName" class="col-sm-12 col-form-label  my-2">Email
+                </label>
+                <label for="fName" class="col-sm-12 col-form-label  my-2">Email
+                    </label>
+            </div>
+        </div>
+       
+            <div class="col-md-12 text-right mt-4">
+                <button class="btn  btn2 my-2">Save</button>
+                <button class="btn btn2 my-2">Reject</button>
+                <button class="btn btn2 my-2">Cancel</button>
+            </div>
+       *@
+
+    </div>
+</form>           

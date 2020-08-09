@@ -1,7 +1,33 @@
-﻿@media(max-width:768px) {
-    .cardBody {
+﻿.container-theme{
+    background:#fff;
+}
+.container-theme header{
+        box-shadow: 0 1px 8px grey;
+        background: white;
+        color: gray;
+        font-size: 2rem;
+        font-weight: 700;
+   }
+
+
+
+
+
+
+    @media(max-width:768px) {
+        .cardBody {
         padding: 35px 0;
     }}
+
+@media(max-width:768px) {
+    .btn2 {
+        display: block;
+        width: 100%;
+        margin: 25px 0;
+    }
+}
+	
+
 
 
     /*h2{

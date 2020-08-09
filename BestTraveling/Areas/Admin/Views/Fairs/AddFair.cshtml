@@ -41,6 +41,17 @@
 		overflow: hidden;
 	}
 </style>
+
+<script>
+    $(document).ready(function () {
+        $('#btn').click(function () {
+            //alert();
+            swal('hello');
+            //toastr('data inserted successfully');
+        });
+    });
+    
+</script>
 @* bgDanger Header For AddFairView *@
 <header>
 	<div class="row p-3 mr-0">
@@ -178,6 +189,7 @@
 				<button type="submit" style="width:100%;" class="btnDesign">Save</button>
 				<br /> <br />
 				<button type="submit" style="width:100%;" class="btnDesign">Clear</button>
+               <input type="button" id="btn" class="btn btn-primary" value="test"/>
 			</div>
 
 			<!-- @* CUSTOM BUTTON DESIGN *@ -->

@@ -26,11 +26,8 @@
         <AssociationConnector Association="BestTravelingModel.fk_bt_District_bt_State_StateId" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_City" Width="1.5" PointX="6" PointY="5.125" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_City_bt_District" />
-        <AssociationConnector Association="BestTravelingModel.fk_bt_City_bt_State_StateId" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_College_bt_City" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_City_CityId" />
-        <AssociationConnector Association="BestTravelingModel.fk_bt_State_bt_Country_CountryId" />
-        <AssociationConnector Association="BestTravelingModel.fk_bt_District_bt_State_StateId" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

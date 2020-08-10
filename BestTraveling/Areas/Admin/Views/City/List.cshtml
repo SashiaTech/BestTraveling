@@ -26,8 +26,7 @@
 <script>
 	$(document).ready(function () {
 		$('#example').DataTable({
-			'paging': false,
-			'scrollY': '250px',
+			'paging': true,
 			'searching': false,
 			'autoWidth': true,
 			'scrollCollapse': true,
@@ -36,8 +35,8 @@
 	});
 </script>
 <div class="container">
-	<table id="example" class="table table-bordered" style="width:100%">
-		<thead>
+	<table id="example" class="table table-bordered table-striped" style="width:100%">
+		<thead class="table-style">
 			<tr>
 				<th>Name</th>
 				<th>Position</th>

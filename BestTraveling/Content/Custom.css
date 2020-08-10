@@ -1,4 +1,5 @@
-﻿.container-theme{
+﻿/*This is common container theme applied on shared bt_layout*/
+.container-theme{
     background:#fff;
 }
 .container-theme header{
@@ -7,28 +8,33 @@
         color: gray;
         font-size: 2rem;
         font-weight: 700;
-   }
-
-
-
-
-
-
-    @media(max-width:768px) {
-        .cardBody {
+}
+/*****Close******/
+/*This is for box-shadow class*/
+.div-shadow{
+    box-shadow: 0 1px 8px grey;
+    border-radius:10px;
+}
+/*Table Style for Table Header*/
+.table-style {
+    background: #3c8dbc;
+    color: white;
+}
+/*Media query for index page cards*/
+@media(max-width:768px) {
+    .cardBody {
         padding: 35px 0;
     }}
 
+/*media query for block size button*/ 
 @media(max-width:768px) {
     .btn2 {
         display: block;
-        width: 100%;
+        width: 100% !important;
         margin: 25px 0;
     }
 }
 	
-
-
 
     /*h2{
      color:Red;

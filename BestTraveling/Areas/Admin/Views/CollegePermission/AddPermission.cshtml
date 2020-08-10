@@ -15,7 +15,6 @@
         transition: all .5s ease-in;
         /* margin-top:15px; */
         margin-left: 5px;
-
         /* margin-bottom:33.50px; */
     }
 
@@ -42,16 +41,17 @@
         height: 60px;
         overflow: hidden;
     }
+
     .btn2 {
         background: #3c8dbc;
         /*text-shadow: -50px 0px 10px white,-50px 0px 10px white;*/
         outline: none;
         border: none;
-        padding: 8px 25px;
+        width:100px;
         margin: 0 5px;
         border-radius: 8px;
         font-family: sans-serif;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
         color: #fff;
     }
@@ -74,129 +74,111 @@
         <!-- @* First Column Starts *@ -->
         <div class="col-lg-6 col-md-12">
             <div class="form-group row">
-                <label for="code"
-                       class="col-sm-6 col-form-label">College</label>
-                <label for="code"
-                       class="col-sm-6 col-form-label">College</label>
-            </div>
-            <div class="form-group row">
-                <label for="code" class="col-sm-6 col-form-label">
-                    Code
-                </label>
-                <label for="code" class="col-sm-6 col-form-label">
-                    Code
-                </label>
+                <label for="College" class="col-sm-4 col-form-label p-0 p-sm-3">College</label>
+                <input type="text" class="col-sm-5 offset-sm-2 col-form-label form-control" id="College" readonly disabled />
             </div>
 
             <div class="form-group row">
-                <label for="code" class="col-sm-6 col-form-label">
-                    Address
+                <label for="code" class="col-sm-4 col-form-labe  p-0 p-sm-3">
+                    Code
                 </label>
-                <label for="code" class="col-sm-6 col-form-label">
-                    Address
-                </label>
+                <input type="text" class="col-sm-5 offset-sm-2 col-form-label form-control" id="Code" readonly disabled />
             </div>
 
+            <div class="form-group row">
+                <label for="Address" class="col-sm-4 col-form-label  p-0 p-sm-3">
+                    Address
+                </label>
+                <input type="text" class="col-sm-5 offset-sm-2 col-form-label form-control" id="Address" readonly disabled />
+            </div>
 
-            <!-- <div class="col-sm-12 d-flex justify-content-center align-items-end" style="margin-top:110px;">
-            <img src="../images/1.jpg" alt="..." class="img-thumbnail">
-        </div> -->
+            <div class="form-group row">
+                <label for="city" class="col-sm-4 col-form-label  p-0 p-sm-3">
+                    City
+                </label>
+                <input type="text" class="col-sm-5 offset-sm-2 col-form-label form-control" id="city" readonly disabled />
+            </div>
+
+            <div class="form-group row">
+                <label for="state" class="col-sm-4 col-form-label  p-0 p-sm-3">
+                    State
+                </label>
+                <input type="text" class="col-sm-5 offset-sm-2 col-form-label form-control" id="state" readonly disabled />
+            </div>
         </div>
 
         <!-- Second Column -->
         <div class="col-lg-6">
             <div class="form-group row">
-                <label for="code" class="col-sm-6 col-form-label">Number of Students</label>
-                <label for="code" class="col-sm-6 col-form-label">Number of Students</label>
+                <label for="Nos" class="col-sm-4 col-form-label  p-0 p-sm-3">Number of Students</label>
+                <input type="text" class="col-sm-5 offset-sm-2 col-form-label form-control" id="Nos" readonly disabled />
             </div>
             <div class="form-group row">
-                <label for="code" class="col-sm-6 col-form-label">
+                <label for="branches" class="col-sm-4 col-form-label  p-0 p-sm-3">
                     Branches
                 </label>
-                <label for="code" class="col-sm-6 col-form-label">
-                    Branches
-                </label>
+                <input type="text" class="col-sm-5 offset-sm-2 col-form-label form-control" id="branches" readonly disabled />
             </div>
             <div class="form-group row">
-                <label for="code" class="col-sm-6 col-form-label">
+                <label for="phone" class="col-sm-4 col-form-label  p-0 p-sm-3">
                     Phone
                 </label>
-                <label for="code" class="col-sm-6 col-form-label">
-                    Phone
-                </label>
+                <input type="text" class="col-sm-5 offset-sm-2 col-form-label form-control" id="phone" readonly disabled />
             </div>
             <div class="form-group row">
-                <label for="code" class="col-sm-6 col-form-label">
-                    Branches
+                <label for="email" class="col-sm-4 col-form-label  p-0 p-sm-3">
+                   Email 
                 </label>
-                <label for="code" class="col-sm-6 col-form-label">
-                    Branches
-                </label>
+                <input type="text" class="col-sm-5 offset-sm-2 col-form-label form-control" id="email" readonly disabled />
+
             </div>
-
-
-
         </div>
         <!-- @* Third Column Starts *@ -->
-        @*<div class="col-lg-3  px-0 pb-5 ml-lg-5" style="border: 1px solid black; border-radius: 10px">
-            <h5 class="pt-3 text-center">Director Patel</h5>
-            <hr style="background:black;">
-            <div class="form-group">
-                <label for="fName" class="col-sm-12 col-form-label my-0">
-                    Director
-                </label>
-                   <label for="fName" class="col-sm-12 col-form-label my-2">
-                    Director Name
-                </label>
+    <div class="col-lg-12 div-shadow mt-5">
+        <h4 class="font-weight-bolder">Director Detail</h4>
+        <hr style="background:#000; margin-top:7px;" />
 
-            </div>
-            <div class="form-group">
-                <label for="fName" class="col-sm-12 col-form-label  my-2">
-                    Address
-                </label>
-                <label for="fName" class="col-sm-12 col-form-label  my-2">
-                    Address
-                </label>
-
-            </div>
-            <div class="form-group">
-                <label for="fName" class="col-sm-12 col-form-label  my-2">
-                    City
-                </label>
-                <label for="fName" class="col-sm-12 col-form-label  my-2">
-                    City
-                </label>
-            </div>
-            <div class="form-group">
-                <label for="fName" class="col-sm-12 col-form-label  my-2">
-                    Gender
-                </label>
-                <label for="fName" class="col-sm-12 col-form-label  my-2">
-                    Gender
-                </label>
-            </div>
-            <div class="form-group">
-                <label for="fName" class="col-sm-12 col-form-label  my-2">
-                    Contact Number
-                </label>
-                <label for="fName" class="col-sm-12 col-form-label  my-2">
-                    Contact Number
-                </label>
-            </div>
-            <div class="form-group">
-                <label for="fName" class="col-sm-12 col-form-label  my-2">Email
-                </label>
-                <label for="fName" class="col-sm-12 col-form-label  my-2">Email
-                    </label>
-            </div>
+        <div class="form-group row px-4 px-md-0">
+            <label for="director" class="col-md-2 col-form-label my-2 px-md-4 px-0">
+                Director
+            </label>
+            <input class="col-md-3 form-control" type="text" id="director" readonly disabled />
+            <label for="adress" class="col-md-2 offset-md-1 col-form-label my-2 px-md-4 px-0">
+                Address
+            </label>
+            <input class="col-md-3  form-control" type="text" id="address" readonly disabled />
         </div>
-       
-            <div class="col-md-12 text-right mt-4">
-                <button class="btn  btn2 my-2">Save</button>
-                <button class="btn btn2 my-2">Reject</button>
-                <button class="btn btn2 my-2">Cancel</button>
-            </div>
-       *@
+
+        <div class="form-group row px-4 px-md-0">
+            <label for="city" class="col-md-2 col-form-label my-2 px-md-4 px-0">
+                City
+            </label>
+            <input class="col-md-3 form-control" type="text" id="city" readonly disabled />
+            <label for="gender" class="col-md-2 offset-md-1 col-form-label my-2 px-md-4 px-0">
+                Gender
+            </label>
+            <input class="col-md-3  form-control" type="text" id="gender" readonly disabled />
+        </div>
+
+        <div class="form-group row px-4 px-md-0">
+            <label for="contactNo" class="col-md-2 col-form-label my-2 px-md-4 px-0">
+                Contact No
+            </label>
+            <input class="col-md-3 form-control" type="text" id="contactNo" readonly disabled />
+            <label for="email" class="col-md-2 offset-md-1 col-form-label my-2 px-md-4 px-0">
+                Email
+            </label>
+            <input class="col-md-3  form-control" type="text" id="email" readonly disabled />
+        </div>
+    </div>
+
+
+        <div class="col-md-12 text-right mt-4">
+            <button class="btn  btn2 my-2">save</button>
+            <button class="btn btn2 my-2">reject</button>
+            <button class="btn btn2 my-2">cancel</button>
+        </div>
+
 
     </div>
 </form>           

@@ -16,7 +16,7 @@
     border-radius:10px;
 }
 /*Table Style for Table Header*/
-.table-style {
+.table-head-design {
     background: #3c8dbc;
     color: white;
 }
@@ -47,6 +47,13 @@
     font-weight: bold;
     color: #fff;
 }
+/*jquery datalist table  modification*/
+#example_filter {
+    position: absolute !important;
+    left: 0 !important;
+    top: -30px !important;
+}
+
 	
 
     /*h2{

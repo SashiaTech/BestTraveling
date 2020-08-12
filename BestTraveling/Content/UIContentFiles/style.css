@@ -95,7 +95,7 @@ header {
         background: white;
         /*display:flex;*/
         position: sticky;
-        top: 63px;
+        top: 60px;
         z-index: 11;
         overflow-y: scroll;
         transition: all .3s cubic-bezier(.17,.67,.83,.67);
@@ -217,7 +217,7 @@ header {
     }
 
     .sideBarDashboard .leftSideBar {
-        width: 85px;
+        width: 84px;
     }
 
 }

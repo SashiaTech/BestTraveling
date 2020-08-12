@@ -8,12 +8,11 @@
 
 
 
-
 @* bgDanger Header For StateView *@
 <header>
     <div class="row p-3 mr-0">
         <div class="col-md-6 col-6">
-            <span>Country</span>
+            <span>User</span>
         </div>
         <div class="col-md-6 col-6 text-right">
             <i class="fa fa-arrow-left"></i>
@@ -21,7 +20,7 @@
     </div>
 </header>
 <div class="AddBtn d-flex justify-content-end mr-5 my-4">
-    <button type="button" class="btn btn-primary px-5">User</button>
+    <a href="@Url.Action("Add","User",new { Area="Admin"})" type="button" class="btn btn-primary px-5">Add</a>
 </div>
 
 
@@ -29,7 +28,7 @@
 	$(document).ready(function () {
 		$('#example').DataTable({
 			'paging': false,
-			'scrollY': '250px',
+			'scrollY': '450px',
 			'searching': true,
 			'autoWidth': true,
 			'scrollCollapse': true,
@@ -39,9 +38,9 @@
 </script>
 
 
-<div class="container">
-    <table id="example" class="table table-bordered" style="width:100%">
-        <thead>
+<div class="container-fluid mt-5">
+    <table id="example" class="table table-bordered table-striped" style="width:100%">
+        <thead class="table-head-design">
             <tr>
                 <th>Name</th>
                 <th>Position</th>

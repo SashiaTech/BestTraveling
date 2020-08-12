@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BT_Model.AdminModel;
 
 namespace BestTraveling.Areas.Admin.Controllers
 {
@@ -12,6 +13,23 @@ namespace BestTraveling.Areas.Admin.Controllers
         public ActionResult List()
         {
             return View();
+        }
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public void Add(CountryModel model)
+        {
+            try
+            {
+
+            }
+            catch(Exception ex)
+            {
+
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ namespace BestTraveling.Areas.Admin
     public class FairsController : Controller
     {
         // GET: Admin/Fairs
-        public ActionResult Index()
+        public ActionResult List()
         {
             return View();
         }

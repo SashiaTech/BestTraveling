@@ -46,8 +46,10 @@
     <Compile Include="AdminModel\CityModel.cs" />
     <Compile Include="AdminModel\CountryModel.cs" />
     <Compile Include="AdminModel\FairsModel.cs" />
+    <Compile Include="AdminModel\StateModel.cs" />
     <Compile Include="AdminModel\UserModel.cs" />
     <Compile Include="CollegeModel\CollegeModel.cs" />
+    <Compile Include="CollegeModel\StudentAuthorizationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -152,6 +152,7 @@
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Areas\College\CollegeAreaRegistration.cs" />
     <Compile Include="Areas\College\Controllers\CollegeController.cs" />
+    <Compile Include="Areas\College\Controllers\StudentAuthorizationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -557,6 +558,8 @@
     <Content Include="Areas\Admin\Views\User\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Fairs\List.cshtml" />
     <Content Include="Areas\Admin\Views\Country\Add.cshtml" />
+    <Content Include="Areas\College\Views\StudentAuthorization\List.cshtml" />
+    <Content Include="Areas\College\Views\StudentAuthorization\Add.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />

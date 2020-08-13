@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using bt_Services.IServices;
-using BT_Model;
+using BT_Model.CollegeModel;
 
 namespace BestTraveling.Areas.College.Controllers
 {

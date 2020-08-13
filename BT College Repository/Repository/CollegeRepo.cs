@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BT_College_Repository.IRepository;
-using BT_Model;
+using BT_Model.CollegeModel;
 using BT_Data.BT_EDMX;
 using BT.Repositories;
 

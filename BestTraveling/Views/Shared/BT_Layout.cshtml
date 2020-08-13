@@ -23,12 +23,6 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @*Sweet alert Cdn link*@
 
-    <!-- add jquery cdn -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-
-
     @*<link href="~/Content/Custom.css" rel="stylesheet" />*@
 
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -99,102 +93,104 @@
 				</div>
 
 				<ul id="ul" class="navBar">
-					<a href="@Url.Action("Index","Home",new {Area = "" })">
-						<li>
-							<i class="fa fa-home icon"></i>Dashboard
-						</li>
-					</a>
-					<li class="li_collapse">
-						<a href="#">
-							<i class="fa fa-home icon"></i>College
+					<li>
+						<a href="@Url.Action("Index","Home",new {Area = "" })" class="anchor_event">
 
+							<i class="fa fa-home icon"></i>Dashboard
+						</a>
+					</li>
+				
+					<li class="li_collapse">
+						<a href="#" class="anchor-design" >
+							<i class="fa fa-home icon"></i>College
 							<i class="fa fa-angle-right rytArrowBtn"></i>
 						</a>
 						<ul class="submenu" style="display:none;">
-							<a href="@Url.Action("List","College",new { Area = "College"})"><li style="border:none;">Request Pass</li></a>
-							<li class="borderTop"><a href="@Url.Action("List","StudentAuthorization",new { Area = "College"})">Authorize Student</a></li>
-							<li><a href="#">Contact121</a></li>
-							<li style="border:none;"><a href="#">Block Student</a></li>
+							<li style="border:none;"><a href="@Url.Action("List","College",new { Area = "College"})"><i class="fa fa-bitcoin icon"></i>Request Pass</a></li>
+							<li class="borderTop"><a href="@Url.Action("List","StudentAuthorization",new { Area = "College"})"><i class="fa fa-bitcoin icon"></i>Authorize Student</a></li>
+							<li><a href="#"><i class="fa fa-bitcoin icon"></i>Contact121</a></li>
+							<li style="border:none;"><a href="#"><i class="fa fa-bitcoin icon"></i>Block Student</a></li>
 							@*<li style="border:none;"><a href="#">Request Pass</a></li>*@
 						</ul>
 					</li>
 
 					<li class="li_collapse">
-						<a href="#">
+						<a href="#" class="anchor-design">
 							<i class="fa fa-american-sign-language-interpreting icon"></i>Admin
 							<i class="fa fa-angle-right rytArrowBtn"></i>
 						</a>
 						<ul class="submenu" style="display:none;">
-							<a href="@Url.Action("List", "User", new { Area = "Admin" })"><li class="borderTop">User</li></a>
-							<a href="@Url.Action("List", "Fairs", new { Area = "Admin" })"><li>Fair</li></a>
-							<a href="@Url.Action("List","CollegePermission",new { Area = "Admin"})"><li style="border:none;">Permission</li></a>
-							<a href="@Url.Action("List","Country",new { Area = "Admin"})"><li style="border:none;">Country</li></a>
-							<a href="@Url.Action("List","State",new { Area = "Admin"})"><li style="border:none;">State</li></a>
+							<li class="borderTop"><a href="@Url.Action("List", "User", new { Area = "Admin" })"><i class="fa fa-bitcoin icon"></i>User</a></li>
+							<li><a href="@Url.Action("List", "Fairs", new { Area = "Admin" })"><i class="fa fa-bitcoin icon"></i>Fair</a></li>
+							<li style="border:none;"><a href="@Url.Action("List","CollegePermission",new { Area = "Admin"})"><i class="fa fa-bitcoin icon"></i>Permission</a></li>
+							<li style="border:none;"><a href="@Url.Action("List","Country",new { Area = "Admin"})"><i class="fa fa-bitcoin icon"></i>Country</a></li>
+							<li style="border:none;"><a href="@Url.Action("List","State",new { Area = "Admin"})"><i class="fa fa-bitcoin icon"></i>State</a></li>
 							@*<a href="@Url.Action("List","District",new { Area = "Admin"})"><li style="border:none;">District</li></a>*@
-							<a href="@Url.Action("List","City",new { Area = "Admin"})"><li style="border:none;">City</li></a>
+							<li style="border:none;"><a href="@Url.Action("List","City",new { Area = "Admin"})"><i class="fa fa-bitcoin icon"></i>City</a></li>
 						</ul>
 					</li>
 
 					<li class="li_collapse">
-						<a href="#">
+						<a href="#" class="anchor-design">
 							<i class="fa fa-american-sign-language-interpreting icon"></i>Our College
 							<i class="fa fa-angle-right rytArrowBtn"></i>
 						</a>
 						<ul class="submenu" style="display:none;">
-							<li class="borderTop"><a href="https://www.google.com">Product</a></li>
-							<li><a href="#contact121">Contact121</a></li>
-							<li style="border:none;"><a href="#about">About us</a></li>
+							<li class="borderTop"><a href="#"><i class="fa fa-bitcoin icon"></i>Product</a></li>
+							<li><a href="#contact121"><i class="fa fa-bitcoin icon"></i>Contact121</a></li>
+							<li style="border:none;"><a href="#about"><i class="fa fa-bitcoin icon"></i>About us</a></li>
 						</ul>
 					</li>
 
 
 
 					<li class="li_collapse">
-						<a href="#">
+						<a href="#" class="anchor-design">
 							<i class="fa fa-home icon"></i>Our Managment
 							<i class="fa fa-angle-right rytArrowBtn"></i>
 						</a>
 						<ul class="submenu" style="display:none;">
-							<li class="borderTop"><a href="#">Product</a></li>
-							<li><a href="#">Contact121</a></li>
-							<li style="border:none;"><a href="#">About us</a></li>
+							<li class="borderTop"><a href="#"><i class="fa fa-bitcoin icon"></i>Product</a></li>
+							<li><a href="#"><i class="fa fa-bitcoin icon"></i>Contact121</a></li>
+							<li style="border:none;"><a href="#"><i class="fa fa-bitcoin icon"></i>About us</a></li>
 						</ul>
 					</li>
 
 					<li class="li_collapse">
-						<a href="#">
+						<a href="#" class="anchor-design">
 							<i class="fa fa-bitcoin icon"></i>Bitcoins Currecy
 							<i class="fa fa-angle-right rytArrowBtn"></i>
 						</a>
 						<ul class="submenu" style="display:none;">
-							<li class="borderTop"><a href="#">Product</a></li>
-							<li><a href="#">Contact121</a></li>
-							<li style="border:none;"><a href="#">About us</a></li>
+							<li class="borderTop"><a href="#"><i class="fa fa-bitcoin icon"></i>Product</a></li>
+							<li><a href="#"><i class="fa fa-bitcoin icon"></i>Contact121</a></li>
+							<li style="border:none;"><a href="#"><i class="fa fa-bitcoin icon"></i>About us</a></li>
 						</ul>
 					</li>
 					<li class="li_collapse">
-						<a href="#">
+						<a href="#" class="anchor-design">
 							<i class="fa fa-bitcoin icon"></i>Bitcoins
 							<i class="fa fa-angle-right rytArrowBtn"></i>
 						</a>
 						<ul class="submenu" style="display:none;">
-							<li class="borderTop"><a href="#">Product</a></li>
-							<li><a href="#">Contact121</a></li>
-							<li style="border:none;"><a href="#">About us</a></li>
+							<li class="borderTop"><a href="#bitcoin"><i class="fa fa-bitcoin icon"></i>Product</a></li>
+							<li><a href="#"><i class="fa fa-bitcoin icon"></i>Contact121</a></li>
+							<li style="border:none;"><a href="#"><i class="fa fa-bitcoin icon"></i>About us</a></li>
 						</ul>
 					</li>
 					<li class="li_collapse">
-						<a href="#">
+						<a href="#" class="anchor-design">
 							<i class="fa fa-bitcoin icon"></i>Bitcoins
 							<i class="fa fa-angle-right rytArrowBtn"></i>
 						</a>
 						<ul class="submenu" style="display:none;">
-							<li class="borderTop"><a href="#">Product</a></li>
-							<li><a href="#">Contact121</a></li>
-							<li style="border:none;"><a href="#">About us</a></li>
+							<li class="borderTop"><a href="#"><i class="fa fa-bitcoin icon"></i>Product</a></li>
+							<li><a href="#"><i class="fa fa-bitcoin icon"></i>Contact121</a></li>
+							<li style="border:none;"><a href="#"><i class="fa fa-bitcoin icon"></i>About us</a></li>
 						</ul>
 					</li>
-			</div>
+					</ul>
+</div>
 			<!-- LeftSideBarDashBoard Closed -->
 
 
@@ -218,6 +214,7 @@
 
 	<script src="~/Content/UIContentFiles/js/index.js"></script>
 	<script src="~/Content/UIContentFiles/js/bootstrap.js"></script>
+	<script src="~/Content/UIContentFiles/js/jquery.js"></script>
 </body>
 
 </html>

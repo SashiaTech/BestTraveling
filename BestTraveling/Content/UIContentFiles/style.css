@@ -145,6 +145,8 @@ header {
             list-style: none;
             text-align: left;
             width: auto;
+            overflow:hidden;
+            white-space:nowrap;
         }
 
             .sideBarDashboard .leftSideBar .navBar li {
@@ -168,6 +170,9 @@ header {
                     text-decoration: none;
                     color: #270b0b;
                     font-family: 'Roboto', sans-serif;
+                    padding: 17px 220px 17px 0px;
+                    /*g: 16px 138px 17px 0px;
+                    background:red;*/
                 }
 
                     .sideBarDashboard .leftSideBar .navBar li a .rytArrowBtn {
@@ -183,7 +188,7 @@ header {
 
             .sideBarDashboard .leftSideBar .submenu li {
                 list-style: none;
-                padding: 0px 30px;
+                /*padding: 0px 30px;*/
                 transition: 0.8s;
                 background:white;
                 

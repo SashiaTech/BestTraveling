@@ -19,8 +19,8 @@ toggle.addEventListener('click', () => {
     }
 })
 //function for dropdowns and font awesome icon-changer collapse other dwopdowns on single click
-let li_collapse = document.getElementsByClassName('li_collapse');
-Array.from(li_collapse).forEach((Element, index) => {
+let anchor_Design = document.getElementsByClassName('anchor-design');
+Array.from(anchor_Design).forEach((Element, index) => {
     let rytArrowBtn = document.getElementsByClassName('rytArrowBtn');
     Element.addEventListener('click', () => {
         let submenu = document.getElementsByClassName("submenu");

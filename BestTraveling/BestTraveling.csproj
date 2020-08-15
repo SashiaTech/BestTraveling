@@ -146,6 +146,7 @@
     <Compile Include="Areas\Admin\Controllers\CityController.cs" />
     <Compile Include="Areas\Admin\Controllers\CollegePermissionController.cs" />
     <Compile Include="Areas\Admin\Controllers\CountryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DistrictController.cs" />
     <Compile Include="Areas\Admin\Controllers\FairsController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoleController.cs" />
     <Compile Include="Areas\Admin\Controllers\StateController.cs" />
@@ -560,6 +561,8 @@
     <Content Include="Areas\Admin\Views\Country\Add.cshtml" />
     <Content Include="Areas\College\Views\StudentAuthorization\List.cshtml" />
     <Content Include="Areas\College\Views\StudentAuthorization\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\District\List.cshtml" />
+    <Content Include="Areas\Admin\Views\District\Add.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />

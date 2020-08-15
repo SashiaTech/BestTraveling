@@ -6,124 +6,134 @@
 <header>
     <div class="row p-3 mr-0">
         <div class="col-md-6 col-6">
-            <span>College Authroization</span>
+            <span><b>College Authroization</b></span>
         </div>
         <div class="col-md-6 col-6 text-right pr-5">
             <a href="#"><i class="fa fa-arrow-circle-left"></i></a>
         </div>
     </div>
 </header>
-<form method="get" class="mt-5">
+<form method="post">
     <div class="row mainRow mx-5">
-        <div class="col-lg-12 my-lg-0 my-5 my-sm-5">
-            <div class="row">
-                <div class="div-shadow col-12">
-                    <h4 class="font-weight-bolder my-5">Personal Detail</h4>
-                    <div class="col-md-12 col-lg-5">
-                        <div class="form-group row">
-                            <label for="fname" class="col-sm-4 col-form-label">First Name</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" id="fname">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="fathername" class="col-sm-4 col-form-label">Father Name</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" id="fathername">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="state" class="col-sm-4 col-form-label">State</label>
-                            <div class="col-sm-8">
-                                <select id="state" class="form-control">
-                                    <option selected>Choose...</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="city" class="col-sm-4 col-form-label">City</label>
-                            <div class="col-sm-8">
-                                <select id="city" class="form-control">
-                                    <option selected>Choose...</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputGender" class="col-sm-4 col-form-label">Gender</label>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                <label class="form-check-label" for="exampleRadios1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Male</label>
-                            </div>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option1">
-                                <label class="form-check-label" for="exampleRadios2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Female</label>
-                            </div>
+        <div class="col-lg-12 mt-5">
+            <div class="row div-shadow">
+                <div class="col-12">
+                <h4 class="font-weight-bolder my-4">Personal Detail</h4>
+                    </div>
+                <div class=" col-xl-5">
+                    <div class="form-group row">
+                        <label for="fname" class="col-sm-5 col-form-label">First Name</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="fname">
                         </div>
                     </div>
-
-
-                    <div class="col-md-12 col-lg-5">
-                        <div class="form-group row">
-                            <label for="lname" class="col-sm-4 col-form-label">Last Name</label>
-                            <div class="col-sm-8">
-
-                                <input type="text" class="form-control" id="lname">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="Mname" class="col-sm-4 col-form-label">Mother Name</label>
-                            <div class="col-sm-8">
-
-                                <input type="text" class="form-control" id="Mname">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="inputDistrict" class="col-sm-4 col-form-label">District</label>
-                            <div class="col-sm-8">
-                                <select id="inputDistrict" class="form-control">
-                                    <option selected>Choose...</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="Scode" class="col-sm-4 col-form-label">Student Code</label>
-
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" id="Scode">
-                            </div>
-
+                    <div class="form-group row">
+                        <label for="fathername" class="col-sm-5 col-form-label">Father Name</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="fathername">
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-2">
-                        <img src="~/Content/images/avatar5.png" alt="..." class="img-thumbnail">
+                    <div class="form-group row">
+                        <label for="state" class="col-sm-5 col-form-label">State</label>
+                        <div class="col-sm-7">
+                            <select id="state" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="city" class="col-sm-5 col-form-label">City</label>
+                        <div class="col-sm-7">
+                            <select id="city" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputGender" class="col-sm-5 col-form-label">Gender</label>
+                        <div class="col-sm-7 pl-4 pr-0">
+                            <div class="row mt-2">
+                                <div class="form-check">
+                                    &nbsp;&nbsp;<input class="form-check-input mt-2" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">@*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*@Male</label>
+                                </div>
+                                <div class="form-check ml-3">
+                                    <input class="form-check-input mt-2" type="radio" name="exampleRadios" id="exampleRadios2" value="option1">
+                                    <label class="form-check-label" for="exampleRadios2">@*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*@Female</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="div-shadow col-12 mt-5">
-                    <h4 class="font-weight-bolder my-5">Student College Detail</h4>
-                    <div class="col-md-12 col-lg-5">
+
+
+                <div class="col-xl-5">
+                    <div class="form-group row">
+                        <label for="lname" class="col-sm-5 col-form-label">Last Name</label>
+                        <div class="col-sm-7">
+
+                            <input type="text" class="form-control" id="lname">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="Mname" class="col-sm-5 col-form-label">Mother Name</label>
+                        <div class="col-sm-7">
+
+                            <input type="text" class="form-control" id="Mname">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputDistrict" class="col-sm-5 col-form-label">District</label>
+                        <div class="col-sm-7">
+                            <select id="inputDistrict" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="Scode" class="col-sm-5 col-form-label">Student Code</label>
+
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="Scode">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <img src="~/Content/images/avatar5.png" alt="..." class="img-thumbnail">
+                </div>
+            </div>
+         </div>
+         <div class="col-lg-12 mt-5">
+                <div class="row div-shadow">
+                    <div class="col-12">
+                        <h4 class="font-weight-bolder my-4">Personal Detail</h4>
+                    </div>
+                    <div class="col-xl-5">
+
                         <div class="form-group row">
-                            <label for="college" class="col-sm-4 col-form-label">College</label>
-                            <div class="col-sm-8">
+                            <label for="college" class="col-sm-5 col-form-label">College</label>
+                            <div class="col-sm-7">
                                 <input type="text" class="form-control" id="college">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="dname" class="col-sm-4 col-form-label">Director Name</label>
-                            <div class="col-sm-8">
+                            <label for="dname" class="col-sm-5 col-form-label">Director Name</label>
+                            <div class="col-sm-7">
                                 <input type="text" class="form-control" id="dname">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="c-state" class="col-sm-4 col-form-label">State</label>
-                            <div class="col-sm-8">
+                            <label for="c-state" class="col-sm-5 col-form-label">State</label>
+                            <div class="col-sm-7">
                                 <select id="c-state" class="form-control">
                                     <option selected>Choose...</option>
                                     <option>...</option>
@@ -131,8 +141,8 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="c-city" class="col-sm-4 col-form-label">City</label>
-                            <div class="col-sm-8">
+                            <label for="c-city" class="col-sm-5 col-form-label">City</label>
+                            <div class="col-sm-7">
                                 <select id="c-city" class="form-control">
                                     <option selected>Choose...</option>
                                     <option>...</option>
@@ -140,8 +150,8 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="course" class="col-sm-4 col-form-label">Course</label>
-                            <div class="col-sm-8">
+                            <label for="course" class="col-sm-5 col-form-label">Course</label>
+                            <div class="col-sm-7">
                                 <select id="course" class="form-control">
                                     <option selected>Choose...</option>
                                     <option>...</option>
@@ -150,12 +160,10 @@
                         </div>
 
                     </div>
-
-
-                    <div class="col-md-12 col-lg-5">
+                    <div class="col-xl-5">
                         <div class="form-group row">
-                            <label for="c-code" class="col-sm-4 col-form-label">Code</label>
-                            <div class="col-sm-8">
+                            <label for="c-code" class="col-sm-5 col-form-label">Code</label>
+                            <div class="col-sm-7">
 
                                 <input type="text" class="form-control" id="c-code">
 
@@ -163,16 +171,16 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="a-name" class="col-sm-4 col-form-label">Authorizer Name</label>
-                            <div class="col-sm-8">
+                            <label for="a-name" class="col-sm-5 col-form-label">Authorizer Name</label>
+                            <div class="col-sm-7">
 
                                 <input type="text" class="form-control" id="a-name">
 
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="c-inputDistrict" class="col-sm-4 col-form-label">District</label>
-                            <div class="col-sm-8">
+                            <label for="c-inputDistrict" class="col-sm-5 col-form-label">District</label>
+                            <div class="col-sm-7">
                                 <select id="c-inputDistrict" class="form-control">
                                     <option selected>Choose...</option>
                                     <option>...</option>
@@ -181,9 +189,9 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="branch" class="col-sm-4 col-form-label">Branch</label>
+                            <label for="branch" class="col-sm-5 col-form-label">Branch</label>
 
-                            <div class="col-sm-8">
+                            <div class="col-sm-7">
                                 <select id="branch" class="form-control">
                                     <option selected>Choose...</option>
                                     <option>...</option>
@@ -192,8 +200,8 @@
 
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-2 position-relative text-right">
-                        <div class="position-absolute" style="bottom:-166px">
+                    <div class="col-xl-2 checkBox-style" style="margin-top:168px ">
+                        <div class="ml-4">
                             <input class="form-check-input mt-3" type="checkbox" name="Activecheck" id="Activecheck" checked>
                             <label for="Activecheck" class="col-sm-4 col-form-label">Active</label>
                         </div>
@@ -206,8 +214,8 @@
                     <button class="btn btn2 my-2">cancel</button>
                 </div>
             </div>
-        </div>
-    </div>
+           </div>
+            @*</div>*@
 </form>
 
               

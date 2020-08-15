@@ -6,8 +6,8 @@
         box-shadow: 0 1px 8px grey;
         background: white;
         color: gray;
-        font-size: 2rem;
-        font-weight: 700;
+        font-size: 1.30rem;
+        font-weight:400;
 }
 /*****Close******/
 /*This is for box-shadow class*/
@@ -34,19 +34,33 @@
         margin: 25px 0;
     }
 }
-/*common button class*/
-.btn2 {
-    background: #3c8dbc;
-    outline: none;
-    border: none;
-    width: 100px;
-    margin: 0 5px;
-    border-radius: 8px;
-    font-family: sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-}
+/*@media only screen and (max-width: 1368px) and (min-width: 992px) {
+    .flx-dir {
+        display:block !important;
+        margin:auto;
+    }
+    .cardBody
+    {
+        padding:18px 0px !important;
+    }
+    /*.icon-design
+    {
+        margin-left:20px;
+    }*/
+    /*}*/
+    /*common button class*/
+    .btn2 {
+        background: #3c8dbc !important;
+        outline: none;
+        border: none;
+        width: 100px;
+        margin: 0 5px;
+        border-radius: 8px;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff !important;
+    }
 /*jquery datalist table  modification*/
 #example_filter {
     position: absolute !important;
@@ -194,5 +208,5 @@ table {
 
 .listGrid {
     height: 50vh;
-}*/
+}*/*/
 

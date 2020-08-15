@@ -17,7 +17,7 @@
 <header>
     <div class="row p-3 mr-0">
         <div class="col-md-6 col-6">
-            <span>User</span>
+            <span><b>User</b></span>
         </div>
         <div class="col-md-6 col-6 text-right pr-5">
             <a href="#"><i class="fa fa-arrow-circle-left"></i></a>
@@ -26,33 +26,34 @@
 </header>
 
 <form method="get" class="mt-5">
-    <div class="row mainRow mx-5">
-        <div class="col-lg-7 my-lg-0 my-5 my-sm-5">
-            <div class="row">
-                <div class="div-shadow col-12">
-                    <h4 class="font-weight-bolder my-5">Personal Detail</h4>
+    <div class="row mainRow mx-4">
+        <div class="col-xl-7 my-lg-0 my-5 ">
+            <div class="row div-shadow">
+                <div class="col-12">
+                    <h4 class="font-weight-bolder my-4">Personal Detail</h4>
+                </div>
                     <div class="col-lg-12 col-xl-6">
                         <div class="form-group row">
-                            <label for="fname" class="col-sm-4 col-form-label">First Name</label>
-                            <div class="col-sm-8">
+                            <label for="fname" class="col-sm-5 col-form-label">First Name</label>
+                            <div class="col-sm-7">
                                 <input type="text" class="form-control" id="fname">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="lname" class="col-sm-4 col-form-label">Last Name</label>
-                            <div class="col-sm-8">
+                            <label for="lname" class="col-sm-5 col-form-label">Last Name</label>
+                            <div class="col-sm-7">
                                 <input type="text" class="form-control" id="lname">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="code" class="col-sm-4 col-form-label">Code</label>
-                            <div class="col-sm-8">
+                            <label for="code" class="col-sm-5 col-form-label">Code</label>
+                            <div class="col-sm-7">
                                 <input type="number" class="form-control" id="code">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="country" class="col-sm-4 col-form-label">Country</label>
-                            <div class="col-sm-8">
+                            <label for="country" class="col-sm-5 col-form-label">Country</label>
+                            <div class="col-sm-7">
                                 <select id="country" class="form-control">
                                     <option selected>Choose...</option>
                                     <option>...</option>
@@ -63,8 +64,8 @@
 
                     <div class="col-lg-12 col-xl-6">
                         <div class="form-group row">
-                            <label for="inputState" class="col-sm-4 col-form-label">State</label>
-                            <div class="col-sm-8">
+                            <label for="inputState" class="col-sm-5 col-form-label">State</label>
+                            <div class="col-sm-7">
                                 <select id="inputState" class="form-control">
                                     <option selected>Choose...</option>
                                     <option>...</option>
@@ -73,8 +74,8 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="inputCity" class="col-sm-4 col-form-label">City</label>
-                            <div class="col-sm-8">
+                            <label for="inputCity" class="col-sm-5 col-form-label">City</label>
+                            <div class="col-sm-7">
                                 <select id="inputCity" class="form-control">
                                     <option selected>Choose...</option>
                                     <option>...</option>
@@ -83,8 +84,8 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="inputDistrict" class="col-sm-4 col-form-label">District</label>
-                            <div class="col-sm-8">
+                            <label for="inputDistrict" class="col-sm-5 col-form-label">District</label>
+                            <div class="col-sm-7">
                                 <select id="inputDistrict" class="form-control">
                                     <option selected>Choose...</option>
                                     <option>...</option>
@@ -93,14 +94,14 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="inputGender" class="col-sm-4 col-form-label">Gender</label>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                <label class="form-check-label" for="exampleRadios1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Male</label>
+                            <label for="inputGender" class="col-sm-5 col-form-label">Gender</label>
+                            <div class="form-check mt-1">
+                                &nbsp;&nbsp;&nbsp; <input class="form-check-input mt-2" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">Male</label>
                             </div>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option1">
-                                <label class="form-check-label" for="exampleRadios2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Female</label>
+                            <div class="form-check mt-1">
+                                &nbsp;&nbsp;&nbsp;  <input class="form-check-input mt-2" type="radio" name="exampleRadios" id="exampleRadios2" value="option1">
+                                <label class="form-check-label" for="exampleRadios2">Female</label>
                             </div>
                         </div>
                     </div>
@@ -145,53 +146,55 @@
                 </div>
 
             </div>
-        </div>
+     
  
 
-        <div class="col-lg-4 offset-lg-1 div-shadow ">
-            <h4 class="font-weight-bolder my-5">Other Details</h4>
-            <div class="form-group row mt-5 mb-5">
-                <label for="Role" class="col-sm-4 col-form-label">Role</label>
-                <div class="col-sm-8">
+        <div class="col-xl-4 offset-xl-1 div-shadow">
+            <div class="row">
+                <h4 class="font-weight-bolder mx-4 my-4">Other Details</h4>
+            </div>
+            <div class="form-group row mt-0 mb-xl-5">
+                <label for="Role" class="col-sm-5 col-form-label">Role</label>
+                <div class="col-sm-7">
                     <select id="Role" class="form-control">
                         <option selected>Choose...</option>
                         <option>...</option>
                     </select>
                 </div>
             </div>
-            <div class="form-group row mb-5">
-                <label for="mobile" class="col-sm-4 col-form-label">Mobile</label>
-                <div class="col-sm-8">
+            <div class="form-group row mb-xl-5">
+                <label for="mobile" class="col-sm-5 col-form-label">Mobile</label>
+                <div class="col-sm-7">
                     <input type="number" class="form-control" id="mobile">
                 </div>
             </div>
-            <div class="form-group row mb-5">
-                <label for="email" class="col-sm-4 col-form-label">Email</label>
-                <div class="col-sm-8">
+            <div class="form-group row mb-xl-5">
+                <label for="email" class="col-sm-5 col-form-label">Email</label>
+                <div class="col-sm-7">
                     <input type="email" class="form-control" id="email">
                 </div>
             </div>
-            <div class="form-group row mb-5">
-                <label for="Designation" class="col-sm-4 col-form-label">Designation</label>
-                <div class="col-sm-8">
+            <div class="form-group row mb-xl-5">
+                <label for="Designation" class="col-sm-5 col-form-label">Designation</label>
+                <div class="col-sm-7">
                     <select id="Designation" class="form-control">
                         <option selected>Choose...</option>
                         <option>...</option>
                     </select>
                 </div>
             </div>
-            <div class="form-group row mb-5">
-                <label for="office-dist" class="col-sm-4 col-form-label">Office District</label>
-                <div class="col-sm-8">
+            <div class="form-group row mb-xl-5">
+                <label for="office-dist" class="col-sm-5 col-form-label">Office District</label>
+                <div class="col-sm-7">
                     <select id="office-dist" class="form-control">
                         <option selected>Choose...</option>
                         <option>...</option>
                     </select>
                 </div>
             </div>
-            <div class="form-group row mb-5">
-                <label for="office-city" class="col-sm-4 col-form-label">Office City</label>
-                <div class="col-sm-8">
+            <div class="form-group row mb-xl-5">
+                <label for="office-city" class="col-sm-5 col-form-label">Office City</label>
+                <div class="col-sm-7">
                     <select id="office-city" class="form-control">
                         <option selected>Choose...</option>
                         <option>...</option>

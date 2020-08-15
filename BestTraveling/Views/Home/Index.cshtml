@@ -8,20 +8,25 @@
         border-radius: 4px;
     }
 
-    .cardBody {
-        padding: 50px 0px;
-        font-weight: 600;
-    }
-
     .card-design {
+        width: 100%;
+        height: 22vh;
         border: none;
         background: #00c0ef;
         border-radius: 13px;
-        color: #ffff;
+    }
+
+        .card-design > .cardBody {
+            font-weight: 600;
+            color: #fff;
+        }
+
+    .cardBody > .card-text {
+        margin: 0 !important;
     }
 
     .icon-design {
-        font-size: 6rem;
+        font-size: 4.7rem;
         opacity: 0.5;
     }
 
@@ -37,128 +42,73 @@
 @*<a href="~/Views/Home/Index.cshtml">~/Views/Home/Index.cshtml</a>*@
 @*--------*@
 <header>
-    <div class="row p-3 mr-0">
+    <div class="row mr-0 p-1">
         <div class="col-12 text-center">
             <span><b>DASHBOARD</b></span>
         </div>
     </div>
 </header>
 <div class="row m-0 mt-5">
-    <div class="col-lg-3 col-md-6  mb-4 mb-lg-0">
+    <div class="col-xl-3 col-md-6  mb-4 mb-xl-0">
         <a href="#" class="text-decoration-none">
             <div class="card card-design" style="background: #dd4b39; box-shadow: 0px 0px 5px #dd4b39 ">
-                <div class="card-body cardBody ">
-                    <div class="d-flex align-items-center justify-content-around">
-                        <p class="card-text" style="opacity:0.7;">New Pass</p>
-                        <i class="fa fa-address-book icon-design"></i>
-                    </div>
+                <div class="card-body cardBody d-flex align-items-center justify-content-around">
+                    <p class="card-text" style="opacity:0.7;">New Pass</p>
+                    <i class="fa fa-address-book icon-design"></i>
                 </div>
             </div>
-
         </a>
     </div>
-    <div class="col-lg-3 col-md-6  mb-4 mb-lg-0">
+    <div class="col-xl-3 col-md-6  mb-4 mb-xl-0">
         <a href="#" class="text-decoration-none">
             <div class="card card-design" style="background:#00a65a;box-shadow:0px 0px 5px #00a65a ;">
-                <div class="card-body cardBody ">
-                    <div class="d-flex align-items-center justify-content-around">
-                        <p class="card-text" style="opacity:0.7;">Renew Pass</p>
-                        <i class="fa fa-edit  icon-design"></i>
-                    </div>
+                <div class="card-body cardBody d-flex align-items-center justify-content-around">
+                    <p class="card-text" style="opacity:0.7;">Renew Pass</p>
+                    <i class="fa fa-edit  icon-design"></i>
                 </div>
             </div>
         </a>
     </div>
-    <div class="col-lg-3 col-md-6  mb-4 mb-lg-0">
+    <div class="col-xl-3 col-md-6  mb-4 mb-xl-0">
         <a href="#" class="text-decoration-none">
             <div class="card card-design " style="box-shadow:0px 0px 5px #00c0ef ">
-                <div class="card-body cardBody ">
-                    <div class="d-flex align-items-center justify-content-around">
-                        <p class="card-text text-center" style="opacity:0.7;">View Permission</p>
-                        <i class="fa fa-bell-slash icon-design"></i>
-                    </div>
-
+                <div class="card-body cardBody d-flex align-items-center justify-content-around">
+                    <p class="card-text" style="opacity:0.7;">View Permission</p>
+                    <i class="fa fa-bell-slash icon-design"></i>
                 </div>
             </div>
         </a>
     </div>
-
-    <div class="col-lg-3 col-md-6  mb-4 mb-lg-0">
+    <div class="col-xl-3 col-md-6  mb-4 mb-xl-0">
         <a href="#" class="text-decoration-none">
             <div class="card card-design" style="background:#f39c12;  box-shadow:0px 0px 5px #f39c12;">
-                <div class="card-body cardBody ">
-                    <div class="d-flex align-items-center justify-content-around">
-                        <p class="card-text " style="opacity:0.7;">View Charges</p>
-                        <i class="fa fa-home  icon-design"></i>
-                    </div>
+                <div class="card-body cardBody d-flex align-items-center justify-content-around">
+                    <p class="card-text " style="opacity:0.7;">View Charges</p>
+                    <i class="fa fa-home  icon-design"></i>
                 </div>
             </div>
         </a>
     </div>
 </div>
-
 <div class="row m-0 mt-5">
     <div class="col-md-6">
-            <script>
-                window.onload = function () {
-
-                    var chart = new CanvasJS.Chart("chartContainer", {
-                        animationEnabled: true,
-                        axisY: {
-                            title: "Revenue in USD",
-                            valueFormatString: "#0,,.",
-                            suffix: "mn",
-                            prefix: "$"
-                        },
-                        data: [{
-                            type: "splineArea",
-                            color: "rgba(54,158,173,.7)",
-                            markerSize: 5,
-                            xValueFormatString: "YYYY",
-                            yValueFormatString: "$#,##0.##",
-                            dataPoints: [
-                                { x: new Date(2000, 0), y: 3289000 },
-                                { x: new Date(2001, 0), y: 3830000 },
-                                { x: new Date(2002, 0), y: 2009000 },
-                                { x: new Date(2003, 0), y: 2840000 },
-                                { x: new Date(2004, 0), y: 2396000 },
-                                { x: new Date(2005, 0), y: 1613000 },
-                                { x: new Date(2006, 0), y: 2821000 },
-                                { x: new Date(2007, 0), y: 2000000 },
-                                { x: new Date(2008, 0), y: 1397000 },
-                                { x: new Date(2009, 0), y: 2506000 },
-                                { x: new Date(2010, 0), y: 2798000 },
-                                { x: new Date(2011, 0), y: 3386000 },
-                                { x: new Date(2012, 0), y: 6704000 },
-                                { x: new Date(2013, 0), y: 6026000 },
-                                { x: new Date(2014, 0), y: 2394000 },
-                                { x: new Date(2015, 0), y: 1872000 },
-                                { x: new Date(2016, 0), y: 2140000 }
-                            ]
-                        }]
-                    });
-                    chart.render();
-
-                }
-            </script>
-            <div id="chartContainer" style="height: 200px; width: 100%;"></div>
-            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <div id="chartContainer" style="height: 200px; width: 100%;"></div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 my-3">
         <div class="progress">
             <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-        <div class="progress">
+        <div class="progress my-3">
             <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-        <div class="progress">
+        <div class="progress my-3">
             <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-        <div class="progress">
+        <div class="progress my-3">
             <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
-      
+
 </div>
 
 <section class="mx-4 my-5 map-design position-relative">
@@ -171,3 +121,81 @@
     </div>
 
 </section>
+<p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Button with data-target
+    </button>
+</p>
+<div class="collapse" id="collapseExample">
+    <div class="card card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+    </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+    window.onload = function () {
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            axisY: {
+                title: "Revenue in USD",
+                valueFormatString: "#0,,.",
+                suffix: "mn",
+                prefix: "$"
+            },
+            data: [{
+                type: "splineArea",
+                color: "rgba(54,158,173,.7)",
+                markerSize: 5,
+                xValueFormatString: "YYYY",
+                yValueFormatString: "$#,##0.##",
+                dataPoints: [
+                    { x: new Date(2000, 0), y: 3289000 },
+                    { x: new Date(2001, 0), y: 3830000 },
+                    { x: new Date(2002, 0), y: 2009000 },
+                    { x: new Date(2003, 0), y: 2840000 },
+                    { x: new Date(2004, 0), y: 2396000 },
+                    { x: new Date(2005, 0), y: 1613000 },
+                    { x: new Date(2006, 0), y: 2821000 },
+                    { x: new Date(2007, 0), y: 2000000 },
+                    { x: new Date(2008, 0), y: 1397000 },
+                    { x: new Date(2009, 0), y: 2506000 },
+                    { x: new Date(2010, 0), y: 2798000 },
+                    { x: new Date(2011, 0), y: 3386000 },
+                    { x: new Date(2012, 0), y: 6704000 },
+                    { x: new Date(2013, 0), y: 6026000 },
+                    { x: new Date(2014, 0), y: 2394000 },
+                    { x: new Date(2015, 0), y: 1872000 },
+                    { x: new Date(2016, 0), y: 2140000 }
+                ]
+            }]
+        });
+        chart.render();
+
+    }
+</script>

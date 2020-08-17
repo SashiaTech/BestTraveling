@@ -206,8 +206,14 @@ header {
     border-top: 1px solid white;
 }
 
-
-
+/*Table Height Fixed*/
+.dataTables_scrollBody{
+    height:50vh;
+}
+/*table scrollhead*/
+.dataTables_scrollHeadInner {
+    height: 50px;
+}
 @media(max-width: 600px) {
     header .toggle {
         top: 20px;

@@ -13,7 +13,7 @@
                 $('#addCountryModal .modal-body').empty().html(result);
             },
             error: function (result) {
-                //alert('error' + result);
+                toastr.error('Something went wrong.');
             }
         });
 
@@ -23,13 +23,14 @@
 
 function onAddOperation(e) {
     if (e == true) {
-        alert('data saved successfully');
+        //alert('data saved successfully');
+        toastr.success('Data saved successfully');
         $('#addCountryModal').modal('hide');
     }
     else {
-        alert('something went wrong');
+        toastr.error('Something went wrong.');
     }
 }
 function onsuccess(e) {
-    alert('something went wrong');
+    toastr.error('Something went wrong.');
 }

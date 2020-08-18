@@ -566,7 +566,6 @@
     <Content Include="Areas\Admin\Views\District\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Country\_AddCountry.cshtml" />
     <Content Include="Areas\Admin\Views\District\_AddDistrict.cshtml" />
-    <Content Include="Areas\Admin\Views\Country\AddCountry1.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
@@ -658,6 +657,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\View js\Admin\Country\List.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -686,7 +686,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\College\Models\" />
     <Folder Include="Content\UIContentFiles\images\" />
-    <Folder Include="Scripts\View js\" />
+    <Folder Include="Scripts\View js\Admin\City\" />
+    <Folder Include="Scripts\View js\College\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

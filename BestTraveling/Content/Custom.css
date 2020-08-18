@@ -1,10 +1,10 @@
 ﻿/*This is common container theme applied on shared bt_layout*/
 .container-theme{
-    background:#fff;
+    background:#ffff;
 }
 .container-theme header{
         box-shadow: 0 1px 8px grey;
-        background: white;
+        background: #fff;
         color: gray;
         font-size: 1.30rem;
         font-weight:400;

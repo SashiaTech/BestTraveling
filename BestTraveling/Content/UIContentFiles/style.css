@@ -50,17 +50,16 @@ header {
         }
 
     header .navBg {
-        background: #3c8dbc;
+        background: #00c0ef;
         width: 100%;
         display: flex;
-        position:sticky;
-        top:0;
-        left:0;
+        position: sticky;
+        top: 0;
+        left: 0;
         justify-content: flex-start;
         align-items: center;
         height: 8vh;
-        z-index:4;
-      
+        z-index: 4;
     }
 
         header .navBg .navBar_logo img {
@@ -96,7 +95,7 @@ header {
     .sideBarDashboard .leftSideBar {
         width: 300px;
         height: 92vh;
-        background: white;
+        background: #1f262d;
         /*display:flex;*/
         position: sticky;
         top: 60px;
@@ -110,7 +109,7 @@ header {
         }
 
         .sideBarDashboard .leftSideBar::-webkit-scrollbar-track {
-            background: #adaaaa;
+            background: #1f262d;
         }
 
         .sideBarDashboard .leftSideBar::-webkit-scrollbar-thumb {
@@ -137,11 +136,11 @@ header {
                 }
 
                     .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons a:hover {
-                        background-color: #576574;
+                        background-color: #00c0ef;
                     }
 
                     .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons a i {
-                        color: #000;
+                        color: #fff;
                         font-size: 18px;
                     }
 
@@ -163,7 +162,7 @@ header {
             }
 
                 .sideBarDashboard .leftSideBar .navBar li:hover {
-                    background-color: #e4e7ea;
+                    background-color: #00c0ef;
                 }
 
                 .sideBarDashboard .leftSideBar .navBar li .icon {
@@ -172,7 +171,7 @@ header {
 
                 .sideBarDashboard .leftSideBar .navBar li a {
                     text-decoration: none;
-                    color: #270b0b;
+                    color: #fff;
                     font-family: 'Roboto', sans-serif;
                     padding: 17px 220px 17px 0px;
                     /*g: 16px 138px 17px 0px;
@@ -197,14 +196,8 @@ header {
                 list-style: none;
                 /*padding: 0px 30px;*/
                 transition: 0.8s;
-                background:white;
-                
-
+                background: #2c3b41;
             }
-
-.borderTop {
-    border-top: 1px solid white;
-}
 
 /*Table Height Fixed*/
 .dataTables_scrollBody{
@@ -213,6 +206,10 @@ header {
 /*table scrollhead*/
 .dataTables_scrollHeadInner {
     height: 50px;
+}
+/*Style for area graph*/
+.canvasjs-chart-canvas {
+    box-shadow: 0 1px 8px grey;
 }
 @media(max-width: 600px) {
     header .toggle {

@@ -18,28 +18,6 @@ toggle.addEventListener('click', () => {
         menuBar.style.width = "70px";
     }
 })
-//function for dropdowns and font awesome icon-changer collapse other dwopdowns on single click
-//let anchor_Design = document.getElementsByClassName('anchor-design');
-//Array.from(anchor_Design).forEach((Element, index) => {
-//    let rytArrowBtn = document.getElementsByClassName('rytArrowBtn');
-//    Element.addEventListener('click', () => {
-//        let submenu = document.getElementsByClassName("submenu");
-//        if (submenu[index].style.display === "none") {
-//            Array.from(rytArrowBtn).forEach((Element1) => {
-//                Element1.className = "fa fa-angle-right rytArrowBtn";
-//            })
-//            rytArrowBtn[index].className = "fa fa-angle-down rytArrowBtn";
-//            Array.from(submenu).forEach((Element) => {
-//                Element.style.display = "none";
-//            })
-//            submenu[index].style.display = "block";
-//        }
-//        else {
-//            submenu[index].style.display = "none";
-//            rytArrowBtn[index].className = "fa fa-angle-right rytArrowBtn";
-//        }
-//    });
-//});
 let anchor_Design = document.getElementsByClassName('anchor-design');
 Array.from(anchor_Design).forEach((Element, index) => {
     let rytArrowBtn = document.getElementsByClassName('rytArrowBtn');

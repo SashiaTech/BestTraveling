@@ -1,40 +1,43 @@
 ﻿@model BT_Model.AdminModel.CountryModel
 
 
-@*<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>*@
 <div class="container-fluid">
 
-    @using (Ajax.BeginForm("AddCountry", "Country", new AjaxOptions { OnSuccess = "onAddOperation", OnFailure = "Onfails" },new {@class="form-group" }))
+    @using (Ajax.BeginForm("AddCountry", "Country", new AjaxOptions { OnSuccess = "onAddOperation", OnFailure = "Onfails" }, new { @class = "form-group" }))
     {
-        <div class="row form-group">
-            <div id="Productresult"></div>
-            <div class="col-md-4">
-                <label>Name</label>
-            </div>
-            <div class="col-md-8">
-                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
-            </div>
-
+    <div class="row form-group">
+        <div id="Productresult"></div>
+        <div class="col-md-4">
+            <label>Name</label>
+        </div>
+        <div class="col-md-8">
+            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Name, string.Empty, new { @class = "text-danger" })
         </div>
 
-        <div class="row form-group">
-            <div class="col-md-4">
-                <label>Code</label>
-            </div>
-            <div class="col-md-8">
-                @Html.TextBoxFor(x => x.Code, new { @class = "form-control" })
-            </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-4">
+            <label>Code</label>
         </div>
-        <div class="row pull-right">
-            <div>
-                <button type="submit" id="btn_Save" class="btn btn-primary mx-1">Save</button>
-            </div>
-            <div>
-                <input type="button" id="btn_Close" value="Close" class="btn btn-primary mx-1" />
-            </div>
+        <div class="col-md-8">
+            @Html.TextBoxFor(x => x.Code, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Code, string.Empty, new { @class = "text-danger" })
         </div>
+    </div>
+    <div class="row pull-right">
+        <div>
+            <button type="submit" id="btn_Save" class="btn btn-primary mx-1">Save</button>
+        </div>
+        <div>
+            <input type="button" id="btn_Close" value="Close" class="btn btn-primary mx-1" />
+        </div>
+    </div>
     }
 </div>
 
+<script src='@Url.Content("~/Scripts/jquery.validate.js")' type='text/javascript'></script>
+<script src='@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")' type='text/javascript'></script>
 
-<script src="@Url.Content("~/Scripts/View js/Admin/Country/List.js")" type="text/javascript"></script>
+<script src="@Url.Content(" ~/Scripts/View js/Admin/Country/List.js")" type="text/javascript"></script>

@@ -566,6 +566,7 @@
     <Content Include="Areas\Admin\Views\District\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Country\_AddCountry.cshtml" />
     <Content Include="Areas\Admin\Views\District\_AddDistrict.cshtml" />
+    <Content Include="Areas\Admin\Views\Country\AddCountry1.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />

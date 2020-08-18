@@ -560,11 +560,12 @@
     <Content Include="Areas\Admin\Views\User\List.cshtml" />
     <Content Include="Areas\Admin\Views\User\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Fairs\List.cshtml" />
-    <Content Include="Areas\Admin\Views\Country\Add.cshtml" />
     <Content Include="Areas\College\Views\StudentAuthorization\List.cshtml" />
     <Content Include="Areas\College\Views\StudentAuthorization\Add.cshtml" />
     <Content Include="Areas\Admin\Views\District\List.cshtml" />
     <Content Include="Areas\Admin\Views\District\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Country\_AddCountry.cshtml" />
+    <Content Include="Areas\Admin\Views\District\_AddDistrict.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
@@ -714,6 +715,10 @@
     <ProjectReference Include="..\BT Model\BT Model.csproj">
       <Project>{7679f68a-9bd1-4677-ab35-662d38b66d74}</Project>
       <Name>BT Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BT.AdminService\BT.AdminService.csproj">
+      <Project>{2831fc01-234a-43d5-a727-326268838e47}</Project>
+      <Name>BT.AdminService</Name>
     </ProjectReference>
     <ProjectReference Include="..\BT.Repositories\BT.Repositories.csproj">
       <Project>{7e6a07d4-99bc-4f00-b3b2-0c9000ccddfe}</Project>

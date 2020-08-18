@@ -1,0 +1,36 @@
+﻿@model BT_Model.AdminModel.CountryModel
+
+
+@*<div class="container-fluid">
+
+    @using (Ajax.BeginForm("AddCountry", "Country", new AjaxOptions { OnSuccess = "onsuccess", HttpMethod = "POST" }, new { id = "frm_addCountry" }))
+    {
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label>Name</label>
+            </div>
+            <div class="col-md-8">
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+            </div>
+
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label>Code</label>
+            </div>
+
+            <div class="col-md-8">
+                @Html.TextBoxFor(x => x.Code, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="row pull-right">
+            <div>
+                <input type="submit" id="btn_Save" value="Save" class="btn btn-primary mx-1" />
+            </div>
+            <div>
+                <input type="button" id="btn_Close" value="Close" class="btn btn-primary mx-1" />
+            </div>
+        </div>
+    }
+</div>*@

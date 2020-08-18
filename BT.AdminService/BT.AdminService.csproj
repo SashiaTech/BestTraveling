@@ -41,11 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IServices\ICountryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CountryService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="IServices\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\BT Model\BT Model.csproj">
+      <Project>{7679f68a-9bd1-4677-ab35-662d38b66d74}</Project>
+      <Name>BT Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BT.AdminRepository\BT.AdminRepository.csproj">
+      <Project>{1be17318-1335-4124-a1a5-058c3f05a01d}</Project>
+      <Name>BT.AdminRepository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

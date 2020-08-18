@@ -4,8 +4,8 @@ using Unity.Mvc5;
 using bt_Services;
 using bt_Services.IServices;
 using bt_Services.Services;
-using BT_College_Repository.IRepository;
-using BT_College_Repository.Repository;
+using BT.AdminService.IServices;
+using BT.AdminService.Services;
 
 namespace BestTraveling
 {
@@ -20,6 +20,7 @@ namespace BestTraveling
 
             // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<ICollegeService, CollegeService>();
+            container.RegisterType<ICountryService, CountryService>();
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }

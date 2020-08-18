@@ -17,7 +17,7 @@ namespace BT.AdminRepository.Repository
         GUnitWork gWork = null;
         public CityRepo()
         {
-            gWork = new BestTravelingEntities();
+            gWork = new GUnitWork(new BestTravelingEntities());
 
         }
         public void AddCity(CityModel model)

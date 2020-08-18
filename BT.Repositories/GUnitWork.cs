@@ -58,9 +58,5 @@ namespace BT.Repositories
             GC.SuppressFinalize(this);
         }
 
-        public static implicit operator GUnitWork(BestTravelingEntities v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -6,7 +6,6 @@
         $.ajax({
             url: '/Admin/Country/AddCountry',
             dataType: 'html',
-            async:false,
             contentType: 'application/json; charset=utf-8',
             method: 'GET',
             success: function (result) {
@@ -28,13 +27,13 @@ function Country_Read() {
         url: '/Admin/Country/Country_Read',
         method: 'GET',
         contentType: 'application/json; charset=utf-8',
-        async:false,
         success: function (data) {
             $('#grd_Country').DataTable({
                 data: data,
                 paging: false,
                 searching: false,
                 scrollY: 300,
+                
                 columns: [
                     { 'data': 'Name' },
                     { 'data': 'Code' },
@@ -52,7 +51,6 @@ function onAddOperation(e) {
         //alert('data saved successfully');
         toastr.success('Data saved successfully');
         $('#addCountryModal').modal('hide');
-        Country_Read();
     }
     else {
         toastr.error('Something went wrong.');

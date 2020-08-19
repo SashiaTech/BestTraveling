@@ -154,6 +154,7 @@
     <Compile Include="Areas\College\CollegeAreaRegistration.cs" />
     <Compile Include="Areas\College\Controllers\CollegeController.cs" />
     <Compile Include="Areas\College\Controllers\StudentAuthorizationController.cs" />
+    <Compile Include="Common Helpers\CommonProp.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -25,12 +25,15 @@
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="~/Scripts/toastr.min.js"></script>
+     @{ 
+         var SiteUrl = BestTraveling.Common_Helpers.CommonProp.SiteUrl;
+     }
     <link href="~/Content/toastr.min.css" rel="stylesheet" />
     @*Sweet alert Cdn link*@
     <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
     @*<link href="~/Content/Custom.css" rel="stylesheet" />*@
 
-
+  
 
     @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
         @Styles.Render("~/Content/css")

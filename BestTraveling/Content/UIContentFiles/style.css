@@ -50,7 +50,7 @@ header {
         }
 
     header .navBg {
-        background: #00c0ef;
+        background: #3c8dbc;
         width: 100%;
         display: flex;
         position: sticky;
@@ -95,7 +95,7 @@ header {
     .sideBarDashboard .leftSideBar {
         width: 300px;
         height: 92vh;
-        background: #1f262d;
+        background: #222d32;
         /*display:flex;*/
         position: sticky;
         top: 60px;
@@ -136,11 +136,11 @@ header {
                 }
 
                     .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons a:hover {
-                        background-color: #00c0ef;
+                        background: #3c8dbc;
                     }
 
                     .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons a i {
-                        color: #fff;
+                        color:#fff;
                         font-size: 18px;
                     }
 
@@ -155,14 +155,13 @@ header {
             .sideBarDashboard .leftSideBar .navBar li {
                 line-height: 50px;
                 letter-spacing: 1px;
-      
                 position: relative;
                 cursor: pointer;
                 transition: all .4s ease-in;
             }
 
                 .sideBarDashboard .leftSideBar .navBar li:hover {
-                    background-color: #00c0ef;
+                    background: #3c8dbc;
                 }
 
                 .sideBarDashboard .leftSideBar .navBar li .icon {
@@ -174,7 +173,7 @@ header {
                     color: #fff;
                     font-family: 'Roboto', sans-serif;
                     padding: 17px 220px 17px 0px;
-                    /*g: 16px 138px 17px 0px;
+                    /*g: 16px 138px 17px 0px
                     background:red;*/
                 }
 
@@ -199,10 +198,10 @@ header {
                 background: #2c3b41;
             }
 
-/*Table Height Fixed*/
-.dataTables_scrollBody{
-    height:50vh;
-}
+                /*Table Height Fixed*/
+                .dataTables_scrollBody {
+                    height: 50vh;
+                }
 /*table scrollhead*/
 .dataTables_scrollHeadInner {
     height: 50px;

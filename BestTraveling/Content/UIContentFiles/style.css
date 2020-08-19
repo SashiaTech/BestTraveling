@@ -220,6 +220,15 @@ header {
         top: 18px;
     }
 }
+/*row color-profile change*/
+.even {
+    background: #939b9d42 !important;
+    line-height:1.1rem;
+}
+.odd
+{
+    line-height:1.1rem;
+}
 
 @media(max-width:768px) {
     .sideBarDashboard .leftSideBar .navBar {

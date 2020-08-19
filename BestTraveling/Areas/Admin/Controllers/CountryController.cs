@@ -15,14 +15,23 @@ namespace BestTraveling.Areas.Admin.Controllers
         {
             this._countryService = _countryService;
         }
+
         // GET: Admin/Country
         public ActionResult List()
         {
             return View();
         }
+
+        public JsonResult Country_Read()
+        {
+           var Countries =  _countryService.GetCountries();
+            return Json(Countries,JsonRequestBehavior.AllowGet);
+        }
+
+
         public ActionResult AddCountry()
         {
-            return PartialView("~/Areas/Admin/Views/Country/_AddCountry.cshtml",new CountryModel());
+            return PartialView("~/Areas/Admin/Views/Country/_AddCountry.cshtml", new CountryModel());
         }
 
         [HttpPost]
@@ -31,8 +40,8 @@ namespace BestTraveling.Areas.Admin.Controllers
             bool flag = false;
             try
             {
-               
-                    model.CountryId = Guid.NewGuid();
+
+                model.CountryId = Guid.NewGuid();
                 _countryService.AddCountry(model);
                 flag = true;
             }

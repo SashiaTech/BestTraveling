@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-   
+    Country_Read();
     $('#btn_AddCountry').click(function () {
         $('#addCountryModal').modal('show');
 
@@ -20,6 +20,30 @@
 
     });
 });
+
+
+function Country_Read() {
+    $.ajax({
+        url: '/Admin/Country/Country_Read',
+        method: 'GET',
+        contentType: 'application/json; charset=utf-8',
+        success: function (data) {
+            $('#grd_Country').DataTable({
+                data: data,
+                paging: false,
+                searching: false,
+                scrollY: 300,
+                columns: [
+                    { 'data': 'Name' },
+                    { 'data': 'Code' },
+                ],
+            });
+        },
+        error: function () {
+            toastr.error('something went wrong. please contact to administrator');
+        }
+    });
+}
 
 function onAddOperation(e) {
     if (e == true) {

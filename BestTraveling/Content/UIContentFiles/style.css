@@ -58,7 +58,7 @@ header {
         left: 0;
         justify-content: flex-start;
         align-items: center;
-        height: 8vh;
+        height:60px;
         z-index: 4;
     }
 
@@ -236,13 +236,16 @@ header {
     }
 
     .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons {
-        display: block;
+        display: none;
+    }
+    .sideBarDashboard .leftSideBar
+    {
+        position:fixed;
     }
 
-    .sideBarDashboard .leftSideBar {
-        width: 84px;
+    .win {
+        width: 0% !important;
     }
-
 }
 @media(max-width:992px){
     .checkBox-style{margin-top:4px !important; margin-bottom:5px;}

@@ -13,5 +13,6 @@ namespace BT.AdminService.IServices
         IQueryable<CountryModel> GetCountries();
         CountryModel GetCountryById(Guid CountryId);
         void RemoveCountry(Guid CountryId);
+        void UpdateCountry(CountryModel model);
     }
 }

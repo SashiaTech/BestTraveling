@@ -29,7 +29,7 @@
 </div>
 
 
-        <p>
+        @*<p>
             <a class="position-relative text-decoration-none text-black-50" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="fa fa-cog"></i> <i class="fa fa-angle-down"></i></a>
         </p>
         <div class="row">
@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>*@
 
 
 <div class="container-fluid" style="margin-top:50px;">
@@ -51,6 +51,7 @@
             <tr>
                 <th>Country</th>
                 <th>Code</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -58,12 +59,12 @@
     </table>
 </div>
 
-<!-- Modal -->
+<!-- Add Country Modal -->
 <div class="modal  fade" id="addCountryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">District</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Add Country</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -76,15 +77,28 @@
         </div>
     </div>
 </div>
+
+<!-- Update country Modal-->
+<div class="modal fade" id="modal_UpdateCountry" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Update Country</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
-    $('#example').DataTable({
-        'paging': false,
-        'scrollY': '450px',
-        'searching': true,
-        'autoWidth': true,
-        'scrollCollapse': true,
-        'footerCallback': false
-    });
     function onAddOperation(e) {
         alert(e);
         alert("test3");

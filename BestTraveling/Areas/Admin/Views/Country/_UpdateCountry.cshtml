@@ -1,0 +1,37 @@
+﻿@model BT_Model.AdminModel.CountryModel
+
+<div class="container-fluid">
+    @using (Ajax.BeginForm("UpdateCountry", "Country", new AjaxOptions { OnSuccess = "onUpdateCountry", OnFailure = "onFailureUpdateCountry" }, new { @id = "frm_UpdateCountry", @class = "form-group" }))
+    {
+        @Html.HiddenFor(x => x.CountryId)
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label>Name</label>
+            </div>
+            <div class="col-md-6">
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Name, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label>Code</label>
+            </div>
+            <div class="col-md-6">
+                @Html.TextBoxFor(x => x.Code, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Code, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row pull-right">
+            <div>
+                <input type="submit" value="Save" id="btn_UpdateCountry" class="btn btn-primary mx-1" />
+            </div>
+            <div>
+                <input type="button" value="Close" id="btn_close" class="btn btn-primary mx-1" />
+            </div>
+        </div>
+
+    }
+</div>
+<script src='@Url.Content("~/Scripts/jquery.validate.js")' type='text/javascript'></script>
+<script src='@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")' type='text/javascript'></script>

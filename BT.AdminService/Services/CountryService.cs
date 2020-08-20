@@ -37,5 +37,10 @@ namespace BT.AdminService.Services
         {
             _ICountryRepo.RemoveCountry(CountryId);
         }
+
+        public void UpdateCountry(CountryModel model)
+        {
+            _ICountryRepo.UpdateCountry(model);
+        }
     }
 }

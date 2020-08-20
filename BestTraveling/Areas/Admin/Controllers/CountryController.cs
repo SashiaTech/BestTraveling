@@ -51,5 +51,41 @@ namespace BestTraveling.Areas.Admin.Controllers
             }
             return Json(flag);
         }
+
+        public ActionResult UpdateCountry(Guid CountryId)
+        {
+            CountryModel country = _countryService.GetCountryById(CountryId);
+            return PartialView("~/Areas/Admin/Views/Country/_UpdateCountry.cshtml",country);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateCountry(CountryModel model)
+        {
+            bool flag = false;
+            try
+            {
+                _countryService.UpdateCountry(model);
+                flag = true;
+            }catch(Exception e)
+            {
+                flag = false;
+            }
+            return Json(flag, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult DeleteCountry(Guid CountryId)
+        {
+            bool flag = false;
+            try
+            {
+                _countryService.RemoveCountry(CountryId);
+                flag = true;
+            }
+            catch (Exception e)
+            {
+                flag = false;
+            }
+            return Json(flag,JsonRequestBehavior.AllowGet);
+        }
     }
 }

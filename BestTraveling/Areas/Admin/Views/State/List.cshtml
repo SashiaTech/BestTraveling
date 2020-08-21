@@ -3,11 +3,6 @@
 	ViewBag.Title = "List";
 	Layout = "~/Views/Shared/BT_Layout.cshtml";
 }
-<link href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
-<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-
-
-
 
 @* bgDanger Header For StateView *@
 <header>
@@ -23,8 +18,6 @@
 <div class="AddBtn d-flex justify-content-end mr-5 my-4">
 	<button type="button" class="btn btn-primary px-3">Add</button>
 </div>
-
-
 <script>
 	$(document).ready(function () {
 		$('#example').DataTable({
@@ -41,7 +34,7 @@
 
 <div class="container-fluid">
 	<table id="example" class="table table-bordered table-striped" style="width:100%">
-		<thead class="table-head-design">
+		<thead class="table-head-bg">
 			<tr>
 				<th>Name</th>
 				<th>Position</th>

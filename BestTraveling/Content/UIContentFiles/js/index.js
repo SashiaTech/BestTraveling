@@ -10,32 +10,33 @@ window.addEventListener("resize", () => {
     }
 });
 toggle.addEventListener('click', toggler);
-
 function toggler(e) {
     const menuBar = document.querySelector('#menuBar');
     const query = window.matchMedia("(max-width: 768px)")
     if (query.matches) {
-        if (menuBar.style.width === "300px") {
+        if (menuBar.style.width === "250px") {
             menuBar.style.width = "0px";
             ul_list.style.display = "none";
             sideBarIcons.style.display = "none";
         }
         else {
             menuBar.classList.remove("win");
-            menuBar.style.width = "300px";
+            menuBar.style.width = "250px";
             ul_list.style.display = "block";
             sideBarIcons.style.display = "none";
         }
     }
-    else if (menuBar.style.width === "45px") {
-        menuBar.style.width = "300px";
-        ul_list.style.display = "block";
-        sideBarIcons.style.display = "none";
-    }
     else {
-        menuBar.style.width = "45px";
-        ul_list.style.display = "none";
-        sideBarIcons.style.display = "block";
+        if (menuBar.style.width === "45px") {
+            menuBar.style.width = "300px";
+            ul_list.style.display = "block";
+            sideBarIcons.style.display = "none";
+        }
+        else {
+            menuBar.style.width = "45px";
+            ul_list.style.display = "none";
+            sideBarIcons.style.display = "block";
+        }
     }
 }
 

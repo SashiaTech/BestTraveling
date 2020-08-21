@@ -1,7 +1,6 @@
 ﻿/*****styling for adminPanel Side bar********/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
-
 html
 {
     font-size:100%;
@@ -16,196 +15,173 @@ html
     padding: 0;
     box-sizing: border-box;
 }
-/* header styling... */
+
+/*Body Custom Scrollbar Design*/
 body::-webkit-scrollbar {
     width: 12px; /* width of the entire scrollbar */
 }
-
 body::-webkit-scrollbar-track {
     background: #222d32; /* color of the tracking area */
 }
-
 body::-webkit-scrollbar-thumb {
     background-color: gray; /* color of the scroll thumb */
-    border-radius: 20px; /* roundness of the scroll thumb */
-   
-}
+    border-radius: 20px; /* roundness of the scroll thumb */  
+}/*Closed*/
+
+/* header styling */
 header {
     width: 100%;
     position: relative;
 }
+header .toggle {
+    position: fixed;
+    top: 18px;
+    left: 250px;
+    transition: all .3s;
+    cursor: pointer;
+    z-index:5;
+}
+header .toggle i {
+    color: var(--color);
+    position: relative;
+}
+header .navBg {
+    background: #3c8dbc;
+    width: 100%;
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    justify-content: flex-start;
+    align-items: center;
+    height:60px;
+    z-index: 4;
+}
+header .navBg .navBar_logo img {
+    width: 110px;
+    margin: 0px 35px;
+}
+header .navBg .someIcon {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+}
+header .navBg .someIcon a {
+    border-radius: 50%;
+    padding: 3px;
+    margin: 0 4px;
+    width: 30px;
+    text-align: center;
+}
+header .navBg .someIcon a i {
+    color: var(--color);
+}/*closed*/
 
-    header .toggle {
-        position: fixed;
-        top: 18px;
-        left: 250px;
-        transition: all .3s;
-        cursor: pointer;
-        z-index:5;
-    }
-
-        header .toggle i {
-            color: var(--color);
-            position: relative;
-        }
-
-    header .navBg {
-        background: #3c8dbc;
-        width: 100%;
-        display: flex;
-        position: sticky;
-        top: 0;
-        left: 0;
-        justify-content: flex-start;
-        align-items: center;
-        height:60px;
-        z-index: 4;
-    }
-
-        header .navBg .navBar_logo img {
-            width: 110px;
-            margin: 0px 35px;
-        }
-
-        header .navBg .someIcon {
-            display: flex;
-            position: absolute;
-            top: 15px;
-            right: 30px;
-        }
-
-            header .navBg .someIcon a {
-                border-radius: 50%;
-                padding: 3px;
-                margin: 0 4px;
-                width: 30px;
-                text-align: center;
-            }
-
-                header .navBg .someIcon a i {
-                    color: var(--color);
-                }
-
-/* styling leftSideBar... */
+/*main-sidebardashboard starts..*/
 .sideBarDashboard {
     display: flex;
-    justify-content: start;
+}
+.sideBarDashboard .leftSideBar {
+    width: 300px;
+    height: 92vh;
+    background: #222d32;
+    /*display:flex;*/
+    position: sticky;
+    top: 60px;
+    z-index: 11;
+    overflow-y: scroll;
+    transition: all .3s cubic-bezier(.17,.67,.83,.67);
+    -webkit-transition: all .3s cubic-bezier(.17,.67,.83,.67);
+    -moz-transition: all .3s cubic-bezier(.17,.67,.83,.67);
+    -o-transition: all .3s cubic-bezier(.17,.67,.83,.67);
 }
 
-    .sideBarDashboard .leftSideBar {
-        width: 300px;
-        height: 92vh;
-        background: #222d32;
-        /*display:flex;*/
-        position: sticky;
-        top: 60px;
-        z-index: 11;
-        overflow-y: scroll;
-        transition: all .3s cubic-bezier(.17,.67,.83,.67);
+/*LeftSideBar CUstom Scrollbar design*/
+.sideBarDashboard .leftSideBar::-webkit-scrollbar {
+    width: 6px;
+}
+.sideBarDashboard .leftSideBar::-webkit-scrollbar-track {
+    background: #1f262d;
+}
+.sideBarDashboard .leftSideBar::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+}/*closed*/
+
+ .sideBarDashboard .leftSideBar .menuIcons {
+     width: 100%;
+     display: flex;
+     justify-content: flex-end;
+ }
+ .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons {
+     width: 80px;
+     text-align: center;
+     display: none;
+ }
+ .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons a {
+     display: block;
+     padding: 16px 8px;
+ }
+ .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons a:hover {
+     background: #3c8dbc;
+ }
+ .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons a i {
+     color:#fff;
+     font-size: 18px;
+ }
+ .sideBarDashboard .leftSideBar .navBar {
+     list-style: none;
+     text-align: left;
+     width: auto;
+     overflow:hidden;
+     white-space:nowrap;
+ }
+ .sideBarDashboard .leftSideBar .navBar li {
+     line-height: 50px;
+     letter-spacing: 1px;
+     position: relative;
+     cursor: pointer;
+     -webkit-transition: all .5s ease-in;
+     -moz-transition: all .5s ease-in;
+     -o-transition: all .5s ease-in;
+     transition: all .5s ease-in;
+ }
+ .sideBarDashboard .leftSideBar .navBar li:hover {
+     background: #3c8dbc;
+ }
+ .sideBarDashboard .leftSideBar .navBar li .icon {
+     padding: 0 8px;
+ }
+ .sideBarDashboard .leftSideBar .navBar li a {
+     text-decoration: none;
+     color: #fff;
+     font-size: 0.9rem;
+     font-family: 'Roboto', sans-serif;
+     padding: 17px 220px 17px 0px;               
+ }
+ .sideBarDashboard .leftSideBar .navBar li a .rytArrowBtn {
+     position: absolute;
+     right: 8px;
+     top: 25px;
+     transition: all 0.8s linear;
+     -webkit-transition: all 0.8s linear;
+     -moz-transition: all 0.8s linear;
+     -o-transition: all 0.8s linear;
+ }
+ .sideBarDashboard .leftSideBar .submenu {
+     display: block !important;
+     max-height: 0px;
+     overflow: hidden;
+     transition: all .4s linear;
+     -webkit-transition: all .4s linear;
+     -moz-transition: all .4s linear;
+     -o-transition: all .4s linear;
     }
-    /*scrollbar design*/
-        .sideBarDashboard .leftSideBar::-webkit-scrollbar {
-            width: 6px;  
-        }
-
-        .sideBarDashboard .leftSideBar::-webkit-scrollbar-track {
-            background: #1f262d;
-        }
-
-        .sideBarDashboard .leftSideBar::-webkit-scrollbar-thumb {
-            background-color: gray;  
-            border-radius: 20px;  
-        }
-
-
-        .sideBarDashboard .leftSideBar .menuIcons {
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-            .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons {
-                width: 80px;
-                text-align: center;
-                display: none;
-            }
-
-                .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons a {
-                    display: block;
-                    padding: 16px 8px;
-                }
-
-                    .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons a:hover {
-                        background: #3c8dbc;
-                    }
-
-                    .sideBarDashboard .leftSideBar .menuIcons .sideBarIcons a i {
-                        color:#fff;
-                        font-size: 18px;
-                    }
-
-        .sideBarDashboard .leftSideBar .navBar {
-            list-style: none;
-            text-align: left;
-            width: auto;
-            overflow:hidden;
-            white-space:nowrap;
-        }
-
-            .sideBarDashboard .leftSideBar .navBar li {
-                line-height: 50px;
-                letter-spacing: 1px;
-                position: relative;
-                cursor: pointer;
-                transition: all .4s ease-in;
-            }
-
-                .sideBarDashboard .leftSideBar .navBar li:hover {
-                    background: #3c8dbc;
-                }
-
-                .sideBarDashboard .leftSideBar .navBar li .icon {
-                    padding: 0 8px;
-                }
-
-                .sideBarDashboard .leftSideBar .navBar li a {
-                    text-decoration: none;
-                    color: #fff;
-                    font-family: 'Roboto', sans-serif;
-                    padding: 17px 220px 17px 0px;
-                    /*g: 16px 138px 17px 0px
-                    background:red;*/
-                }
-
-                    .sideBarDashboard .leftSideBar .navBar li a .rytArrowBtn {
-                        position: absolute;
-                        right: 8px;
-                        top: 25px;
-                        transition: 0.8s;
-                    }
-
-        .sideBarDashboard .leftSideBar .submenu {
-             display: block !important;
-             max-height: 0px;
-             overflow: hidden;
-             transition: all 0.5s linear;
-        }
-
-            .sideBarDashboard .leftSideBar .submenu li {
-                list-style: none;
-                /*padding: 0px 30px;*/
-                transition: 0.8s;
-                background: #2c3b41;
-            }
-
-                /*Table Height Fixed*/
-                .dataTables_scrollBody {
-                    height: 50vh;
-                }
-/*table scrollhead*/
-.dataTables_scrollHeadInner {
-    height: 50px;
-}
+ .sideBarDashboard .leftSideBar .submenu li {
+     list-style: none;
+     background: #2c3b41;   
+ }
 /*Style for area graph*/
 .canvasjs-chart-canvas {
     box-shadow: 0 1px 8px grey;
@@ -215,21 +191,10 @@ header {
         top: 20px;
         left: 150px;
     }
-
     header .navBg .someIcon {
         top: 18px;
     }
 }
-/*row color-profile change*/
-.even {
-    background: #939b9d42 !important;
-    line-height:1.1rem;
-}
-.odd
-{
-    line-height:1.1rem;
-}
-
 @media(max-width:768px) {
     .sideBarDashboard .leftSideBar .navBar {
         display: none;
@@ -241,8 +206,8 @@ header {
     .sideBarDashboard .leftSideBar
     {
         position:fixed;
+        width:250px;
     }
-
     .win {
         width: 0% !important;
     }

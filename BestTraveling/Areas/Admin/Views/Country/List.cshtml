@@ -2,9 +2,6 @@
     ViewBag.Title = "List";
     Layout = "~/Views/Shared/BT_Layout.cshtml";
 }
-
-<link href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
-<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 <style>
     .card {
          left : 19px;
@@ -12,7 +9,7 @@
           background:#3c8dbc;
           z-index:10;
     }
-    </style>
+</style>
 @* bgDanger Header For StateView *@
 <header>
     <div class="row p-1 mr-0">
@@ -27,27 +24,23 @@
 <div class="AddBtn d-flex justify-content-end mr-5 my-4">
     <button type="button" id="btn_AddCountry" class="btn btn-primary px-3">Add</button>
 </div>
-
-
-        @*<p>
-            <a class="position-relative text-decoration-none text-black-50" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="fa fa-cog"></i> <i class="fa fa-angle-down"></i></a>
-        </p>
-        <div class="row">
+@*<p>
+	<a class="position-relative text-decoration-none" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="fa fa-cog"></i> <i class="fa fa-angle-down"></i></a>
+       </p>
+<div class="row">
             <div class="col-sm-4 position-absolute">
                 <div class="collapse multi-collapse" id="multiCollapseExample1">
                     <div class="card card-body p-0" style="width:80px">
-                        <a href="#" class="text-center text-white text-decoration-none">Edit</a>
-                   
+                        <a href="#" class="text-center text-white text-decoration-none">Edit</a>           
                         <a href="#" class=" text-white text-center text-decoration-none"style="border-top: 1px solid white;">Delete</a>
                     </div>
                 </div>
             </div>
         </div>*@
 
-
-<div class="container-fluid" style="margin-top:50px;">
+<div class="container-fluid">
     <table id="grd_Country" class="table table-bordered table-striped" style="width:100%">
-        <thead class="table-head-design" style="width:100%">
+        <thead class="table-head-bg" style="width:100%">
             <tr>
                 <th>Country</th>
                 <th>Code</th>
@@ -63,7 +56,7 @@
 <div class="modal  fade" id="addCountryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header modal-pop-bg">
                 <h5 class="modal-title" id="exampleModalLabel">Add Country</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -82,8 +75,8 @@
 <div class="modal fade" id="modal_UpdateCountry" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Update Country</h5>
+            <div class="modal-header modal-pop-bg">
+                <h5 class="modal-title" id="exampleModalLabel">Update Country</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

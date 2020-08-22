@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IServices\ICountryService.cs" />
+    <Compile Include="IServices\IStateService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CountryService.cs" />
+    <Compile Include="Services\StateService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BT Model\BT Model.csproj">

@@ -16,7 +16,7 @@ namespace BT.AdminRepository.Repository
 
         public StateRepo()
         {
-            gwork = new BestTravelingEntities();
+            gwork = new GUnitWork(new BestTravelingEntities());
         }
         public void AddState(StateModel stateModel)
         {

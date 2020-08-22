@@ -21,7 +21,8 @@ namespace BestTraveling
             // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<ICollegeService, CollegeService>();
             container.RegisterType<ICountryService, CountryService>();
-
+            container.RegisterType<ICountryService, CountryService>();
+            container.RegisterType<IStateService, StateService>();
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }

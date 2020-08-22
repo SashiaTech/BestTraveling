@@ -155,6 +155,7 @@
     <Compile Include="Areas\College\Controllers\CollegeController.cs" />
     <Compile Include="Areas\College\Controllers\StudentAuthorizationController.cs" />
     <Compile Include="Common Helpers\CommonProp.cs" />
+    <Compile Include="Controllers\CommonDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -692,6 +693,7 @@
     <Folder Include="Content\UIContentFiles\images\" />
     <Folder Include="Scripts\View js\Admin\City\" />
     <Folder Include="Scripts\View js\College\" />
+    <Folder Include="Views\CommonData\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

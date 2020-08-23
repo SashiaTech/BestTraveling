@@ -163,7 +163,7 @@ header .navBg .someIcon a i {
  .sideBarDashboard .leftSideBar .navBar li a .rytArrowBtn {
      position: absolute;
      right: 8px;
-     top: 25px;
+     top: 21px;
      transition: all 0.8s linear;
      -webkit-transition: all 0.8s linear;
      -moz-transition: all 0.8s linear;

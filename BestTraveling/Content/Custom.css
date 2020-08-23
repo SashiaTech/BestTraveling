@@ -22,13 +22,18 @@
         margin-top: 8px;
 }
 /*Jquery Data Table Edit*/
+
 .dataTables_scrollBody {
     height: 50vh;
 }
 .dataTables_scrollHead {
     height: 40px;
 }
-.odd{
+.dataTables_scrollHeadInner,.no-footer{
+    width:100% !important;
+    box-sizing:border-box !important;
+}
+.odd {
     background: #deecec !important;
 }
 .table-bordered td {
@@ -37,6 +42,15 @@
 .table-head-bg {
     background: #3c8dbc;
     color: white;
+}
+.table thead th
+{
+    vertical-align:top !important;
+}
+@media (min-width: 576px) {
+    .container, .container-sm {
+        max-width: 100% !important;
+    }
 }
 .modal-pop-bg {
     padding: 0.5rem 1rem !important;
@@ -97,8 +111,3 @@
         color: #fff !important;
     }
 /*jquery datalist table  modification*/
-#example_filter {
-    position: absolute !important;
-    left: 0 !important;
-    top: -30px !important;
-}

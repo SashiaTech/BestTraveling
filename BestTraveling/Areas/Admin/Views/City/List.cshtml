@@ -22,15 +22,13 @@
 	$(document).ready(function () {
 		$('#example').DataTable({
 			'paging': false,
-			'scrollY': '450px',
-			'searching': true,
-			'autoWidth': true,
-			'scrollCollapse': true,
-			'footerCallback': false
+            'scrollY': '450px',
+            'scrollX': true,
+			'searching': true
 		});
 	});
 </script>
-<div class="container-fluid">
+<div class="container table-responsive">
 	<table id="example" class="table table-bordered table-striped" style="width:100%">
 		<thead class="table-head-bg" style="width:100%;">
 			<tr>

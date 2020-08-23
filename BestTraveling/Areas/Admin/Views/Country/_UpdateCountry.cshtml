@@ -8,7 +8,7 @@
             <div class="col-md-4">
                 <label>Name</label>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8">
                 @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
                 @Html.ValidationMessageFor(x => x.Name, string.Empty, new { @class = "text-danger" })
             </div>
@@ -17,12 +17,12 @@
             <div class="col-md-4">
                 <label>Code</label>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8">
                 @Html.TextBoxFor(x => x.Code, new { @class = "form-control" })
                 @Html.ValidationMessageFor(x => x.Code, string.Empty, new { @class = "text-danger" })
             </div>
         </div>
-        <div class="row pull-right">
+        <div class="row pull-right" style="padding-right:12px;">
             <div>
                 <input type="submit" value="Save" id="btn_UpdateCountry" class="btn btn-primary mx-1" />
             </div>

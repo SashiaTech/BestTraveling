@@ -19,15 +19,14 @@
 		height: 25px !important;
 		padding: 3px 12px !important;
 		font-size: 11px !important;
-        margin-top: 8px;
+        /*margin-top: 8px;*/
 }
 /*Jquery Data Table Edit*/
-
-.dataTables_scrollBody {
-    height: 50vh;
-}
 .dataTables_scrollHead {
     height: 40px;
+}
+.dataTables_scrollBody {
+    height: 50vh !important;
 }
 .dataTables_scrollHeadInner,.no-footer{
     width:100% !important;
@@ -36,23 +35,34 @@
 .odd {
     background: #deecec !important;
 }
-.table-bordered td {
-    padding: 8px !important;
-}
+/*#example_filter{
+    margin-left: 5px;
+    border: none !important;
+    outline: none;
+    border-radius: 4px;
+}*/
 .table-head-bg {
     background: #3c8dbc;
     color: white;
 }
-.table thead th
-{
-    vertical-align:top !important;
+.table thead th {
+    vertical-align: top !important;
 }
+.table-bordered td {
+    padding: 8px !important;
+}
+.table-bordered td>a{
+    text-decoration:none !important;
+    color:#000 !important;
+} 
 @media (min-width: 576px) {
     .container, .container-sm {
         max-width: 100% !important;
     }
 }
-.modal-pop-bg {
+/*Datatable closed*/
+    /*POP-POP Design*/
+    .modal-pop-bg {
     padding: 0.5rem 1rem !important;
     background: #3c8dbc;
     color:#fff !important;
@@ -83,7 +93,12 @@
     /* padding-left: 0px !important; */
     font-size: 0.8rem !important;
 }
-
+.dropdown-menu>li:nth-child(1){
+    border-bottom:1px solid #fff;
+}
+.dropdown-menu>li>a:nth-child(1){
+    outline:none;
+}
 /*Media query for index page cards*/
 @media(max-width:768px) {
     .cardBody {
@@ -98,7 +113,7 @@
         margin: 25px 0;
     }
 }
-    .btn2 {
+    /*.btn2 {
         background: #3c8dbc !important;
         outline: none;
         border: none;
@@ -109,5 +124,4 @@
         font-size: 16px;
         font-weight: bold;
         color: #fff !important;
-    }
-/*jquery datalist table  modification*/
+    }*/

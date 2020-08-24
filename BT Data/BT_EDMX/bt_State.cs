@@ -17,8 +17,8 @@ namespace BT_Data.BT_EDMX
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public bt_State()
         {
-            this.bt_CollegeDirector = new HashSet<bt_CollegeDirector>();
             this.bt_City = new HashSet<bt_City>();
+            this.bt_CollegeDirector = new HashSet<bt_CollegeDirector>();
             this.bt_District = new HashSet<bt_District>();
         }
     
@@ -28,11 +28,13 @@ namespace BT_Data.BT_EDMX
         public Nullable<System.DateTime> CreatedBy { get; set; }
         public Nullable<System.DateTime> CreatedDateTime { get; set; }
         public Nullable<System.Guid> CountryId { get; set; }
+        public bool IsDeleted { get; set; }
+        public bool IsActive { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<bt_CollegeDirector> bt_CollegeDirector { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_City> bt_City { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<bt_CollegeDirector> bt_CollegeDirector { get; set; }
         public virtual bt_Country bt_Country { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_District> bt_District { get; set; }

@@ -98,6 +98,8 @@
           <Property Name="CreatedBy" Type="datetime" />
           <Property Name="CreatedDateTime" Type="datetime" />
           <Property Name="CountryId" Type="uniqueidentifier" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="bt_User">
           <Key>
@@ -467,7 +469,6 @@
           </AssociationSet>
           <EntitySet Name="bt_CollegeDirector" EntityType="BestTravelingModel.bt_CollegeDirector" />
           <EntitySet Name="bt_Gender" EntityType="BestTravelingModel.bt_Gender" />
-          <EntitySet Name="bt_State" EntityType="BestTravelingModel.bt_State" />
           <AssociationSet Name="FK_bt_CollegeDirector_bt_College_CollegeId" Association="BestTravelingModel.FK_bt_CollegeDirector_bt_College_CollegeId">
             <End Role="bt_College" EntitySet="bt_College" />
             <End Role="bt_CollegeDirector" EntitySet="bt_CollegeDirector" />
@@ -480,18 +481,10 @@
             <End Role="bt_Gender" EntitySet="bt_Gender" />
             <End Role="bt_CollegeDirector" EntitySet="bt_CollegeDirector" />
           </AssociationSet>
-          <AssociationSet Name="FK_bt_CollegeDirector_bt_State_StateId" Association="BestTravelingModel.FK_bt_CollegeDirector_bt_State_StateId">
-            <End Role="bt_State" EntitySet="bt_State" />
-            <End Role="bt_CollegeDirector" EntitySet="bt_CollegeDirector" />
-          </AssociationSet>
           <EntitySet Name="bt_City" EntityType="BestTravelingModel.bt_City" />
           <EntitySet Name="bt_Country" EntityType="BestTravelingModel.bt_Country" />
           <AssociationSet Name="FK_bt_City_bt_District" Association="BestTravelingModel.FK_bt_City_bt_District">
             <End Role="bt_District" EntitySet="bt_District" />
-            <End Role="bt_City" EntitySet="bt_City" />
-          </AssociationSet>
-          <AssociationSet Name="fk_bt_City_bt_State_StateId" Association="BestTravelingModel.fk_bt_City_bt_State_StateId">
-            <End Role="bt_State" EntitySet="bt_State" />
             <End Role="bt_City" EntitySet="bt_City" />
           </AssociationSet>
           <AssociationSet Name="FK_bt_College_bt_City" Association="BestTravelingModel.FK_bt_College_bt_City">
@@ -500,6 +493,15 @@
           </AssociationSet>
           <AssociationSet Name="FK_bt_CollegeDirector_bt_City_CityId" Association="BestTravelingModel.FK_bt_CollegeDirector_bt_City_CityId">
             <End Role="bt_City" EntitySet="bt_City" />
+            <End Role="bt_CollegeDirector" EntitySet="bt_CollegeDirector" />
+          </AssociationSet>
+          <EntitySet Name="bt_State" EntityType="BestTravelingModel.bt_State" />
+          <AssociationSet Name="fk_bt_City_bt_State_StateId" Association="BestTravelingModel.fk_bt_City_bt_State_StateId">
+            <End Role="bt_State" EntitySet="bt_State" />
+            <End Role="bt_City" EntitySet="bt_City" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bt_CollegeDirector_bt_State_StateId" Association="BestTravelingModel.FK_bt_CollegeDirector_bt_State_StateId">
+            <End Role="bt_State" EntitySet="bt_State" />
             <End Role="bt_CollegeDirector" EntitySet="bt_CollegeDirector" />
           </AssociationSet>
           <AssociationSet Name="fk_bt_State_bt_Country_CountryId" Association="BestTravelingModel.fk_bt_State_bt_Country_CountryId">
@@ -532,8 +534,8 @@
           <NavigationProperty Name="bt_College" Relationship="BestTravelingModel.FK_bt_CollegeDirector_bt_College_CollegeId" FromRole="bt_CollegeDirector" ToRole="bt_College" />
           <NavigationProperty Name="bt_District" Relationship="BestTravelingModel.FK_bt_CollegeDirector_bt_District_DistrictId" FromRole="bt_CollegeDirector" ToRole="bt_District" />
           <NavigationProperty Name="bt_Gender" Relationship="BestTravelingModel.FK_bt_CollegeDirector_bt_Gender_GenderId" FromRole="bt_CollegeDirector" ToRole="bt_Gender" />
-          <NavigationProperty Name="bt_State" Relationship="BestTravelingModel.FK_bt_CollegeDirector_bt_State_StateId" FromRole="bt_CollegeDirector" ToRole="bt_State" />
           <NavigationProperty Name="bt_City" Relationship="BestTravelingModel.FK_bt_CollegeDirector_bt_City_CityId" FromRole="bt_CollegeDirector" ToRole="bt_City" />
+          <NavigationProperty Name="bt_State" Relationship="BestTravelingModel.FK_bt_CollegeDirector_bt_State_StateId" FromRole="bt_CollegeDirector" ToRole="bt_State" />
         </EntityType>
         <EntityType Name="bt_Gender">
           <Key>
@@ -543,21 +545,6 @@
           <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Code" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <NavigationProperty Name="bt_CollegeDirector" Relationship="BestTravelingModel.FK_bt_CollegeDirector_bt_Gender_GenderId" FromRole="bt_Gender" ToRole="bt_CollegeDirector" />
-        </EntityType>
-        <EntityType Name="bt_State">
-          <Key>
-            <PropertyRef Name="StateId" />
-          </Key>
-          <Property Name="StateId" Type="Guid" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Code" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="CreatedBy" Type="DateTime" Precision="3" />
-          <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="bt_CollegeDirector" Relationship="BestTravelingModel.FK_bt_CollegeDirector_bt_State_StateId" FromRole="bt_State" ToRole="bt_CollegeDirector" />
-          <Property Name="CountryId" Type="Guid" />
-          <NavigationProperty Name="bt_City" Relationship="BestTravelingModel.fk_bt_City_bt_State_StateId" FromRole="bt_State" ToRole="bt_City" />
-          <NavigationProperty Name="bt_Country" Relationship="BestTravelingModel.fk_bt_State_bt_Country_CountryId" FromRole="bt_State" ToRole="bt_Country" />
-          <NavigationProperty Name="bt_District" Relationship="BestTravelingModel.fk_bt_District_bt_State_StateId" FromRole="bt_State" ToRole="bt_District" />
         </EntityType>
         <Association Name="FK_bt_CollegeDirector_bt_College_CollegeId">
           <End Type="BestTravelingModel.bt_College" Role="bt_College" Multiplicity="0..1" />
@@ -595,18 +582,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_bt_CollegeDirector_bt_State_StateId">
-          <End Type="BestTravelingModel.bt_State" Role="bt_State" Multiplicity="1" />
-          <End Type="BestTravelingModel.bt_CollegeDirector" Role="bt_CollegeDirector" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="bt_State">
-              <PropertyRef Name="StateId" />
-            </Principal>
-            <Dependent Role="bt_CollegeDirector">
-              <PropertyRef Name="StateId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="bt_City">
           <Key>
             <PropertyRef Name="CityId" />
@@ -618,9 +593,9 @@
           <Property Name="StateId" Type="Guid" />
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="bt_District" Relationship="BestTravelingModel.FK_bt_City_bt_District" FromRole="bt_City" ToRole="bt_District" />
-          <NavigationProperty Name="bt_State" Relationship="BestTravelingModel.fk_bt_City_bt_State_StateId" FromRole="bt_City" ToRole="bt_State" />
           <NavigationProperty Name="bt_College" Relationship="BestTravelingModel.FK_bt_College_bt_City" FromRole="bt_City" ToRole="bt_College" />
           <NavigationProperty Name="bt_CollegeDirector" Relationship="BestTravelingModel.FK_bt_CollegeDirector_bt_City_CityId" FromRole="bt_City" ToRole="bt_CollegeDirector" />
+          <NavigationProperty Name="bt_State" Relationship="BestTravelingModel.fk_bt_City_bt_State_StateId" FromRole="bt_City" ToRole="bt_State" />
         </EntityType>
         <EntityType Name="bt_Country">
           <Key>
@@ -640,18 +615,6 @@
             </Principal>
             <Dependent Role="bt_City">
               <PropertyRef Name="DistrictId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_bt_City_bt_State_StateId">
-          <End Type="BestTravelingModel.bt_State" Role="bt_State" Multiplicity="0..1" />
-          <End Type="BestTravelingModel.bt_City" Role="bt_City" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="bt_State">
-              <PropertyRef Name="StateId" />
-            </Principal>
-            <Dependent Role="bt_City">
-              <PropertyRef Name="StateId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -676,6 +639,47 @@
             </Principal>
             <Dependent Role="bt_CollegeDirector">
               <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="bt_State">
+          <Key>
+            <PropertyRef Name="StateId" />
+          </Key>
+          <Property Name="StateId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="DateTime" Precision="3" />
+          <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="CountryId" Type="Guid" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="bt_City" Relationship="BestTravelingModel.fk_bt_City_bt_State_StateId" FromRole="bt_State" ToRole="bt_City" />
+          <NavigationProperty Name="bt_CollegeDirector" Relationship="BestTravelingModel.FK_bt_CollegeDirector_bt_State_StateId" FromRole="bt_State" ToRole="bt_CollegeDirector" />
+          <NavigationProperty Name="bt_Country" Relationship="BestTravelingModel.fk_bt_State_bt_Country_CountryId" FromRole="bt_State" ToRole="bt_Country" />
+          <NavigationProperty Name="bt_District" Relationship="BestTravelingModel.fk_bt_District_bt_State_StateId" FromRole="bt_State" ToRole="bt_District" />
+        </EntityType>
+        <Association Name="fk_bt_City_bt_State_StateId">
+          <End Type="BestTravelingModel.bt_State" Role="bt_State" Multiplicity="0..1" />
+          <End Type="BestTravelingModel.bt_City" Role="bt_City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_State">
+              <PropertyRef Name="StateId" />
+            </Principal>
+            <Dependent Role="bt_City">
+              <PropertyRef Name="StateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_bt_CollegeDirector_bt_State_StateId">
+          <End Type="BestTravelingModel.bt_State" Role="bt_State" Multiplicity="1" />
+          <End Type="BestTravelingModel.bt_CollegeDirector" Role="bt_CollegeDirector" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_State">
+              <PropertyRef Name="StateId" />
+            </Principal>
+            <Dependent Role="bt_CollegeDirector">
+              <PropertyRef Name="StateId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -792,18 +796,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="bt_State">
-            <EntityTypeMapping TypeName="BestTravelingModel.bt_State">
-              <MappingFragment StoreEntitySet="bt_State">
-                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
-                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="StateId" ColumnName="StateId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="bt_City">
             <EntityTypeMapping TypeName="BestTravelingModel.bt_City">
               <MappingFragment StoreEntitySet="bt_City">
@@ -822,6 +814,20 @@
                 <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bt_State">
+            <EntityTypeMapping TypeName="BestTravelingModel.bt_State">
+              <MappingFragment StoreEntitySet="bt_State">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="StateId" ColumnName="StateId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

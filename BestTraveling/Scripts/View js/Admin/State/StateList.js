@@ -11,10 +11,15 @@
                     searching: false,
                     scrollY: 300,
                     columns: [
-                        { 'data': 'Name' },
+                        {
+                            'data': 'Name',
+                            'render': function (data, type, row) {
+                                return '<a href="#" style=cursor:pointer; onclick=onUpdateState("'+row.StateId+'")>'+row.Name+'</a>';
+                            }
+                        },
                         { 'data': 'Code' },
                         //{'data':'Active'},
-                        { 'data': 'Country' },
+                        { 'data': 'CountryName' },
                         {
                             'data': 'StateId',
                             'render': function (data) {
@@ -23,8 +28,8 @@
                                 //html += "<i class=\"fa fa-caret-down\"></i>";
                                 html += "</a>";
                                 html += "<ul class=\"dropdown-menu pull-right bg-primary\" role=\"menu\" >";
-                                html += "<li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" style='cursor:pointer' onclick=updateCountry('" + data + "')><i class='fa fa-edit'></i> Edit</a></li>";
-                                html += "<li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" style='cursor:pointer' onclick=DeleteCountry('" + data + "') ><i class='fa fa-remove'></i> Delete</a></li>";
+                                html += "<li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" style='cursor:pointer' onclick=onUpdateState('" + data + "')><i class='fa fa-edit'></i> Edit</a></li>";
+                                html += "<li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" style='cursor:pointer' onclick=DeleteState('" + data + "') ><i class='fa fa-remove'></i> Delete</a></li>";
                                 html += "</ul>";
                                 html += "</div>";
                                 return html;
@@ -66,3 +71,75 @@
 
         });
     });
+
+
+function OnAddState(e) {
+    if (e == true) {
+        toastr.success('State saved successfully');
+        $('#modal_AddState').modal('hide');
+    } else {
+        toastr.error('something went wrong!');
+    }
+}
+
+
+function OnFailsAddState(e) {
+    toastr.error('something went wrong. please contact to administrator');
+}
+
+function onUpdateState(stateId) {
+    $('#modal_UpdateState').modal('show');
+
+    $.ajax({
+        url: '/Admin/State/UpdateState',
+        method: 'GET',
+        data: { StateId: stateId},
+        dataType: 'html',
+        contentType: 'application/json; charset=utf-8',
+        success: function (result) {
+            $('#modal_UpdateState .modal-body').empty().html(result);
+
+        },
+        error: function (e) {
+            toastr.error('something went wrong. Please contact to administrator !');
+        }
+    });
+
+
+}
+
+
+
+function OnUpdateStateSuccess(e) {
+    if (e == true) {
+        toastr.success('State updated successfully');
+        $('#modal_UpdateState').modal('hide');
+    } else {
+        toastr.error('something went wrong !');
+    }
+}
+
+
+function onFailsStateUpdate(e) {
+    toastr.error('something went wrong');
+}
+
+
+function DeleteState(stateId) {
+    $.ajax({
+        url: '/Admin/State/DeleteState',
+        method: 'GET',
+        dataType: 'json',
+        data: { StateId: stateId },
+        success: function (result) {
+            if (result == true) {
+                toastr.success('State deleted successfully');
+            } else {
+                toastr.error('something went wrong!');
+            }
+        },
+        error: function (e) {
+            toastr.error('something went wrong. please contact to administrator');
+        }
+    });
+}

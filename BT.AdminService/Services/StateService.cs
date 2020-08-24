@@ -32,9 +32,9 @@ namespace BT.AdminService.Services
             return _IStateRepo.GetStates();
         }
 
-        public void RemoveState(Guid StateId)
+        public void RemoveState(StateModel model)
         {
-            _IStateRepo.RemoveState(StateId);
+            _IStateRepo.RemoveState(model);
         }
 
         public void UpdateState(StateModel model)

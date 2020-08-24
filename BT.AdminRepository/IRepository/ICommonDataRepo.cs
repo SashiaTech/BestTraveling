@@ -8,5 +8,6 @@ namespace BT.AdminRepository.IRepository
 {
     public interface ICommonDataRepo
     {
+
     }
 }

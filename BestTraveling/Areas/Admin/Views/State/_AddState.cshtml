@@ -27,9 +27,8 @@
                 <label>Country</label>
             </div>
             <div class="col-md-8">
-                @*@Html.DropDownListFor(x=>x.CountryId)*@
-                @Html.TextBoxFor(x => x.CountryName, new { @class = "form-control" })
-                @Html.ValidationMessageFor(x => x.Code, string.Empty, new { @class = "text-danger" })
+                @Html.DropDownListFor(x => x.CountryId, new SelectList(ViewBag.Countries, "Value", "Text"), new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.CountryName, string.Empty, new { @class = "text-danger" })
             </div>
         </div>
 

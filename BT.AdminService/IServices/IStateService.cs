@@ -13,6 +13,6 @@ namespace BT.AdminService.IServices
         StateModel GetStateById(Guid StateId);
         void AddState(StateModel model);
         void UpdateState(StateModel model);
-        void RemoveState(Guid StateId);
+        void RemoveState(StateModel model);
     }
 }

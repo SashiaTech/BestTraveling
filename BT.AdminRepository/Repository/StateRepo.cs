@@ -56,9 +56,24 @@ namespace BT.AdminRepository.Repository
             return States;
         }
 
-        public void RemoveState(Guid stateId)
+        public void RemoveState(StateModel model)
         {
-            throw new NotImplementedException();
+            bt_State state = gwork.Repository<bt_State>().AsQuerable().FirstOrDefault(x=>x.StateId == model.StateId);
+            gwork.Repository<bt_State>().Attach(state);
+            state.StateId = model.StateId;
+            state.Name = model.Name;
+            state.CountryId = model.CountryId;
+            state.Code = model.Code;
+            state.IsDeleted = model.IsDeleted;
+            state.IsActive = false;
+
+            gwork.SaveChanges();
+            //foreach (var item in states)
+            //{
+            //    gwork.Repository<bt_State>().Attach(item);
+            //    item.IsDeleted = true;
+            //    gwork.SaveChanges();
+            //}
         }
 
         public void UpdateState(StateModel stateModel)
@@ -69,6 +84,7 @@ namespace BT.AdminRepository.Repository
             state.Name = stateModel.Name;
             state.Code = stateModel.Code;
             state.CountryId = stateModel.CountryId;
+            state.IsDeleted = true;
             gwork.SaveChanges();
         }
     }

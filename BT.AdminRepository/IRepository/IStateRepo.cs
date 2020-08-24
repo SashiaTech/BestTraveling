@@ -12,6 +12,6 @@ namespace BT.AdminRepository.IRepository
         StateModel GetStateById(Guid StateId);
         void AddState(StateModel stateModel);
         void UpdateState(StateModel stateModel);
-        void RemoveState(Guid stateId);
+        void RemoveState(StateModel model);
     }
 }

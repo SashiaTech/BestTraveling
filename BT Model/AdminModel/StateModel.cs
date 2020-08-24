@@ -16,9 +16,11 @@ namespace BT_Model.AdminModel
 
         [Required(ErrorMessage = "Code is required")]
         public string Code { get; set; }
+
         public Guid? CountryId { get; set; }
 
-        [Required(ErrorMessage = "Country is required")]
         public string CountryName { get; set; }
+
+        public bool IsDeleted { get; set; }
     }
 }

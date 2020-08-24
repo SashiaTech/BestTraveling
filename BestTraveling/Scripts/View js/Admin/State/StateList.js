@@ -101,7 +101,7 @@ function onUpdateState(stateId) {
 
         },
         error: function (e) {
-            toastr.error('something went wrong. Please contact to administrator !');
+            toastr.error('something went wrong. Please contact to administrator !111');
         }
     });
 

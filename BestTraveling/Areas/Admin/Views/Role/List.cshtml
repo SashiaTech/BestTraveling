@@ -15,12 +15,11 @@
 
 <div class="AddBtn d-flex justify-content-end mr-5 my-4">
 	<button type="button" class="btn btn-primary px-3" data-target="#exampleModal" data-toggle="modal">Add</button>
-	<input type="button" id="btn" value="Test modal" class="btn btn-primary"/>
 </div>
 <div class="modal fade mt-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<div class="modal-header">
+			<div class="modal-header  modal-pop-bg">
 				<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -30,8 +29,8 @@
 				...
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">save</button>
+				<button type="button" class="btn btn-primary">close</button>
 			</div>
 		</div>
 	</div>
@@ -52,7 +51,7 @@
 
 	<div class="container-fluid">
 		<table id="example" class="table table-striped" style="width:100%">
-			<thead class="table-head-design">
+			<thead class="table-head-bg">
 				<tr>
 					<th>Role</th>
 					<th>Name</th>
@@ -72,12 +71,3 @@
 			</tbody>
 		</table>
 	</div>
-
-<script>
-    $(document).ready(function () {
-        $('#btn').click(function () {
-            alert('test');
-            jQuery('#exampleModal').modal('show');
-        });
-    });
-</script>

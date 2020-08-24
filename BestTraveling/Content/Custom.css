@@ -73,8 +73,11 @@
 }
 .btn-primary {
     background: #3c8dbc !important;
-    border-color: #3c8dbc !important;
+    /*border-color: #3c8dbc !important;*/
     padding:2px  10px !important;
+    outline:none !important;
+    border:none !important;
+    border-radius:4px !important;
 }
 .btn-group{
     height:0px;
@@ -113,15 +116,3 @@
         margin: 25px 0;
     }
 }
-    /*.btn2 {
-        background: #3c8dbc !important;
-        outline: none;
-        border: none;
-        width: 100px;
-        margin: 0 5px;
-        border-radius: 8px;
-        font-family: sans-serif;
-        font-size: 16px;
-        font-weight: bold;
-        color: #fff !important;
-    }*/

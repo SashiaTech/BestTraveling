@@ -1,0 +1,54 @@
+﻿@model BT_Model.AdminModel.StateModel
+
+<div class="container-fluid">
+
+    @using (Ajax.BeginForm("UpdateState", "State", new AjaxOptions { OnSuccess = "OnUpdateStateSuccess", OnFailure = "onFailsStateUpdate" }, new { @class = "form-group", id = "frm_UpdateState", role = "form" }))
+    {
+
+ @Html.HiddenFor(x=>x.StateId)
+        <div class="row">
+            <div class="col-md-4">
+                <label>Name</label>
+            </div>
+            <div class="col-md-8">
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Name, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label>Code</label>
+            </div>
+            <div class="col-md-8">
+                @Html.TextBoxFor(x => x.Code, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Code, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label>Name</label>
+            </div>
+            <div class="col-md-8">
+                @Html.DropDownListFor(x => x.CountryId, new SelectList(ViewBag.Countries, "Value", "Text"), new { @class = "form-control",placeholder = "--select country--" })
+                @Html.ValidationMessageFor(x => x.CountryId, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row pull-right my-1">
+            <div>
+                <input type="submit" id="btn_UpdateState" value="Update" class="btn btn-primary mx-1" />
+            </div>
+            <div>
+                <input type="button" id="btn_Close" value="Close" data-dismiss="modal" class="btn btn-primary mx-1" />
+            </div>
+        </div>
+
+    }
+
+</div>
+
+
+<script src='@Url.Content("~/Scripts/jquery.validate.js")' type='text/javascript'></script>
+<script src='@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")' type='text/javascript'></script>

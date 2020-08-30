@@ -16,5 +16,6 @@ namespace BT_Model.AdminModel
 
         [Required(ErrorMessage ="Code is required")]
         public string Code { get; set; }
+        public bool? IsDeleted { get; set; }
     }
 }

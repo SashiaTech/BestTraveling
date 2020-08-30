@@ -50,11 +50,13 @@
     <Compile Include="IRepository\ICityRepo.cs" />
     <Compile Include="IRepository\ICommonDataRepo.cs" />
     <Compile Include="IRepository\ICountryRepo.cs" />
+    <Compile Include="IRepository\IRoleRepo.cs" />
     <Compile Include="IRepository\IStateRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CityRepo.cs" />
     <Compile Include="Repository\CommonDataRepo.cs" />
     <Compile Include="Repository\CountryRepo.cs" />
+    <Compile Include="Repository\RoleRepo.cs" />
     <Compile Include="Repository\StateRepo.cs" />
   </ItemGroup>
   <ItemGroup>

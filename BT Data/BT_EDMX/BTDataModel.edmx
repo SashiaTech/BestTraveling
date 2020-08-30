@@ -62,6 +62,7 @@
           <Property Name="CountryId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="30" />
           <Property Name="Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="IsDeleted" Type="bit" />
         </EntityType>
         <EntityType Name="bt_District">
           <Key>
@@ -87,6 +88,24 @@
           <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="40" Nullable="false" />
           <Property Name="Code" Type="nvarchar" MaxLength="10" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="CreatedDataTime" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="bt_Roles2">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="10" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="CretedDateTime" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" />
         </EntityType>
         <EntityType Name="bt_State">
           <Key>
@@ -290,6 +309,7 @@
           <EntitySet Name="bt_District" EntityType="Self.bt_District" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="bt_Gender" EntityType="Self.bt_Gender" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="bt_Roles" EntityType="Self.bt_Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="bt_Roles2" EntityType="Self.bt_Roles2" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="bt_State" EntityType="Self.bt_State" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="bt_User" EntityType="Self.bt_User" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__bt_Colleg__Colle__1DE57479" Association="Self.FK__bt_Colleg__Colle__1DE57479">
@@ -391,15 +411,6 @@
           <NavigationProperty Name="bt_City" Relationship="BestTravelingModel.FK_bt_City_bt_District" FromRole="bt_District" ToRole="bt_City" />
           <NavigationProperty Name="bt_State" Relationship="BestTravelingModel.fk_bt_District_bt_State_StateId" FromRole="bt_District" ToRole="bt_State" />
         </EntityType>
-        <EntityType Name="bt_Roles">
-          <Key>
-            <PropertyRef Name="RoleId" />
-          </Key>
-          <Property Name="RoleId" Type="Guid" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="bt_User" Relationship="Self.FK_bt_User_bt_User" FromRole="bt_Roles" ToRole="bt_User" />
-        </EntityType>
         <EntityType Name="bt_User">
           <Key>
             <PropertyRef Name="UserId" />
@@ -411,7 +422,7 @@
           <Property Name="RoleId" Type="Guid" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Contact" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="bt_Roles" Relationship="Self.FK_bt_User_bt_User" FromRole="bt_User" ToRole="bt_Roles" />
+          <NavigationProperty Name="bt_Roles" Relationship="BestTravelingModel.FK_bt_User_bt_User" FromRole="bt_User" ToRole="bt_Roles" />
         </EntityType>
         <Association Name="FK__bt_Colleg__Colle__1DE57479">
           <End Role="bt_College" Type="Self.bt_College" Multiplicity="1" />
@@ -437,23 +448,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_bt_User_bt_User">
-          <End Role="bt_Roles" Type="Self.bt_Roles" Multiplicity="0..1" />
-          <End Role="bt_User" Type="Self.bt_User" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="bt_Roles">
-              <PropertyRef Name="RoleId" />
-            </Principal>
-            <Dependent Role="bt_User">
-              <PropertyRef Name="RoleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="BestTravelingEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="bt_College" EntityType="Self.bt_College" />
           <EntitySet Name="bt_CollegeBranches" EntityType="Self.bt_CollegeBranches" />
           <EntitySet Name="bt_District" EntityType="Self.bt_District" />
-          <EntitySet Name="bt_Roles" EntityType="Self.bt_Roles" />
           <EntitySet Name="bt_User" EntityType="Self.bt_User" />
           <AssociationSet Name="FK__bt_Colleg__Colle__1DE57479" Association="Self.FK__bt_Colleg__Colle__1DE57479">
             <End Role="bt_College" EntitySet="bt_College" />
@@ -462,10 +460,6 @@
           <AssociationSet Name="FK_bt_College_bt_District" Association="Self.FK_bt_College_bt_District">
             <End Role="bt_District" EntitySet="bt_District" />
             <End Role="bt_College" EntitySet="bt_College" />
-          </AssociationSet>
-          <AssociationSet Name="FK_bt_User_bt_User" Association="Self.FK_bt_User_bt_User">
-            <End Role="bt_Roles" EntitySet="bt_Roles" />
-            <End Role="bt_User" EntitySet="bt_User" />
           </AssociationSet>
           <EntitySet Name="bt_CollegeDirector" EntityType="BestTravelingModel.bt_CollegeDirector" />
           <EntitySet Name="bt_Gender" EntityType="BestTravelingModel.bt_Gender" />
@@ -482,7 +476,6 @@
             <End Role="bt_CollegeDirector" EntitySet="bt_CollegeDirector" />
           </AssociationSet>
           <EntitySet Name="bt_City" EntityType="BestTravelingModel.bt_City" />
-          <EntitySet Name="bt_Country" EntityType="BestTravelingModel.bt_Country" />
           <AssociationSet Name="FK_bt_City_bt_District" Association="BestTravelingModel.FK_bt_City_bt_District">
             <End Role="bt_District" EntitySet="bt_District" />
             <End Role="bt_City" EntitySet="bt_City" />
@@ -504,13 +497,20 @@
             <End Role="bt_State" EntitySet="bt_State" />
             <End Role="bt_CollegeDirector" EntitySet="bt_CollegeDirector" />
           </AssociationSet>
+          <AssociationSet Name="fk_bt_District_bt_State_StateId" Association="BestTravelingModel.fk_bt_District_bt_State_StateId">
+            <End Role="bt_State" EntitySet="bt_State" />
+            <End Role="bt_District" EntitySet="bt_District" />
+          </AssociationSet>
+          <EntitySet Name="bt_Roles2" EntityType="BestTravelingModel.bt_Roles2" />
+          <EntitySet Name="bt_Country" EntityType="BestTravelingModel.bt_Country" />
           <AssociationSet Name="fk_bt_State_bt_Country_CountryId" Association="BestTravelingModel.fk_bt_State_bt_Country_CountryId">
             <End Role="bt_Country" EntitySet="bt_Country" />
             <End Role="bt_State" EntitySet="bt_State" />
           </AssociationSet>
-          <AssociationSet Name="fk_bt_District_bt_State_StateId" Association="BestTravelingModel.fk_bt_District_bt_State_StateId">
-            <End Role="bt_State" EntitySet="bt_State" />
-            <End Role="bt_District" EntitySet="bt_District" />
+          <EntitySet Name="bt_Roles" EntityType="BestTravelingModel.bt_Roles" />
+          <AssociationSet Name="FK_bt_User_bt_User" Association="BestTravelingModel.FK_bt_User_bt_User">
+            <End Role="bt_Roles" EntitySet="bt_Roles" />
+            <End Role="bt_User" EntitySet="bt_User" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="bt_CollegeDirector">
@@ -597,15 +597,6 @@
           <NavigationProperty Name="bt_CollegeDirector" Relationship="BestTravelingModel.FK_bt_CollegeDirector_bt_City_CityId" FromRole="bt_City" ToRole="bt_CollegeDirector" />
           <NavigationProperty Name="bt_State" Relationship="BestTravelingModel.fk_bt_City_bt_State_StateId" FromRole="bt_City" ToRole="bt_State" />
         </EntityType>
-        <EntityType Name="bt_Country">
-          <Key>
-            <PropertyRef Name="CountryId" />
-          </Key>
-          <Property Name="CountryId" Type="Guid" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="bt_State" Relationship="BestTravelingModel.fk_bt_State_bt_Country_CountryId" FromRole="bt_Country" ToRole="bt_State" />
-        </EntityType>
         <Association Name="FK_bt_City_bt_District">
           <End Type="BestTravelingModel.bt_District" Role="bt_District" Multiplicity="0..1" />
           <End Type="BestTravelingModel.bt_City" Role="bt_City" Multiplicity="*" />
@@ -656,8 +647,8 @@
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="bt_City" Relationship="BestTravelingModel.fk_bt_City_bt_State_StateId" FromRole="bt_State" ToRole="bt_City" />
           <NavigationProperty Name="bt_CollegeDirector" Relationship="BestTravelingModel.FK_bt_CollegeDirector_bt_State_StateId" FromRole="bt_State" ToRole="bt_CollegeDirector" />
-          <NavigationProperty Name="bt_Country" Relationship="BestTravelingModel.fk_bt_State_bt_Country_CountryId" FromRole="bt_State" ToRole="bt_Country" />
           <NavigationProperty Name="bt_District" Relationship="BestTravelingModel.fk_bt_District_bt_State_StateId" FromRole="bt_State" ToRole="bt_District" />
+          <NavigationProperty Name="bt_Country" Relationship="BestTravelingModel.fk_bt_State_bt_Country_CountryId" FromRole="bt_State" ToRole="bt_Country" />
         </EntityType>
         <Association Name="fk_bt_City_bt_State_StateId">
           <End Type="BestTravelingModel.bt_State" Role="bt_State" Multiplicity="0..1" />
@@ -683,6 +674,41 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_bt_District_bt_State_StateId">
+          <End Type="BestTravelingModel.bt_State" Role="bt_State" Multiplicity="0..1" />
+          <End Type="BestTravelingModel.bt_District" Role="bt_District" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_State">
+              <PropertyRef Name="StateId" />
+            </Principal>
+            <Dependent Role="bt_District">
+              <PropertyRef Name="StateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="bt_Roles2">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="Guid" />
+          <Property Name="CretedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="bt_Country">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <NavigationProperty Name="bt_State" Relationship="BestTravelingModel.fk_bt_State_bt_Country_CountryId" FromRole="bt_Country" ToRole="bt_State" />
+        </EntityType>
         <Association Name="fk_bt_State_bt_Country_CountryId">
           <End Type="BestTravelingModel.bt_Country" Role="bt_Country" Multiplicity="0..1" />
           <End Type="BestTravelingModel.bt_State" Role="bt_State" Multiplicity="*" />
@@ -695,15 +721,29 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_bt_District_bt_State_StateId">
-          <End Type="BestTravelingModel.bt_State" Role="bt_State" Multiplicity="0..1" />
-          <End Type="BestTravelingModel.bt_District" Role="bt_District" Multiplicity="*" />
+        <EntityType Name="bt_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="Guid" />
+          <Property Name="CreatedDataTime" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="bt_User" Relationship="BestTravelingModel.FK_bt_User_bt_User" FromRole="bt_Roles" ToRole="bt_User" />
+        </EntityType>
+        <Association Name="FK_bt_User_bt_User">
+          <End Type="BestTravelingModel.bt_Roles" Role="bt_Roles" Multiplicity="0..1" />
+          <End Type="BestTravelingModel.bt_User" Role="bt_User" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="bt_State">
-              <PropertyRef Name="StateId" />
+            <Principal Role="bt_Roles">
+              <PropertyRef Name="RoleId" />
             </Principal>
-            <Dependent Role="bt_District">
-              <PropertyRef Name="StateId" />
+            <Dependent Role="bt_User">
+              <PropertyRef Name="RoleId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -742,15 +782,6 @@
                 <ScalarProperty Name="StateId" ColumnName="StateId" />
                 <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="bt_Roles">
-            <EntityTypeMapping TypeName="BestTravelingModel.bt_Roles">
-              <MappingFragment StoreEntitySet="bt_Roles">
-                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -808,15 +839,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="bt_Country">
-            <EntityTypeMapping TypeName="BestTravelingModel.bt_Country">
-              <MappingFragment StoreEntitySet="bt_Country">
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="bt_State">
             <EntityTypeMapping TypeName="BestTravelingModel.bt_State">
               <MappingFragment StoreEntitySet="bt_State">
@@ -828,6 +850,44 @@
                 <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="StateId" ColumnName="StateId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bt_Roles2">
+            <EntityTypeMapping TypeName="BestTravelingModel.bt_Roles2">
+              <MappingFragment StoreEntitySet="bt_Roles2">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CretedDateTime" ColumnName="CretedDateTime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bt_Country">
+            <EntityTypeMapping TypeName="BestTravelingModel.bt_Country">
+              <MappingFragment StoreEntitySet="bt_Country">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bt_Roles">
+            <EntityTypeMapping TypeName="BestTravelingModel.bt_Roles">
+              <MappingFragment StoreEntitySet="bt_Roles">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDataTime" ColumnName="CreatedDataTime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

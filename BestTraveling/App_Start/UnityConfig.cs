@@ -23,6 +23,7 @@ namespace BestTraveling
             container.RegisterType<ICountryService, CountryService>();
             container.RegisterType<ICountryService, CountryService>();
             container.RegisterType<IStateService, StateService>();
+            container.RegisterType<IRoleService,RoleService>();
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }

@@ -6,68 +6,63 @@
 
 @* bgDanger Header For City *@
 <header>
-	<div class="row p-1 mr-0">
-		<div class="col-md-12">
-			<span><b>Role</b></span>
-		</div>
-	</div>
+    <div class="row p-1 mr-0">
+        <div class="col-md-12">
+            <span><b>Role</b></span>
+        </div>
+    </div>
 </header>
 
 <div class="AddBtn d-flex justify-content-end mr-5 my-4">
-	<button type="button" class="btn btn-primary px-3" data-target="#exampleModal" data-toggle="modal">Add</button>
-</div>
-<div class="modal fade mt-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header  modal-pop-bg">
-				<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				...
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">save</button>
-				<button type="button" class="btn btn-primary">close</button>
-			</div>
-		</div>
-	</div>
+    <button type="button" id="btn_AddRole" class="btn btn-primary px-3">Add</button>
 </div>
 
-	<script>
-		$(document).ready(function () {
-			$('#example').DataTable({
-				'paging': false,
-				'scrollY': '450px',
-				'searching': false,
-				'autoWidth': true,
-				'scrollCollapse': true,
-				'footerCallback': false
-			});
-		});
-	</script>
+<div class="container-fluid">
+    <table id="grd_Role" class="table table-striped" style="width:100%">
+        <thead class="table-head-bg">
+            <tr>
+                <th>Role</th>
+                <th>Code</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</div>
+<div class="modal fade mt-5" id="modal_AddRole" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header  modal-pop-bg">
+                <h5 class="modal-title" id="exampleModalLabel">Add Role</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
 
-	<div class="container-fluid">
-		<table id="example" class="table table-striped" style="width:100%">
-			<thead class="table-head-bg">
-				<tr>
-					<th>Role</th>
-					<th>Name</th>
-					<th>Gender</th>
-					<th>Active</th>
-					<th>Action</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>123</td>
-					<td>Manpreet</td>
-					<td>Male</td>
-					<td>Active</td>
-					<td>Action</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade mt-5" id="modal_UpdateRole" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header  modal-pop-bg">
+                <h5 class="modal-title" id="exampleModalLabel">Update Role</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="@Url.Content("~/Scripts/View js/Admin/Role/RoleList.js")"></script>

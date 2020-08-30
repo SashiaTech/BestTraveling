@@ -1,0 +1,51 @@
+﻿@model BT_Model.AdminModel.RoleModel
+<div class="container-fluid">
+    @using (Ajax.BeginForm("AddRole", "Role", new AjaxOptions { OnSuccess = "AddRoleSuccess", OnFailure = "AddRoleFailure" }, new { @class = "form-group", @id = "frm_AddRole" }))
+    {
+        <div class="row">
+            <div class="col-md-4">
+                <label>Name</label>
+            </div>
+            <div class="col-md-6">
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Name, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label>Code</label>
+            </div>
+            <div class="col-md-6">
+                @Html.TextBoxFor(x => x.Code, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Code, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label>Description</label>
+            </div>
+            <div class="col-md-6">
+                @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Description, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label>Active</label>
+            </div>
+            <div class="col-md-8">
+                @Html.CheckBoxFor(x => x.IsActive)
+            </div>
+        </div>
+        <div class="row pull-right pr-2">
+            <div>
+                <input type="submit" value="Save" class="btn btn-primary" id="btn_SaveRole" />
+            </div>
+            <div>
+                <input type="button" value="Close" data-dismiss="modal" class="Close btn btn-primary mx-1" id="btn_Close" />
+            </div>
+        </div>
+    }
+
+</div>

@@ -40,7 +40,9 @@ namespace BT.AdminRepository.Repository
                  CountryId = x.CountryId,
                  Name = x.Name,
                  Code = x.Code,
+                 IsDeleted = x.IsDeleted
              });
+            var test = model.ToList();
             return model;
         }
 

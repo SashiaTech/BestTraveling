@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BT.AdminService.IServices;
-using BT_Model;
+using BT_Model.AdminModel;
 using BT.AdminRepository.IRepository;
 using BT.AdminRepository.Repository;
 

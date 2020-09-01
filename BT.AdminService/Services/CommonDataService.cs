@@ -13,9 +13,13 @@ namespace BT.AdminService.Services
     public class CommonDataService : ICommonDataService
     {
         private readonly  ICountryRepo _ICountryRepo = null;
+        private readonly IStateRepo _IStateRepo = null;
+        private readonly IDistrictRepo _IDistrictRepo = null;
         public CommonDataService()
         {
             _ICountryRepo = new CountryRepo();
+            _IStateRepo = new StateRepo();
+            _IDistrictRepo = new DistrictRepo();
         }
 
         public IQueryable<CountryModel> GetCountries()
@@ -25,7 +29,12 @@ namespace BT.AdminService.Services
 
         public IQueryable<StateModel> GetStates()
         {
-            throw new NotImplementedException();
+            return _IStateRepo.GetStates();
+        }
+
+        public IQueryable<DistrictModel> GetDistricts()
+        {
+            return _IDistrictRepo.GetDistricts();
         }
     }
 }

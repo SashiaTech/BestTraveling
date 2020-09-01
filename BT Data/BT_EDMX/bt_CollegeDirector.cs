@@ -30,9 +30,9 @@ namespace BT_Data.BT_EDMX
         public Nullable<System.DateTime> CreatedDateTime { get; set; }
     
         public virtual bt_College bt_College { get; set; }
-        public virtual bt_District bt_District { get; set; }
         public virtual bt_Gender bt_Gender { get; set; }
-        public virtual bt_City bt_City { get; set; }
         public virtual bt_State bt_State { get; set; }
+        public virtual bt_District bt_District { get; set; }
+        public virtual bt_City bt_City { get; set; }
     }
 }

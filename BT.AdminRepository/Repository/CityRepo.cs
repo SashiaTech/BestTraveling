@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using BT.AdminRepository.IRepository;
 using BT.Repositories;
 using BT_Data.BT_EDMX;
-using BT_Model;
+using BT_Model.AdminModel;
 
 
 namespace BT.AdminRepository.Repository
@@ -27,6 +27,9 @@ namespace BT.AdminRepository.Repository
             city.Name = model.Name;
             city.Code = model.Code;
             city.DistrictId = model.DistrictId;
+            city.StateId = model.StateId;
+            city.CountryId = model.CountryId;
+            city.IsActive = model.IsActive;
             gWork.Repository<bt_City>().Add(city);
             gWork.SaveChanges();
         }
@@ -41,7 +44,13 @@ namespace BT.AdminRepository.Repository
                               DistrictId = cts.DistrictId,
                               DistrictName = cts.bt_District.Name,
                               Code = cts.Code,
-                          });
+                              CountryId = cts.CountryId,
+                              Country = cts.bt_Country.Name,
+                              StateId = cts.StateId,
+                              StateName = cts.bt_State.Name,
+                              IsDeleted = cts.IsDeleted,
+                              IsActive = cts.IsActive,
+                          }).Where(x=>x.IsDeleted!=true);
             return cities;
         }
 

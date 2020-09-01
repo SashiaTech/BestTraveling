@@ -25,12 +25,19 @@ namespace BT_Data.BT_EDMX
         public string Name { get; set; }
         public Nullable<System.Guid> StateId { get; set; }
         public string Code { get; set; }
+        public Nullable<bool> IsActive { get; set; }
+        public Nullable<bool> IsDeleted { get; set; }
+        public Nullable<System.Guid> CountryId { get; set; }
+        public Nullable<System.Guid> ModifiedBy { get; set; }
+        public Nullable<System.DateTime> CreatedDateTime { get; set; }
+        public Nullable<System.Guid> CreatedBy { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_College> bt_College { get; set; }
         public virtual bt_CollegeDirector bt_CollegeDirector { get; set; }
+        public virtual bt_Country bt_Country { get; set; }
+        public virtual bt_State bt_State { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_City> bt_City { get; set; }
-        public virtual bt_State bt_State { get; set; }
     }
 }

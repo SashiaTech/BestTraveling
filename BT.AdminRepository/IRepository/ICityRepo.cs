@@ -1,12 +1,9 @@
-﻿//ICityRepo
-
-using BT_Model;
+﻿using BT_Model.AdminModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 
 namespace BT.AdminRepository.IRepository
 {

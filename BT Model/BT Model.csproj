@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="AdminModel\CityModel.cs" />
     <Compile Include="AdminModel\CountryModel.cs" />
+    <Compile Include="AdminModel\DistrictModel.cs" />
     <Compile Include="AdminModel\FairsModel.cs" />
     <Compile Include="AdminModel\RoleModel.cs" />
     <Compile Include="AdminModel\StateModel.cs" />

@@ -18,6 +18,8 @@ namespace BT_Data.BT_EDMX
         public bt_Country()
         {
             this.bt_State = new HashSet<bt_State>();
+            this.bt_District = new HashSet<bt_District>();
+            this.bt_City = new HashSet<bt_City>();
         }
     
         public System.Guid CountryId { get; set; }
@@ -27,5 +29,9 @@ namespace BT_Data.BT_EDMX
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_State> bt_State { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<bt_District> bt_District { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<bt_City> bt_City { get; set; }
     }
 }

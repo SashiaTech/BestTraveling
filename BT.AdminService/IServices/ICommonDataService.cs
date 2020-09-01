@@ -11,6 +11,7 @@ namespace BT.AdminService.IServices
     {
         IQueryable<StateModel> GetStates();
         IQueryable<CountryModel> GetCountries();
+        IQueryable<DistrictModel> GetDistricts();
         
     }
 }

@@ -13,12 +13,13 @@ namespace BestTraveling.Controllers
     {
         private readonly ICountryService _ICountryService = null;
         private readonly IStateService _IStateService = null;
+        private readonly ICommonDataService _ICommonDataService = null;
 
-
-        public CommonDataController(ICountryService _ICountryService, IStateService _IStateService)
+        public CommonDataController(ICountryService _ICountryService, IStateService _IStateService, ICommonDataService _ICommonDataService)
         {
             this._ICountryService = _ICountryService;
             this._IStateService = _IStateService;
+            this._ICommonDataService = _ICommonDataService;
         }
 
         // GET: CommonData

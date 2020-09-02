@@ -64,15 +64,15 @@ namespace BT.AdminRepository.Repository
                 IsActive = x.IsActive,
                 IsDeleted = x.IsDeleted,
 
-            });
+            }).Where(x=>x.IsDeleted!=true);
             return model;
         }
 
-        public void RemoveDistrict(DistrictModel model)
+        public void RemoveDistrict(Guid DistrictId)
         {
-            bt_District dist = gWork.Repository<bt_District>().AsQuerable().FirstOrDefault(x=>x.DistrictId == model.DistrictId);
+            bt_District dist = gWork.Repository<bt_District>().AsQuerable().FirstOrDefault(x=>x.DistrictId == DistrictId);
             gWork.Repository<bt_District>().Attach(dist);
-            dist.IsDeleted = model.IsDeleted;
+            dist.IsDeleted = true;
             gWork.SaveChanges();
         }
 

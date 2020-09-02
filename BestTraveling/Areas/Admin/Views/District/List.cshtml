@@ -16,112 +16,51 @@
 </header>
 
 <div class="AddBtn d-flex justify-content-end mr-5 my-4">
-    <button type="button" class="btn btn-primary px-3">Add</button>
+    <button type="button" id="btn_AddDistrict" class="btn btn-primary px-3">Add</button>
 </div>
 
-
-<script>
-    $(document).ready(function () {
-        alert("test");
-        $('#exampleModal').modal('show');
-        $('#example').DataTable({
-            'scrollY': '450px',
-            'searching': true,
-            'autoWidth': true,
-            'scrollCollapse': true,
-            'footerCallback': false
-        });
-
-        $.ajax({
-            url: "https://jsonplaceholder.typicode.com/users",
-            success: function (result) {
-                alert(result);
-            },
-            error: function (result) {
-                alert(result);
-            }
-        });
-    });
-
-</script>
-
-<!-- Modal -->
-@*<div class="modal  fade"id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>*@
 <div class="container-fluid table-responsive">
-    <table id="example" class="table table-striped" style="width:100%;">
+    <table id="grd_District" class="table table-striped" style="width:100%;">
         <thead class="table-head-design">
             <tr>
-                <th>Role</th>
-                <th>Name</th>
-                <th>Gender</th>
+                <th>District</th>
+                <th>Code</th>
+                <th>State</th>
+                <th>Country</th>
                 <th>Active</th>
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>123</td>
-                <td>Manpreet</td>
-                <td>Male</td>
-                <td>Active</td>
-                <td>Action</td>
-            </tr>
-            <tr>
-                <td>123</td>
-                <td>Manpreet</td>
-                <td>Male</td>
-                <td>Active</td>
-                <td>Action</td>
-            </tr>
-            <tr>
-                <td>123</td>
-                <td>Manpreet</td>
-                <td>Male</td>
-                <td>Active</td>
-                <td>Action</td>
-            </tr>
-            <tr>
-                <td>123</td>
-                <td>Manpreet</td>
-                <td>Male</td>
-                <td>Active</td>
-                <td>Action</td>
-            </tr>
-        </tbody>
+        <tbody></tbody>
     </table>
 </div>
 
+<div class="modal fade" id="modal_AddDistrict" tabindex="-1" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-pop-bg">
+                <h5 class="modal-title">Add District</h5>
+                <button class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
 
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal_UpdateDistrict" tabindex="-1" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-pop-bg">
+                <h5 class="modal-title">Update District</h5>
+                <button class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="@Url.Content("~/Scripts/View js/Admin/District/DistrictList.js")"></script>

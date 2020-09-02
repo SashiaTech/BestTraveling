@@ -20,17 +20,17 @@
         <AssociationConnector Association="BestTravelingModel.fk_bt_State_bt_Country_CountryId" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_Roles" Width="1.5" PointX="0.75" PointY="5.875" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_User_bt_User" />
+        <EntityTypeShape EntityType="BestTravelingModel.bt_City" Width="1.5" PointX="11" PointY="9.625" />
+        <AssociationConnector Association="BestTravelingModel.bt_City_bt_Country_CountryId" />
+        <AssociationConnector Association="BestTravelingModel.fk_bt_City_bt_State_StateId" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_College_bt_City" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_City_CityId" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_District" Width="1.5" PointX="8.75" PointY="9.75" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_City_bt_District" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_College_bt_District" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_District_DistrictId" />
         <AssociationConnector Association="BestTravelingModel.FK_District_bt_Country_CountryId" />
         <AssociationConnector Association="BestTravelingModel.fk_bt_District_bt_State_StateId" />
-        <EntityTypeShape EntityType="BestTravelingModel.bt_City" Width="1.5" PointX="11" PointY="9.625" />
-        <AssociationConnector Association="BestTravelingModel.bt_City_bt_Country_CountryId" />
-        <AssociationConnector Association="BestTravelingModel.FK_bt_City_bt_District" />
-        <AssociationConnector Association="BestTravelingModel.fk_bt_City_bt_State_StateId" />
-        <AssociationConnector Association="BestTravelingModel.FK_bt_College_bt_City" />
-        <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_City_CityId" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

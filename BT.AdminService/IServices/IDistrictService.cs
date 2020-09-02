@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BT_Model.AdminModel;
-namespace BT.AdminRepository.IRepository
+
+namespace BT.AdminService.IServices
 {
-    public interface IDistrictRepo
+    public interface IDistrictService
     {
         IQueryable<DistrictModel> GetDistricts();
         DistrictModel GetDistrictById(Guid DistrictId);
         void AddDistrict(DistrictModel model);
         void UpdateDistrict(DistrictModel model);
-        void RemoveDistrict(Guid DistrictId);
+        void RemoveDistrict(Guid District);
+
     }
 }

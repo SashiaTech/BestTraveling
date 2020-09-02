@@ -1,0 +1,69 @@
+﻿@model BT_Model.AdminModel.DistrictModel
+@{
+    var countries = ViewBag.Countries;
+    var states = ViewBag.States;
+}
+
+<div class="container-fluid">
+    @using (Ajax.BeginForm("UpdateDistrict", "District", new AjaxOptions { OnSuccess = "UpdateDistrictSuccess", OnFailure = "UpdateDistrictFaliure" }, new { @class = "form-group", @id = "frm_AddDistrict", role = "form" }))
+    {
+        @Html.HiddenFor(x=>x.DistrictId)
+        <div class="row">
+            <div class="col-md-4">
+                <label>Name</label>
+            </div>
+            <div class="col-md-8">
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Name, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label>Code</label>
+            </div>
+            <div class="col-md-8">
+                @Html.TextBoxFor(x => x.Code, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Code, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label>Country</label>
+            </div>
+            <div class="col-md-8">
+                @Html.DropDownListFor(x => x.CountryId, new SelectList(countries, "Value", "Text"), new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.CountryId, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label>State</label>
+            </div>
+            <div class="col-md-8">
+                @Html.DropDownListFor(x => x.StateId, new SelectList(states, "Value", "Text"), new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.StateId, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label>Active</label>
+            </div>
+            <div class="col-md-8">
+                @Html.CheckBoxFor(x => x.IsActive)
+            </div>
+        </div>
+
+        <div class="row pull-right">
+            <div>
+                <input type="submit" value="Update" id="btn_UpdateDistrict" class="btn btn-primary mr-1" />
+            </div>
+            <div>
+                <input type="button" value="Close" id="btn_close" data-dismiss="modal" class="btn btn-primary mr-2" />
+            </div>
+        </div>
+    }
+</div>

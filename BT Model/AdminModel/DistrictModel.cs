@@ -15,8 +15,8 @@ namespace BT_Model.AdminModel
         public string StateName { get; set; }
         public Guid? CountryId { get; set; }
         public string CountryName { get; set; }
-        public bool? IsActive { get; set; }
-        public bool? IsDeleted { get; set; }
+        public bool IsActive { get; set; }
+        public bool IsDeleted { get; set; }
         public Guid? CreatedBy { get; set; }
         public DateTime? CreatedDateTime { get; set; }
         public Guid? ModifiedBy { get; set; }

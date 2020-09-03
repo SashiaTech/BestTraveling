@@ -45,7 +45,7 @@ Array.from(anchor_Design).forEach((Element, index) => {
     let rytArrowBtn = document.getElementsByClassName('rytArrowBtn');
     Element.addEventListener('click', () => {
         let submenu = document.getElementsByClassName("submenu");
-        if (submenu[index].style.maxHeight != "300px") {
+        if (submenu[index].style.maxHeight != "800px") {
             Array.from(rytArrowBtn).forEach((Element1) => {
                 Element1.className = "fa fa-angle-right rytArrowBtn";
             })
@@ -53,7 +53,7 @@ Array.from(anchor_Design).forEach((Element, index) => {
             Array.from(submenu).forEach((Element) => {
                 Element.style.maxHeight = "0px";
             })
-            submenu[index].style.maxHeight = "300px";
+            submenu[index].style.maxHeight = "800px";
         }
         else {
             submenu[index].style.maxHeight = "0px";

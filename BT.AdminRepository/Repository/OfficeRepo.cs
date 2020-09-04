@@ -13,6 +13,10 @@ namespace BT.AdminRepository.Repository
     public class OfficeRepo : IOfficeRepo
     {
         private GUnitWork gWork = null;
+        public OfficeRepo()
+        {
+            gWork = new GUnitWork(new BestTravelingEntities());
+        }
         public void AddOffice(OfficeModel model)
         {
             //bt_Office office = null;

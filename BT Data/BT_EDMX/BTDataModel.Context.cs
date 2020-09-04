@@ -36,5 +36,9 @@ namespace BT_Data.BT_EDMX
         public virtual DbSet<bt_Roles> bt_Roles { get; set; }
         public virtual DbSet<bt_City> bt_City { get; set; }
         public virtual DbSet<bt_District> bt_District { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<bt_Office> bt_Office { get; set; }
+        public virtual DbSet<bt_OfficeOperator> bt_OfficeOperator { get; set; }
+        public virtual DbSet<bt_Address> bt_Address { get; set; }
     }
 }

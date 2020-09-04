@@ -45,6 +45,7 @@
     <Compile Include="IServices\ICommonDataService.cs" />
     <Compile Include="IServices\ICountryService.cs" />
     <Compile Include="IServices\IDistrictService.cs" />
+    <Compile Include="IServices\IOfficeService.cs" />
     <Compile Include="IServices\IRoleService.cs" />
     <Compile Include="IServices\IStateService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Services\CommonDataService.cs" />
     <Compile Include="Services\CountryService.cs" />
     <Compile Include="Services\DistrictService.cs" />
+    <Compile Include="Services\OfficeService.cs" />
     <Compile Include="Services\RoleService.cs" />
     <Compile Include="Services\StateService.cs" />
   </ItemGroup>

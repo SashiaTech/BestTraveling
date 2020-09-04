@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IntermediateOutputPath>C:\Users\RAMMOU~1\AppData\Local\Temp\vs8414.tmp\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\bijju\AppData\Local\Temp\vs2259.tmp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,7 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <IntermediateOutputPath>C:\Users\RAMMOU~1\AppData\Local\Temp\vs8414.tmp\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\bijju\AppData\Local\Temp\vs2259.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -51,6 +51,7 @@
     <Compile Include="IRepository\ICommonDataRepo.cs" />
     <Compile Include="IRepository\ICountryRepo.cs" />
     <Compile Include="IRepository\IDistrictRepo.cs" />
+    <Compile Include="IRepository\IOfficeRepo.cs" />
     <Compile Include="IRepository\IRoleRepo.cs" />
     <Compile Include="IRepository\IStateRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Repository\CommonDataRepo.cs" />
     <Compile Include="Repository\CountryRepo.cs" />
     <Compile Include="Repository\DistrictRepo.cs" />
+    <Compile Include="Repository\OfficeRepo.cs" />
     <Compile Include="Repository\RoleRepo.cs" />
     <Compile Include="Repository\StateRepo.cs" />
   </ItemGroup>

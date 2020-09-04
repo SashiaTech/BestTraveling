@@ -18,6 +18,7 @@ namespace BT_Data.BT_EDMX
         public bt_Gender()
         {
             this.bt_CollegeDirector = new HashSet<bt_CollegeDirector>();
+            this.bt_OfficeOperator = new HashSet<bt_OfficeOperator>();
         }
     
         public System.Guid GenderId { get; set; }
@@ -26,5 +27,7 @@ namespace BT_Data.BT_EDMX
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_CollegeDirector> bt_CollegeDirector { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<bt_OfficeOperator> bt_OfficeOperator { get; set; }
     }
 }

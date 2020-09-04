@@ -21,7 +21,21 @@ namespace BT_Data.BT_EDMX
         public Nullable<System.Guid> RoleId { get; set; }
         public string Email { get; set; }
         public string Contact { get; set; }
+        public Nullable<System.Guid> AddressId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string GenderId { get; set; }
+        public Nullable<System.Guid> OfficeDistictId { get; set; }
+        public Nullable<System.Guid> OfficeCityId { get; set; }
+        public Nullable<System.Guid> DesignationId { get; set; }
+        public bool IsDeleted { get; set; }
+        public bool IsActive { get; set; }
+        public Nullable<System.Guid> CreatedBy { get; set; }
+        public Nullable<System.DateTime> CreatedDateTime { get; set; }
+        public Nullable<System.Guid> ModifiedBy { get; set; }
+        public Nullable<System.DateTime> ModifiedDateTime { get; set; }
     
         public virtual bt_Roles bt_Roles { get; set; }
+        public virtual bt_Address bt_Address { get; set; }
     }
 }

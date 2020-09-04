@@ -70,6 +70,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BTDataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="BT_EDMX\bt_Address.cs">
+      <DependentUpon>BTDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="BT_EDMX\bt_City.cs">
       <DependentUpon>BTDataModel.tt</DependentUpon>
     </Compile>
@@ -91,6 +94,12 @@
     <Compile Include="BT_EDMX\bt_Gender.cs">
       <DependentUpon>BTDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BT_EDMX\bt_Office.cs">
+      <DependentUpon>BTDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BT_EDMX\bt_OfficeOperator.cs">
+      <DependentUpon>BTDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="BT_EDMX\bt_Roles.cs">
       <DependentUpon>BTDataModel.tt</DependentUpon>
     </Compile>
@@ -101,6 +110,9 @@
       <DependentUpon>BTDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="BT_EDMX\bt_User.cs">
+      <DependentUpon>BTDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BT_EDMX\sysdiagram.cs">
       <DependentUpon>BTDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

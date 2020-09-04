@@ -1,7 +1,11 @@
-﻿
+﻿@model BT_Model.AdminModel.OfficeModel
 @{
     ViewBag.Title = "AddOffice";
     Layout = "~/Views/Shared/BT_Layout.cshtml";
+    var countries = ViewBag.Countries;
+    var states = ViewBag.States;
+    var cities = ViewBag.Cities;
+    var districts = ViewBag.Districts;
 }
 <script>
     $(document).ready(function () {
@@ -22,7 +26,8 @@
         </div>
     </div>
 </header>
-<form method="post" >
+@using(Ajax.BeginForm("AddOffice","Office",new AjaxOptions {OnSuccess="",OnFailure="" },new { @class = "form-group" }))
+{ 
     <div class="row mainRow mx-5">
         <div class="col-lg-12 mt-5">
             <div class="row div-shadow py-5">
@@ -30,49 +35,43 @@
                     <div class="form-group row">
                         <label for="name" class="col-sm-5 col-form-label">Name</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="name">
+                            @Html.TextBoxFor(x=>x.Name,new { @class="form-control"})
+                            @Html.ValidationMessageFor(x=>x.Name,string.Empty,new { @class="text-danger"})
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="code" class="col-sm-5 col-form-label">Code</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="code">
+                          @Html.TextBoxFor(x=>x.Code,new { @class="form-control"})
+                            @Html.ValidationMessageFor(x=>x.Code,string.Empty,new { @class="text-danger"})
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="country" class="col-sm-5 col-form-label">Country</label>
                         <div class="col-sm-7">
-                            <select id="country" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select>
+                            @Html.DropDownListFor(x=>x.CountryId,new SelectList(countries,"Value","Text","--select country--"),new { @class="form-control"})
+                            @Html.ValidationMessageFor(x=>x.CountryId,string.Empty,new { @class="text-danger"})
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="state" class="col-sm-5 col-form-label">State</label>
                         <div class="col-sm-7">
-                            <select id="state" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select>
+                            @Html.DropDownListFor(x=>x.StateId,new SelectList(states,"Value","Text","--select state--"),new { @class="form-control"})
+                            @Html.ValidationMessageFor(x=>x.StateId,string.Empty,new { @class="text-danger"})
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="district" class="col-sm-5 col-form-label">District</label>
                         <div class="col-sm-7">
-                            <select id="district" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select>
+                            @Html.DropDownListFor(x=>x.DistrictId,new SelectList(districts,"Value","Text","--select district--"),new { @class="form-control"})
+                            @Html.ValidationMessageFor(x=>x.DistrictId,string.Empty,new { @class="text-danger"})
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="city" class="col-sm-5 col-form-label">City</label>
                         <div class="col-sm-7">
-                            <select id="city" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select>
+                            @Html.DropDownListFor(x=>x.CityId,new SelectList(cities,"Value","Text","--select city--"),new { @class="form-control"})
+                            @Html.ValidationMessageFor(x=>x.CityId,string.Empty,new {@class="text-danger" })
                         </div>
                     </div>
                 </div>
@@ -82,7 +81,7 @@
                             Address1
                         </label>
                         <div class="col-sm-7">
-                            <textarea name="" id="address1" class="w-100">  </textarea>
+                            @Html.TextAreaFor(x=>x.AddressModel.Address1)
                         </div>
                     </div>
                     <div class="form-group row">
@@ -90,7 +89,7 @@
                             Address2
                         </label>
                         <div class="col-sm-7">
-                            <textarea name="" id="address2" class="w-100">  </textarea>
+                            @Html.TextAreaFor(x => x.AddressModel.Address2)
                         </div>
                     </div>
                     <div class="form-group row">
@@ -98,7 +97,7 @@
                             Address3
                         </label>
                         <div class="col-sm-7">
-                            <textarea name="" id="address3" class="w-100">  </textarea>
+                            @Html.TextAreaFor(x => x.AddressModel.Address3)
                         </div>
                     </div>
                 </div>
@@ -138,8 +137,8 @@
                         </table>
                     </div>
                     <div class="col-md-12 text-right mt-4 pl-0">
-                        <button class="btn-primary  btn2 my-2">Save</button>
-                        <button class="btn-primary btn2 my-2">Close</button>
+                        <button class="btn-primary  btn2 my-2" id="btn_SaveOffice" type="submit">Save</button>
+                        <button class="btn-primary btn2 my-2" id="btn_CloseOffice">Close</button>
                     </div>
                     <div class="modal fade" id="modal_AddCity" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog">
@@ -161,4 +160,4 @@
         </div>
     </div>
 
-</form>
+}

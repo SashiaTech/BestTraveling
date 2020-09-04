@@ -23,22 +23,65 @@ namespace BT.AdminRepository.Repository
 
         public void DeleteOffice(Guid OfficeId)
         {
-            throw new NotImplementedException();
+            bt_Office office = gWork.Repository<bt_Office>().AsQuerable().FirstOrDefault(x => x.OfficeId == OfficeId);
+            gWork.Repository<bt_Office>().Attach(office);
+            office.IsDeleted = true;
+            gWork.SaveChanges();
         }
 
-        public OfficeModel GetOfficeId(Guid OfficeId)
+        public OfficeModel GetOfficeById(Guid OfficeId)
         {
-            throw new NotImplementedException();
+            var model = gWork.Repository<bt_Office>().AsQuerable().Select(x => new OfficeModel
+            {
+                OfficeId = x.OfficeId,
+                Name = x.Name != null ? x.Name : "",
+                Code = x.Code != null ? x.Code : "",
+                AddressId = x.AddressId,
+                Address1 = x.bt_Address.Address1 != null ? x.bt_Address.Address1 : "",
+                Address2 = x.bt_Address.Address2 != null ? x.bt_Address.Address2 : "",
+                Address3 = x.bt_Address.Address3 != null ? x.bt_Address.Address3 : "",
+                CountryId = x.bt_Address.CountryId,
+                StateId = x.bt_Address.StateId,
+                DistrictId = x.bt_Address.DistrictId,
+                CityId = x.bt_Address.CityId,
+                IsActive = x.IsActive,
+                IsDeleted = x.IsDeleted,
+            }).FirstOrDefault(x => x.OfficeId == OfficeId);
+
+            return model;
         }
+
 
         public IQueryable<OfficeModel> GetOffices()
         {
-            throw new NotImplementedException();
+            var model = gWork.Repository<bt_Office>().AsQuerable().Select(x => new OfficeModel
+            {
+                OfficeId = x.OfficeId,
+                Name = x.Name != null ? x.Name : "",
+                Code = x.Code != null ? x.Code : "",
+                AddressId = x.AddressId,
+                Address1 = x.bt_Address.Address1 != null ? x.bt_Address.Address1 : "",
+                Address2 = x.bt_Address.Address2 != null ? x.bt_Address.Address2 : "",
+                Address3 = x.bt_Address.Address3 != null ? x.bt_Address.Address3 : "",
+                CountryId = x.bt_Address.CountryId,
+                CountryName = x.bt_Address.bt_Country.Name,
+                StateId = x.bt_Address.StateId,
+                StateName = x.bt_Address.bt_State.Name,
+                CityId = x.bt_Address.CityId,
+                CityName = x.bt_Address.bt_City.Name,
+                DistrictId = x.bt_Address.DistrictId,
+                DistrictName = x.bt_Address.bt_District.Name
+            });
+            return model;
         }
 
         public void UpdateOffice(OfficeModel model)
         {
-            throw new NotImplementedException();
+            //bt_Office office = gWork.Repository<bt_Office>().AsQuerable().FirstOrDefault(x => x.OfficeId == model.OfficeId);
+            //gWork.Repository<bt_Office>().Attach(office);
+            //office.OfficeId = model.OfficeId;
+            //office.Name = model.Name;
+
         }
     }
 }

@@ -10,7 +10,7 @@ namespace BT.AdminRepository.IRepository
     public interface IOfficeRepo
     {
         IQueryable<OfficeModel> GetOffices();
-        OfficeModel GetOfficeId(Guid OfficeId);
+        OfficeModel GetOfficeById(Guid OfficeId);
         void AddOffice(OfficeModel model);
         void UpdateOffice(OfficeModel model);
         void DeleteOffice(Guid OfficeId);

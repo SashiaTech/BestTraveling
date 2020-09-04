@@ -23,7 +23,7 @@ namespace BT.AdminService.Services
             throw new NotImplementedException();
         }
 
-        public OfficeModel GetOfficeId(Guid OfficeId)
+        public OfficeModel GetOfficeById(Guid OfficeId)
         {
             throw new NotImplementedException();
         }

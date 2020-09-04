@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5bdb5469a8144f41ae6b8036296c8cfc" Name="Diagram1">
+      <Diagram DiagramId="5bdb5469a8144f41ae6b8036296c8cfc" Name="Diagram1" ZoomLevel="88">
         <EntityTypeShape EntityType="BestTravelingModel.bt_City" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_District" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_Roles" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />

@@ -25,6 +25,8 @@ namespace BT_Model.AdminModel
         public string Address3 { get; set; }
         public bool IsActive { get; set; }
         public bool IsDeleted { get; set; }
+        public Guid? CreatedBy { get; set; }
+        public DateTime? CreatedDateTime { get; set; }
         public AddressModel AddressModel { get; set; }
     }
 }

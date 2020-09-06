@@ -25,6 +25,14 @@ namespace BT.AdminRepository.Repository
             //office .
         }
 
+        public void AddOfficeByXml(string OfficeAddressXml, string OfficeDetailXml)
+        {
+            using (var context = new BestTravelingEntities())
+            {
+                int test = context.usp_AddOffice(OfficeAddressXml,OfficeDetailXml);
+            }
+        }
+
         public void DeleteOffice(Guid OfficeId)
         {
             bt_Office office = gWork.Repository<bt_Office>().AsQuerable().FirstOrDefault(x => x.OfficeId == OfficeId);
@@ -74,18 +82,29 @@ namespace BT.AdminRepository.Repository
                 CityId = x.bt_Address.CityId,
                 CityName = x.bt_Address.bt_City.Name,
                 DistrictId = x.bt_Address.DistrictId,
-                DistrictName = x.bt_Address.bt_District.Name
+                DistrictName = x.bt_Address.bt_District.Name,
+                IsActive = x.IsActive,
+                IsDeleted = x.IsDeleted
             });
             return model;
         }
 
         public void UpdateOffice(OfficeModel model)
         {
+            
             //bt_Office office = gWork.Repository<bt_Office>().AsQuerable().FirstOrDefault(x => x.OfficeId == model.OfficeId);
             //gWork.Repository<bt_Office>().Attach(office);
             //office.OfficeId = model.OfficeId;
             //office.Name = model.Name;
 
+        }
+
+        public void UpdateOfficeByXml(string OfficeAddressXml, string OfficeDetailXml)
+        {
+            using (var context = new BestTravelingEntities())
+            {
+                int i = context.usp_UpdateOffice(OfficeAddressXml, OfficeDetailXml);
+            }
         }
     }
 }

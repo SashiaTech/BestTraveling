@@ -14,5 +14,7 @@ namespace BT.AdminRepository.IRepository
         void AddOffice(OfficeModel model);
         void UpdateOffice(OfficeModel model);
         void DeleteOffice(Guid OfficeId);
+        void AddOfficeByXml(string OfficeAddressXml,string OfficeDetailXml);
+        void UpdateOfficeByXml(String OfficeAddressXml,string OfficeDetailXml);
     }
 }

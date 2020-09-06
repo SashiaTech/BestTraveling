@@ -8,7 +8,7 @@
 <header>
 	<div class="row p-1 mr-0">
 		<div class="col-md-6 col-6">
-			<span><b>Country</b></span>
+			<span><b>Office</b></span>
 		</div>
 		<div class="col-md-6 col-6 text-right">
 			<i class="fa fa-arrow-left"></i>
@@ -19,12 +19,16 @@
 	<button type="button" id="btn_AddCountry" class="btn btn-primary px-3">Add</button>
 </div>
 <div class="container-fluid">
-	<table id="grd_Country" class="table table-bordered table-striped" style="width:100%">
+	<table id="grd_Office" class="table table-bordered table-striped" style="width:100%">
 		<thead class="table-head-bg" style="width:100%">
 			<tr>
-				<th>Country</th>
+				<th>Office</th>
 				<th>Code</th>
-				<th>Action</th>
+				<th>Country</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Address</th>
+                <th>Action</th>
 			</tr>
 		</thead>
 		<tbody></tbody>
@@ -49,6 +53,8 @@
 		</div>
 	</div>
 </div>
+
+<script src="@Url.Content("~/Scripts/View js/Admin/Office/ListOffice.js")"></script>
 
 @*<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>*@
 @*<script src="@Url.Content("~/Scripts/View js/Admin/Country/List.js")" type="text/javascript"></script>*@

@@ -1,12 +1,13 @@
 ﻿@model BT_Model.AdminModel.OfficeModel
 @{
-    ViewBag.Title = "AddOffice";
+    ViewBag.Title = "UpdateOffice";
     Layout = "~/Views/Shared/BT_Layout.cshtml";
     var countries = ViewBag.Countries;
     var states = ViewBag.States;
     var cities = ViewBag.Cities;
     var districts = ViewBag.Districts;
 }
+
 <style>
     .mainRow {
         height: auto;
@@ -27,7 +28,7 @@
         </div>
     </div>
 </header>
-@using (Ajax.BeginForm("AddOffice", "Office", new AjaxOptions { OnSuccess = "AddOfficeSuccess", OnFailure = "AddOfficeFailure" }, new { @class = "form-group" }))
+@using (Ajax.BeginForm("UpdateOffice", "Office", new AjaxOptions { OnSuccess = "UpdateOfficeSuccess", OnFailure = "UpdateOfficeFailure" }, new { @class = "form-group",@id="frm_UpdateOffice" }))
 {
     @Html.HiddenFor(x => x.AddressId)
     @Html.HiddenFor(x => x.OfficeId)
@@ -279,7 +280,7 @@
                     </div>
 
                     <div class="col-md-12 text-right pl-0">
-                        <button class="btn-primary  btn2 my-2" id="btn_SaveOffice" type="submit">Save</button>
+                        <button class="btn-primary  btn2 my-2" id="btn_SaveOffice" type="submit">Update</button>
                         <button class="btn-primary btn2 my-2" id="btn_CloseOffice">Close</button>
                     </div>
 
@@ -307,4 +308,3 @@
 
 
 <script src="@Url.Content("~/Scripts/View js/Admin/Office/AddOffice.js")"></script>
-@*<script src="@Url.Content("~/Scripts/View js/Admin/Office/Office.js")"></script>*@

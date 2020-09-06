@@ -581,6 +581,7 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Office\AddOffice.cshtml" />
     <Content Include="Areas\Admin\Views\Office\list.cshtml" />
+    <Content Include="Areas\Admin\Views\Office\UpdateOffice.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
@@ -682,6 +683,8 @@
     <Content Include="Scripts\View js\Admin\City\CityList.js" />
     <Content Include="Scripts\View js\Admin\Country\List.js" />
     <Content Include="Scripts\View js\Admin\District\DistrictList.js" />
+    <Content Include="Scripts\View js\Admin\Office\AddOffice.js" />
+    <Content Include="Scripts\View js\Admin\Office\ListOffice.js" />
     <Content Include="Scripts\View js\Admin\Role\RoleList.js" />
     <Content Include="Scripts\View js\Admin\State\StateList.js" />
     <Content Include="Web.config">

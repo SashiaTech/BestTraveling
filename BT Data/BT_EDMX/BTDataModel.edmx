@@ -511,6 +511,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="usp_AddOffice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OfficeAddressXml" Type="xml" Mode="In" />
+          <Parameter Name="OfficeDetailXml" Type="xml" Mode="In" />
+        </Function>
+        <Function Name="usp_UpdateOffice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OfficeAddressXml" Type="xml" Mode="In" />
+          <Parameter Name="OfficeDetailXml" Type="xml" Mode="In" />
+        </Function>
         <EntityContainer Name="BestTravelingModelStoreContainer">
           <EntitySet Name="bt_Address" EntityType="Self.bt_Address" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="bt_City" EntityType="Self.bt_City" Schema="dbo" store:Type="Tables" />
@@ -808,6 +816,14 @@
             <End Role="bt_Address" EntitySet="bt_Address" />
             <End Role="bt_OfficeOperator" EntitySet="bt_OfficeOperator" />
           </AssociationSet>
+          <FunctionImport Name="usp_AddOffice">
+            <Parameter Name="OfficeAddressXml" Mode="In" Type="String" />
+            <Parameter Name="OfficeDetailXml" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_UpdateOffice">
+            <Parameter Name="OfficeAddressXml" Mode="In" Type="String" />
+            <Parameter Name="OfficeDetailXml" Mode="In" Type="String" />
+          </FunctionImport>
           </EntityContainer>
         <EntityType Name="bt_CollegeDirector">
           <Key>
@@ -1514,6 +1530,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="usp_AddOffice" FunctionName="BestTravelingModel.Store.usp_AddOffice" />
+          <FunctionImportMapping FunctionImportName="usp_UpdateOffice" FunctionName="BestTravelingModel.Store.usp_UpdateOffice" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -1528,7 +1546,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

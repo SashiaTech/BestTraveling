@@ -13,6 +13,8 @@ namespace BT.AdminService.IServices
         OfficeModel GetOfficeById(Guid OfficeId);
         void AddOffice(OfficeModel model);
         void UpdateOffice(OfficeModel model);
+        void UpdateOfficeByXml(string OfficeAddressXml,String OfficeDetailXml);
         void DeleteOffice(Guid OfficeId);
+        void AddOfficeByXml(string OfficeAddressXml,string OfficeDetailXml);
     }
 }

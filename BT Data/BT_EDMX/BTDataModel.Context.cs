@@ -12,6 +12,8 @@ namespace BT_Data.BT_EDMX
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class BestTravelingEntities : DbContext
     {
@@ -40,5 +42,31 @@ namespace BT_Data.BT_EDMX
         public virtual DbSet<bt_Office> bt_Office { get; set; }
         public virtual DbSet<bt_OfficeOperator> bt_OfficeOperator { get; set; }
         public virtual DbSet<bt_Address> bt_Address { get; set; }
+    
+        public virtual int usp_AddOffice(string officeAddressXml, string officeDetailXml)
+        {
+            var officeAddressXmlParameter = officeAddressXml != null ?
+                new ObjectParameter("OfficeAddressXml", officeAddressXml) :
+                new ObjectParameter("OfficeAddressXml", typeof(string));
+    
+            var officeDetailXmlParameter = officeDetailXml != null ?
+                new ObjectParameter("OfficeDetailXml", officeDetailXml) :
+                new ObjectParameter("OfficeDetailXml", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_AddOffice", officeAddressXmlParameter, officeDetailXmlParameter);
+        }
+    
+        public virtual int usp_UpdateOffice(string officeAddressXml, string officeDetailXml)
+        {
+            var officeAddressXmlParameter = officeAddressXml != null ?
+                new ObjectParameter("OfficeAddressXml", officeAddressXml) :
+                new ObjectParameter("OfficeAddressXml", typeof(string));
+    
+            var officeDetailXmlParameter = officeDetailXml != null ?
+                new ObjectParameter("OfficeDetailXml", officeDetailXml) :
+                new ObjectParameter("OfficeDetailXml", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_UpdateOffice", officeAddressXmlParameter, officeDetailXmlParameter);
+        }
     }
 }

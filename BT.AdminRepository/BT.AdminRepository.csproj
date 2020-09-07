@@ -52,6 +52,7 @@
     <Compile Include="IRepository\ICountryRepo.cs" />
     <Compile Include="IRepository\IDistrictRepo.cs" />
     <Compile Include="IRepository\IOfficeRepo.cs" />
+    <Compile Include="IRepository\IOperatorRepo.cs" />
     <Compile Include="IRepository\IRoleRepo.cs" />
     <Compile Include="IRepository\IStateRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Repository\CountryRepo.cs" />
     <Compile Include="Repository\DistrictRepo.cs" />
     <Compile Include="Repository\OfficeRepo.cs" />
+    <Compile Include="Repository\OperatorRepo.cs" />
     <Compile Include="Repository\RoleRepo.cs" />
     <Compile Include="Repository\StateRepo.cs" />
   </ItemGroup>

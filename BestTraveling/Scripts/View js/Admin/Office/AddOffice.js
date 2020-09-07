@@ -1,5 +1,17 @@
 ﻿$(document).ready(function () {
-    alert('test');
+
+    $('#grd_OperatorList').DataTable({
+        scrollY: 500,
+        scrollX: true,
+        paging: false,
+        searching:false,
+    });
+
+    $('#btn_AddOperator').click(function () {
+        $('#modal_AddOperator').modal('show');
+
+    });
+
 });
 
 function AddOfficeSuccess(result) {

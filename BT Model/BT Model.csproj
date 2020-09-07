@@ -50,6 +50,7 @@
     <Compile Include="AdminModel\DistrictModel.cs" />
     <Compile Include="AdminModel\FairsModel.cs" />
     <Compile Include="AdminModel\OfficeModel.cs" />
+    <Compile Include="AdminModel\OperatorModel.cs" />
     <Compile Include="AdminModel\RoleModel.cs" />
     <Compile Include="AdminModel\StateModel.cs" />
     <Compile Include="AdminModel\UserModel.cs" />

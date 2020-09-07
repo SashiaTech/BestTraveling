@@ -27,6 +27,7 @@ namespace BestTraveling
             container.RegisterType<ICommonDataService, CommonDataService>();
             container.RegisterType<IDistrictService, DistrictService>();
             container.RegisterType<IOfficeService, OfficeService>();
+            container.RegisterType<IOperatorService, OperatorService>();
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }

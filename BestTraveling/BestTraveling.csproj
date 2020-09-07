@@ -149,6 +149,7 @@
     <Compile Include="Areas\Admin\Controllers\DistrictController.cs" />
     <Compile Include="Areas\Admin\Controllers\FairsController.cs" />
     <Compile Include="Areas\Admin\Controllers\OfficeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OperatorsController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoleController.cs" />
     <Compile Include="Areas\Admin\Controllers\StateController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
@@ -582,6 +583,8 @@
     <Content Include="Areas\Admin\Views\Office\AddOffice.cshtml" />
     <Content Include="Areas\Admin\Views\Office\list.cshtml" />
     <Content Include="Areas\Admin\Views\Office\UpdateOffice.cshtml" />
+    <Content Include="Areas\Admin\Views\Office\_OperatorList.cshtml" />
+    <Content Include="Areas\Admin\Views\Office\_AddOperator.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
@@ -713,6 +716,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Views\Operators\" />
     <Folder Include="Areas\College\Models\" />
     <Folder Include="Content\UIContentFiles\images\" />
     <Folder Include="Scripts\View js\College\" />

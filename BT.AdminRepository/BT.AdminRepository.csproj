@@ -50,6 +50,7 @@
     <Compile Include="IRepository\ICityRepo.cs" />
     <Compile Include="IRepository\ICommonDataRepo.cs" />
     <Compile Include="IRepository\ICountryRepo.cs" />
+    <Compile Include="IRepository\IDesignationRepo.cs" />
     <Compile Include="IRepository\IDistrictRepo.cs" />
     <Compile Include="IRepository\IOfficeRepo.cs" />
     <Compile Include="IRepository\IOperatorRepo.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Repository\CityRepo.cs" />
     <Compile Include="Repository\CommonDataRepo.cs" />
     <Compile Include="Repository\CountryRepo.cs" />
+    <Compile Include="Repository\DesignationRepo.cs" />
     <Compile Include="Repository\DistrictRepo.cs" />
     <Compile Include="Repository\OfficeRepo.cs" />
     <Compile Include="Repository\OperatorRepo.cs" />

@@ -12,6 +12,21 @@
 
     });
 
+
+    $('#btn_AddOperator').click(function () {
+        $('#modal_AddOperator').modal('show');
+        $.ajax({
+            url: '/Admin/Operators/AddOperator',
+            method: 'GET',
+            dataType: 'html',
+            success: function (response) {
+                $('#modal_AddOperator .modal-body').empty().html(response);        
+            },
+            error: function () {
+                toastr.error('something went wrong. please contact to administrator!');
+            }
+        });
+    });
 });
 
 function AddOfficeSuccess(result) {
@@ -38,3 +53,5 @@ function UpdateOfficeSuccess(result) {
 function UpdateOfficeFailure() {
     toastr.error('something went wrong!');
 }
+
+

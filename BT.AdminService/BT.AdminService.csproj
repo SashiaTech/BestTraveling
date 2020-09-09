@@ -44,6 +44,7 @@
     <Compile Include="IServices\ICityService.cs" />
     <Compile Include="IServices\ICommonDataService.cs" />
     <Compile Include="IServices\ICountryService.cs" />
+    <Compile Include="IServices\IDesignationService.cs" />
     <Compile Include="IServices\IDistrictService.cs" />
     <Compile Include="IServices\IOfficeService.cs" />
     <Compile Include="IServices\IOperatorService.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Services\CityService.cs" />
     <Compile Include="Services\CommonDataService.cs" />
     <Compile Include="Services\CountryService.cs" />
+    <Compile Include="Services\DesignationService.cs" />
     <Compile Include="Services\DistrictService.cs" />
     <Compile Include="Services\OfficeService.cs" />
     <Compile Include="Services\OperatorService.cs" />

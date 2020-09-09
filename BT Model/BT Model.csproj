@@ -47,6 +47,7 @@
     <Compile Include="AdminModel\AddressModel.cs" />
     <Compile Include="AdminModel\CityModel.cs" />
     <Compile Include="AdminModel\CountryModel.cs" />
+    <Compile Include="AdminModel\DesignationModel.cs" />
     <Compile Include="AdminModel\DistrictModel.cs" />
     <Compile Include="AdminModel\FairsModel.cs" />
     <Compile Include="AdminModel\OfficeModel.cs" />

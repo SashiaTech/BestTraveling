@@ -157,6 +157,7 @@
     <Compile Include="Areas\College\Controllers\CollegeController.cs" />
     <Compile Include="Areas\College\Controllers\StudentAuthorizationController.cs" />
     <Compile Include="Common Helpers\CommonProp.cs" />
+    <Compile Include="Common Helpers\Enumerations.cs" />
     <Compile Include="Controllers\CommonDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -690,6 +691,7 @@
     <Content Include="Scripts\View js\Admin\Office\ListOffice.js" />
     <Content Include="Scripts\View js\Admin\Role\RoleList.js" />
     <Content Include="Scripts\View js\Admin\State\StateList.js" />
+    <Content Include="Scripts\View js\OfficeOperator\OfficeOperator.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

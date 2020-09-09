@@ -16,12 +16,14 @@ namespace BT.AdminService.Services
         private readonly IStateRepo _IStateRepo = null;
         private readonly IDistrictRepo _IDistrictRepo = null;
         private readonly ICityRepo _ICityRepo = null;
+        private readonly IDesignationRepo _IDesignationRepo = null;
         public CommonDataService()
         {
             _ICountryRepo = new CountryRepo();
             _IStateRepo = new StateRepo();
             _IDistrictRepo = new DistrictRepo();
             _ICityRepo = new CityRepo();
+            _IDesignationRepo = new DesignationRepo();
         }
 
         public IQueryable<CountryModel> GetCountries()
@@ -42,6 +44,16 @@ namespace BT.AdminService.Services
         public IQueryable<CityModel> GetCities()
         {
             return _ICityRepo.GetCitis();
+        }
+
+        //IQueryable<DesignationModel> GetDesignations()
+        //{
+        //    return _IDesignationRepo.GetDesgnations();
+        //}
+
+        IQueryable<DesignationModel> ICommonDataService.GetDesignations()
+        {
+            return _IDesignationRepo.GetDesgnations();
         }
     }
 }

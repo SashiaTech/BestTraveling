@@ -27,7 +27,7 @@
         </div>
     </div>
 </header>
-@using (Ajax.BeginForm("AddOffice", "Office", new AjaxOptions { OnSuccess = "AddOfficeSuccess", OnFailure = "AddOfficeFailure" }, new { @class = "form-group" }))
+@using (Ajax.BeginForm("AddOffice", "Office", new AjaxOptions { OnSuccess = "AddOfficeSuccess", OnFailure = "AddOfficeFailure" }, new { @class = "form-group",@id="frm_AddOffice" }))
 {
     @Html.HiddenFor(x => x.AddressId)
     @Html.HiddenFor(x => x.OfficeId)

@@ -1,13 +1,16 @@
 ﻿@model BT_Model.AdminModel.OperatorModel
-@{ 
+@{
     var countries = ViewBag.Countries;
     var states = ViewBag.States;
     var cities = ViewBag.Cities;
+    var designations = ViewBag.Designations;
 }
 <div class="container-fluid">
-    @using (Ajax.BeginForm("AddOperator", "Operator", new AjaxOptions { OnSuccess = "", OnFailure = "" }, new { @class = "form-group", id = "frm_AddOperator" }))
+    @using (Ajax.BeginForm("AddOperator", "Operator", new AjaxOptions { OnSuccess = "", OnFailure = "" }, new { @class = "form-group", id = "frm_AddOperator", Area = "Admin" }))
     {
 
+        @Html.HiddenFor(x => x.OperatorId)
+        @Html.HiddenFor(x => x.AddressId)
         <div class="row">
             <div class="col-md-4">
                 <label>Name</label>
@@ -28,6 +31,15 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-4">
+                <label>Gender</label>
+            </div>
+            <div class="col-md-8">
+                Male  @Html.RadioButtonFor(x => x.GenderId, Guid.Parse(enumGenderType.Male), new { @checked = true })
+                Female @Html.RadioButtonFor(x => x.GenderId, Guid.Parse(enumGenderType.Female))
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-md-4">
@@ -42,10 +54,21 @@
 
         <div class="row">
             <div class="col-md-4">
+                <label>Designation</label>
+            </div>
+            <div class="col-md-8">
+                @Html.DropDownListFor(x => x.DesignationId, new SelectList(designations, "Value", "Text"), new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.DesignationId, string.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
                 <label>Country</label>
             </div>
             <div class="col-md-8">
-                @Html.DropDownListFor(x => x.CountryId,new SelectList(countries,"Value","Text","--select country--") ,new { @class = "form-control" })
+                @Html.DropDownListFor(x => x.CountryId, new SelectList(countries, "Value", "Text", "--select country--"), new { @class = "form-control" })
                 @Html.ValidationMessageFor(x => x.CountryId, string.Empty, new { @class = "text-danger" })
             </div>
         </div>
@@ -77,19 +100,22 @@
                 <label>Address</label>
             </div>
             <div class="col-md-8">
-                @Html.TextAreaFor(x => x.Address)
+                @Html.TextAreaFor(x => x.Address, new { @class = "txtBox mt-2" })
                 @Html.ValidationMessageFor(x => x.Address, string.Empty, new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="row">
+        <div class="row pull-right mt-1">
             <div>
-                <input type="submit" value="Save" id="btn_SaveOperator" class="btn btn-primary" />
+                <input type="button" value="Save" onclick="AddOperator()" id="btn_SaveOperator" class="btn btn-primary mr-1" />
             </div>
             <div>
-                <input type="button" value="Close" id="btn_Close" class="btn btn-primary" />
+                <input type="button" value="Close" id="btn_Close" data-dismiss="modal" class="btn btn-primary  mr-3" />
             </div>
         </div>
 
     }
 </div>
+
+<script src="@Url.Content("~/Scripts/View js/OfficeOperator/OfficeOperator.js")"></script>
+              

@@ -81,6 +81,17 @@
           <Property Name="Code" Type="nvarchar" MaxLength="20" />
           <Property Name="IsDeleted" Type="bit" />
         </EntityType>
+        <EntityType Name="bt_Designation">
+          <Key>
+            <PropertyRef Name="DesignationId" />
+          </Key>
+          <Property Name="DesignationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" />
+          <Property Name="CreatedDateTime" Type="datetime" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="bt_District">
           <Key>
             <PropertyRef Name="DistrictId" />
@@ -515,6 +526,10 @@
           <Parameter Name="OfficeAddressXml" Type="xml" Mode="In" />
           <Parameter Name="OfficeDetailXml" Type="xml" Mode="In" />
         </Function>
+        <Function Name="usp_AddOperator" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OperatorDetailXml" Type="xml" Mode="In" />
+          <Parameter Name="OperatorAddressXml" Type="xml" Mode="In" />
+        </Function>
         <Function Name="usp_UpdateOffice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="OfficeAddressXml" Type="xml" Mode="In" />
           <Parameter Name="OfficeDetailXml" Type="xml" Mode="In" />
@@ -526,6 +541,7 @@
           <EntitySet Name="bt_CollegeBranches" EntityType="Self.bt_CollegeBranches" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="bt_CollegeDirector" EntityType="Self.bt_CollegeDirector" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="bt_Country" EntityType="Self.bt_Country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="bt_Designation" EntityType="Self.bt_Designation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="bt_District" EntityType="Self.bt_District" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="bt_Gender" EntityType="Self.bt_Gender" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="bt_Office" EntityType="Self.bt_Office" Schema="dbo" store:Type="Tables" />
@@ -823,6 +839,11 @@
           <FunctionImport Name="usp_UpdateOffice">
             <Parameter Name="OfficeAddressXml" Mode="In" Type="String" />
             <Parameter Name="OfficeDetailXml" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="bt_Designation" EntityType="BestTravelingModel.bt_Designation" />
+          <FunctionImport Name="usp_AddOperator">
+            <Parameter Name="OperatorDetailXml" Mode="In" Type="String" />
+            <Parameter Name="OperatorAddressXml" Mode="In" Type="String" />
           </FunctionImport>
           </EntityContainer>
         <EntityType Name="bt_CollegeDirector">
@@ -1303,6 +1324,17 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="bt_Designation">
+          <Key>
+            <PropertyRef Name="DesignationId" />
+          </Key>
+          <Property Name="DesignationId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="Guid" />
+          <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1532,6 +1564,19 @@
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="usp_AddOffice" FunctionName="BestTravelingModel.Store.usp_AddOffice" />
           <FunctionImportMapping FunctionImportName="usp_UpdateOffice" FunctionName="BestTravelingModel.Store.usp_UpdateOffice" />
+          <EntitySetMapping Name="bt_Designation">
+            <EntityTypeMapping TypeName="BestTravelingModel.bt_Designation">
+              <MappingFragment StoreEntitySet="bt_Designation">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DesignationId" ColumnName="DesignationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="usp_AddOperator" FunctionName="BestTravelingModel.Store.usp_AddOperator" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

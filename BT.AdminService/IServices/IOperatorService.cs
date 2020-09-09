@@ -12,7 +12,7 @@ namespace BT.AdminService.IServices
     {
         IQueryable<OperatorModel> GetOperators();
         OperatorModel GetOperatorById(Guid OperatorId);
-        void AddOperator(OperatorModel model);
+        void AddOperator(string OperatorAddressXml, string OperatorDetailXml);
         void UpdateOperator(OperatorModel model);
         void DeleteOperator(OperatorModel model);
     }

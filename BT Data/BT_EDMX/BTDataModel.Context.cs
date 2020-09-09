@@ -42,6 +42,7 @@ namespace BT_Data.BT_EDMX
         public virtual DbSet<bt_Office> bt_Office { get; set; }
         public virtual DbSet<bt_OfficeOperator> bt_OfficeOperator { get; set; }
         public virtual DbSet<bt_Address> bt_Address { get; set; }
+        public virtual DbSet<bt_Designation> bt_Designation { get; set; }
     
         public virtual int usp_AddOffice(string officeAddressXml, string officeDetailXml)
         {
@@ -67,6 +68,19 @@ namespace BT_Data.BT_EDMX
                 new ObjectParameter("OfficeDetailXml", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_UpdateOffice", officeAddressXmlParameter, officeDetailXmlParameter);
+        }
+    
+        public virtual int usp_AddOperator(string operatorDetailXml, string operatorAddressXml)
+        {
+            var operatorDetailXmlParameter = operatorDetailXml != null ?
+                new ObjectParameter("OperatorDetailXml", operatorDetailXml) :
+                new ObjectParameter("OperatorDetailXml", typeof(string));
+    
+            var operatorAddressXmlParameter = operatorAddressXml != null ?
+                new ObjectParameter("OperatorAddressXml", operatorAddressXml) :
+                new ObjectParameter("OperatorAddressXml", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_AddOperator", operatorDetailXmlParameter, operatorAddressXmlParameter);
         }
     }
 }

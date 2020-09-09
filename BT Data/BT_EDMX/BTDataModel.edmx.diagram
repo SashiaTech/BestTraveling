@@ -44,6 +44,7 @@
         <AssociationConnector Association="BestTravelingModel.FK_bt_Address_bt_District_DistrictId" />
         <AssociationConnector Association="BestTravelingModel.Fk_bt_Address_bt_State_StateId" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_OfficeOperator_bt_Address_AddressId" />
+        <EntityTypeShape EntityType="BestTravelingModel.bt_Designation" Width="1.5" PointX="5.375" PointY="5.75" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

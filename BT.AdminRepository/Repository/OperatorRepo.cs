@@ -17,9 +17,12 @@ namespace BT.AdminRepository.Repository
         {
             gWork = new GUnitWork(new BestTravelingEntities());
         }
-        public void AddOperator(OperatorModel model)
+        public void AddOperator(string OperatorAddressXml,string OperatorDetailXml)
         {
-            
+            using (var context = new BestTravelingEntities())
+            {
+                int res = context.usp_AddOperator(OperatorDetailXml, OperatorAddressXml);
+            }
         }
 
         public void DeleteOperator(OperatorModel model)

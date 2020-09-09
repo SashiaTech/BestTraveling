@@ -203,5 +203,6 @@ namespace BestTraveling.Areas.Admin.Controllers
             }
             return Json(flag,JsonRequestBehavior.AllowGet);
         }
+
     }
 }

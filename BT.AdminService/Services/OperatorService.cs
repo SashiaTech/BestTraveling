@@ -17,9 +17,9 @@ namespace BT.AdminService.Services
         {
             _IOpretorRepo = new OperatorRepo();
         }
-        public void AddOperator(OperatorModel model)
+        public void AddOperator(string OperatorAddressXml,string OperatorDetailXml)
         {
-            _IOpretorRepo.AddOperator(model);
+            _IOpretorRepo.AddOperator(OperatorAddressXml,OperatorDetailXml);
         }
 
         public void DeleteOperator(OperatorModel model)

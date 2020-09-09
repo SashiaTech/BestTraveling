@@ -11,7 +11,7 @@ namespace BT.AdminRepository.IRepository
     {
         IQueryable<OperatorModel> GetOperators();
         OperatorModel GetOperatorById(Guid OperatorId);
-        void AddOperator(OperatorModel model);
+        void AddOperator(string OperatorAddressXml,string OperatorDetailXml);
         void UpdateOperator(OperatorModel model);
         void DeleteOperator(OperatorModel model);
     }

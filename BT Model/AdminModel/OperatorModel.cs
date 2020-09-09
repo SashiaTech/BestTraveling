@@ -17,10 +17,13 @@ namespace BT_Model.AdminModel
         public Guid CountryId { get; set; }
         public Guid StateId { get; set; }
         public Guid CityId { get; set; }
-        public Guid DistrictId { get; set; }
+        public Guid? DistrictId { get; set; }
         public Guid Createdby { get; set; }
-        public DateTime CreatedDateTime { get; set; }
-        public Guid ModifiedBy { get; set; }
-        public DateTime ModifiedDateTime { get; set; }
+        public bool IsDeleted { get; set; }
+        public DateTime? CreatedDateTime { get; set; }
+        public Guid? ModifiedBy { get; set; }
+        public DateTime? ModifiedDateTime { get; set; }
+        public Guid? AddressId { get; set; }
+        public Guid? GenderId { get; set; }
     }
 }

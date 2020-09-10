@@ -146,7 +146,6 @@
           <Property Name="ModifiedBy" Type="uniqueidentifier" />
           <Property Name="ModifiedDateTime" Type="datetime" />
           <Property Name="GenderId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <EntityType Name="bt_Roles">
           <Key>
@@ -462,6 +461,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_bt_OfficeOperator_bt_Designation_DesignationId">
+          <End Role="bt_Designation" Type="Self.bt_Designation" Multiplicity="0..1" />
+          <End Role="bt_OfficeOperator" Type="Self.bt_OfficeOperator" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_Designation">
+              <PropertyRef Name="DesignationId" />
+            </Principal>
+            <Dependent Role="bt_OfficeOperator">
+              <PropertyRef Name="DesignationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_bt_OfficeOperator_bt_Gender_GenderId">
           <End Role="bt_Gender" Type="Self.bt_Gender" Multiplicity="1" />
           <End Role="bt_OfficeOperator" Type="Self.bt_OfficeOperator" Multiplicity="*" />
@@ -471,18 +482,6 @@
             </Principal>
             <Dependent Role="bt_OfficeOperator">
               <PropertyRef Name="GenderId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_bt_OfficeOperator_bt_Roles_RoleId">
-          <End Role="bt_Roles" Type="Self.bt_Roles" Multiplicity="1" />
-          <End Role="bt_OfficeOperator" Type="Self.bt_OfficeOperator" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="bt_Roles">
-              <PropertyRef Name="RoleId" />
-            </Principal>
-            <Dependent Role="bt_OfficeOperator">
-              <PropertyRef Name="RoleId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -631,12 +630,12 @@
             <End Role="bt_Address" EntitySet="bt_Address" />
             <End Role="bt_OfficeOperator" EntitySet="bt_OfficeOperator" />
           </AssociationSet>
-          <AssociationSet Name="FK_bt_OfficeOperator_bt_Gender_GenderId" Association="Self.FK_bt_OfficeOperator_bt_Gender_GenderId">
-            <End Role="bt_Gender" EntitySet="bt_Gender" />
+          <AssociationSet Name="FK_bt_OfficeOperator_bt_Designation_DesignationId" Association="Self.FK_bt_OfficeOperator_bt_Designation_DesignationId">
+            <End Role="bt_Designation" EntitySet="bt_Designation" />
             <End Role="bt_OfficeOperator" EntitySet="bt_OfficeOperator" />
           </AssociationSet>
-          <AssociationSet Name="FK_bt_OfficeOperator_bt_Roles_RoleId" Association="Self.FK_bt_OfficeOperator_bt_Roles_RoleId">
-            <End Role="bt_Roles" EntitySet="bt_Roles" />
+          <AssociationSet Name="FK_bt_OfficeOperator_bt_Gender_GenderId" Association="Self.FK_bt_OfficeOperator_bt_Gender_GenderId">
+            <End Role="bt_Gender" EntitySet="bt_Gender" />
             <End Role="bt_OfficeOperator" EntitySet="bt_OfficeOperator" />
           </AssociationSet>
           <AssociationSet Name="fk_bt_State_bt_Country_CountryId" Association="Self.fk_bt_State_bt_Country_CountryId">
@@ -794,15 +793,6 @@
           </AssociationSet>
           <EntitySet Name="sysdiagrams" EntityType="BestTravelingModel.sysdiagram" />
           <EntitySet Name="bt_Office" EntityType="BestTravelingModel.bt_Office" />
-          <EntitySet Name="bt_OfficeOperator" EntityType="BestTravelingModel.bt_OfficeOperator" />
-          <AssociationSet Name="FK_bt_OfficeOperator_bt_Gender_GenderId" Association="BestTravelingModel.FK_bt_OfficeOperator_bt_Gender_GenderId">
-            <End Role="bt_Gender" EntitySet="bt_Gender" />
-            <End Role="bt_OfficeOperator" EntitySet="bt_OfficeOperator" />
-          </AssociationSet>
-          <AssociationSet Name="FK_bt_OfficeOperator_bt_Roles_RoleId" Association="BestTravelingModel.FK_bt_OfficeOperator_bt_Roles_RoleId">
-            <End Role="bt_Roles" EntitySet="bt_Roles" />
-            <End Role="bt_OfficeOperator" EntitySet="bt_OfficeOperator" />
-          </AssociationSet>
           <EntitySet Name="bt_Address" EntityType="BestTravelingModel.bt_Address" />
           <AssociationSet Name="bt_Office_bt_Address_AddressId" Association="BestTravelingModel.bt_Office_bt_Address_AddressId">
             <End Role="bt_Address" EntitySet="bt_Address" />
@@ -828,10 +818,6 @@
             <End Role="bt_State" EntitySet="bt_State" />
             <End Role="bt_Address" EntitySet="bt_Address" />
           </AssociationSet>
-          <AssociationSet Name="FK_bt_OfficeOperator_bt_Address_AddressId" Association="BestTravelingModel.FK_bt_OfficeOperator_bt_Address_AddressId">
-            <End Role="bt_Address" EntitySet="bt_Address" />
-            <End Role="bt_OfficeOperator" EntitySet="bt_OfficeOperator" />
-          </AssociationSet>
           <FunctionImport Name="usp_AddOffice">
             <Parameter Name="OfficeAddressXml" Mode="In" Type="String" />
             <Parameter Name="OfficeDetailXml" Mode="In" Type="String" />
@@ -845,6 +831,19 @@
             <Parameter Name="OperatorDetailXml" Mode="In" Type="String" />
             <Parameter Name="OperatorAddressXml" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="bt_OfficeOperator" EntityType="BestTravelingModel.bt_OfficeOperator" />
+          <AssociationSet Name="FK_bt_OfficeOperator_bt_Address_AddressId" Association="BestTravelingModel.FK_bt_OfficeOperator_bt_Address_AddressId">
+            <End Role="bt_Address" EntitySet="bt_Address" />
+            <End Role="bt_OfficeOperator" EntitySet="bt_OfficeOperator" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bt_OfficeOperator_bt_Designation_DesignationId" Association="BestTravelingModel.FK_bt_OfficeOperator_bt_Designation_DesignationId">
+            <End Role="bt_Designation" EntitySet="bt_Designation" />
+            <End Role="bt_OfficeOperator" EntitySet="bt_OfficeOperator" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bt_OfficeOperator_bt_Gender_GenderId" Association="BestTravelingModel.FK_bt_OfficeOperator_bt_Gender_GenderId">
+            <End Role="bt_Gender" EntitySet="bt_Gender" />
+            <End Role="bt_OfficeOperator" EntitySet="bt_OfficeOperator" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="bt_CollegeDirector">
           <Key>
@@ -985,7 +984,6 @@
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="bt_User" Relationship="BestTravelingModel.FK_bt_User_bt_User" FromRole="bt_Roles" ToRole="bt_User" />
-          <NavigationProperty Name="bt_OfficeOperator" Relationship="BestTravelingModel.FK_bt_OfficeOperator_bt_Roles_RoleId" FromRole="bt_Roles" ToRole="bt_OfficeOperator" />
         </EntityType>
         <Association Name="FK_bt_User_bt_User">
           <End Type="BestTravelingModel.bt_Roles" Role="bt_Roles" Multiplicity="0..1" />
@@ -1171,53 +1169,6 @@
           <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
           <NavigationProperty Name="bt_Address" Relationship="BestTravelingModel.bt_Office_bt_Address_AddressId" FromRole="bt_Office" ToRole="bt_Address" />
         </EntityType>
-        <EntityType Name="bt_OfficeOperator">
-          <Key>
-            <PropertyRef Name="OperatorId" />
-          </Key>
-          <Property Name="OperatorId" Type="Guid" Nullable="false" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
-          <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="AddressId" Type="Guid" />
-          <Property Name="DesignationId" Type="Guid" />
-          <Property Name="Contact" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="IsActive" Type="Boolean" Nullable="false" />
-          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-          <Property Name="Createdby" Type="Guid" />
-          <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
-          <Property Name="ModifiedBy" Type="Guid" />
-          <Property Name="ModifiedDateTime" Type="DateTime" Precision="3" />
-          <Property Name="GenderId" Type="Guid" Nullable="false" />
-          <Property Name="RoleId" Type="Guid" Nullable="false" />
-          <NavigationProperty Name="bt_Gender" Relationship="BestTravelingModel.FK_bt_OfficeOperator_bt_Gender_GenderId" FromRole="bt_OfficeOperator" ToRole="bt_Gender" />
-          <NavigationProperty Name="bt_Roles" Relationship="BestTravelingModel.FK_bt_OfficeOperator_bt_Roles_RoleId" FromRole="bt_OfficeOperator" ToRole="bt_Roles" />
-          <NavigationProperty Name="bt_Address" Relationship="BestTravelingModel.FK_bt_OfficeOperator_bt_Address_AddressId" FromRole="bt_OfficeOperator" ToRole="bt_Address" />
-        </EntityType>
-        <Association Name="FK_bt_OfficeOperator_bt_Gender_GenderId">
-          <End Type="BestTravelingModel.bt_Gender" Role="bt_Gender" Multiplicity="1" />
-          <End Type="BestTravelingModel.bt_OfficeOperator" Role="bt_OfficeOperator" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="bt_Gender">
-              <PropertyRef Name="GenderId" />
-            </Principal>
-            <Dependent Role="bt_OfficeOperator">
-              <PropertyRef Name="GenderId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_bt_OfficeOperator_bt_Roles_RoleId">
-          <End Type="BestTravelingModel.bt_Roles" Role="bt_Roles" Multiplicity="1" />
-          <End Type="BestTravelingModel.bt_OfficeOperator" Role="bt_OfficeOperator" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="bt_Roles">
-              <PropertyRef Name="RoleId" />
-            </Principal>
-            <Dependent Role="bt_OfficeOperator">
-              <PropertyRef Name="RoleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="bt_Address">
           <Key>
             <PropertyRef Name="AddressId" />
@@ -1312,6 +1263,40 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="bt_Designation">
+          <Key>
+            <PropertyRef Name="DesignationId" />
+          </Key>
+          <Property Name="DesignationId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="Guid" />
+          <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="bt_OfficeOperator" Relationship="BestTravelingModel.FK_bt_OfficeOperator_bt_Designation_DesignationId" FromRole="bt_Designation" ToRole="bt_OfficeOperator" />
+        </EntityType>
+        <EntityType Name="bt_OfficeOperator">
+          <Key>
+            <PropertyRef Name="OperatorId" />
+          </Key>
+          <Property Name="OperatorId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AddressId" Type="Guid" />
+          <Property Name="DesignationId" Type="Guid" />
+          <Property Name="Contact" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="Createdby" Type="Guid" />
+          <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="Guid" />
+          <Property Name="ModifiedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="GenderId" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="bt_Address" Relationship="BestTravelingModel.FK_bt_OfficeOperator_bt_Address_AddressId" FromRole="bt_OfficeOperator" ToRole="bt_Address" />
+          <NavigationProperty Name="bt_Designation" Relationship="BestTravelingModel.FK_bt_OfficeOperator_bt_Designation_DesignationId" FromRole="bt_OfficeOperator" ToRole="bt_Designation" />
+          <NavigationProperty Name="bt_Gender" Relationship="BestTravelingModel.FK_bt_OfficeOperator_bt_Gender_GenderId" FromRole="bt_OfficeOperator" ToRole="bt_Gender" />
+        </EntityType>
         <Association Name="FK_bt_OfficeOperator_bt_Address_AddressId">
           <End Type="BestTravelingModel.bt_Address" Role="bt_Address" Multiplicity="0..1" />
           <End Type="BestTravelingModel.bt_OfficeOperator" Role="bt_OfficeOperator" Multiplicity="*" />
@@ -1324,17 +1309,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="bt_Designation">
-          <Key>
-            <PropertyRef Name="DesignationId" />
-          </Key>
-          <Property Name="DesignationId" Type="Guid" Nullable="false" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="CreatedBy" Type="Guid" />
-          <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
-          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-        </EntityType>
+        <Association Name="FK_bt_OfficeOperator_bt_Designation_DesignationId">
+          <End Type="BestTravelingModel.bt_Designation" Role="bt_Designation" Multiplicity="0..1" />
+          <End Type="BestTravelingModel.bt_OfficeOperator" Role="bt_OfficeOperator" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_Designation">
+              <PropertyRef Name="DesignationId" />
+            </Principal>
+            <Dependent Role="bt_OfficeOperator">
+              <PropertyRef Name="DesignationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_bt_OfficeOperator_bt_Gender_GenderId">
+          <End Type="BestTravelingModel.bt_Gender" Role="bt_Gender" Multiplicity="1" />
+          <End Type="BestTravelingModel.bt_OfficeOperator" Role="bt_OfficeOperator" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_Gender">
+              <PropertyRef Name="GenderId" />
+            </Principal>
+            <Dependent Role="bt_OfficeOperator">
+              <PropertyRef Name="GenderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1525,27 +1523,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="bt_OfficeOperator">
-            <EntityTypeMapping TypeName="BestTravelingModel.bt_OfficeOperator">
-              <MappingFragment StoreEntitySet="bt_OfficeOperator">
-                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-                <ScalarProperty Name="GenderId" ColumnName="GenderId" />
-                <ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
-                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
-                <ScalarProperty Name="Createdby" ColumnName="Createdby" />
-                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Contact" ColumnName="Contact" />
-                <ScalarProperty Name="DesignationId" ColumnName="DesignationId" />
-                <ScalarProperty Name="AddressId" ColumnName="AddressId" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="bt_Address">
             <EntityTypeMapping TypeName="BestTravelingModel.bt_Address">
               <MappingFragment StoreEntitySet="bt_Address">
@@ -1577,6 +1554,26 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="usp_AddOperator" FunctionName="BestTravelingModel.Store.usp_AddOperator" />
+          <EntitySetMapping Name="bt_OfficeOperator">
+            <EntityTypeMapping TypeName="BestTravelingModel.bt_OfficeOperator">
+              <MappingFragment StoreEntitySet="bt_OfficeOperator">
+                <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+                <ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="DesignationId" ColumnName="DesignationId" />
+                <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

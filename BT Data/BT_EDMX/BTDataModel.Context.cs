@@ -40,9 +40,9 @@ namespace BT_Data.BT_EDMX
         public virtual DbSet<bt_District> bt_District { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<bt_Office> bt_Office { get; set; }
-        public virtual DbSet<bt_OfficeOperator> bt_OfficeOperator { get; set; }
         public virtual DbSet<bt_Address> bt_Address { get; set; }
         public virtual DbSet<bt_Designation> bt_Designation { get; set; }
+        public virtual DbSet<bt_OfficeOperator> bt_OfficeOperator { get; set; }
     
         public virtual int usp_AddOffice(string officeAddressXml, string officeDetailXml)
         {

@@ -28,6 +28,12 @@ namespace BestTraveling.Areas.Admin.Controllers
             return View();
         }
 
+        public ActionResult Read_Operators()
+        {
+            var model = _IOperatorService.GetOperators();
+            return Json(model,JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult AddOperator()
         {
             ViewBag.Countries = _ICommonDataService.GetCountries().Select(x => new SelectListItem
@@ -120,5 +126,22 @@ namespace BestTraveling.Areas.Admin.Controllers
             }
             return Json(flag, JsonRequestBehavior.AllowGet);
         }
+
+
+        public ActionResult DeleteOperator(Guid OperatorId)
+        {
+            bool flag = false;
+            try
+            {
+                var oper = _IOperatorService.GetOperatorById(OperatorId);
+                _IOperatorService.DeleteOperator(oper);
+                flag = true;
+            }catch(Exception ex)
+            {
+                flag = false;
+            }
+            return Json(flag,JsonRequestBehavior.AllowGet);
+        }
     }
+
 }

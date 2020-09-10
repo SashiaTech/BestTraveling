@@ -28,10 +28,9 @@ namespace BT_Data.BT_EDMX
         public Nullable<System.Guid> ModifiedBy { get; set; }
         public Nullable<System.DateTime> ModifiedDateTime { get; set; }
         public System.Guid GenderId { get; set; }
-        public System.Guid RoleId { get; set; }
     
-        public virtual bt_Gender bt_Gender { get; set; }
-        public virtual bt_Roles bt_Roles { get; set; }
         public virtual bt_Address bt_Address { get; set; }
+        public virtual bt_Designation bt_Designation { get; set; }
+        public virtual bt_Gender bt_Gender { get; set; }
     }
 }

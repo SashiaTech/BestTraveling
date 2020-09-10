@@ -34,11 +34,6 @@
 }
 .odd {
     background: #b6c9ff !important;
-    height: 10px;
-}
-.even
-{
-    height:10px;
 }
 /*#example_filter{
     margin-left: 5px;
@@ -46,14 +41,15 @@
     outline: none;
     border-radius: 4px;
 }*/
-.table-head-bg {
+.table-head-bg{
     background: #3c8dbc;
     color: white;
     font-size:13px;
 }
 .table-bordered td {
     padding: 0px !important;
-    vertical-align:middle !important;
+    vertical-align: middle !important;
+    border: none !important;
 }
 .table-bordered td>a{
     text-decoration:none !important;

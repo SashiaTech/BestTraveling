@@ -146,6 +146,7 @@
     <Compile Include="Areas\Admin\Controllers\CityController.cs" />
     <Compile Include="Areas\Admin\Controllers\CollegePermissionController.cs" />
     <Compile Include="Areas\Admin\Controllers\CountryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DesignationController.cs" />
     <Compile Include="Areas\Admin\Controllers\DistrictController.cs" />
     <Compile Include="Areas\Admin\Controllers\FairsController.cs" />
     <Compile Include="Areas\Admin\Controllers\OfficeController.cs" />
@@ -586,6 +587,9 @@
     <Content Include="Areas\Admin\Views\Office\UpdateOffice.cshtml" />
     <Content Include="Areas\Admin\Views\Office\_OperatorList.cshtml" />
     <Content Include="Areas\Admin\Views\Office\_AddOperator.cshtml" />
+    <Content Include="Areas\Admin\Views\Designation\List.cshtml" />
+    <Content Include="Areas\Admin\Views\Designation\_AddDesignation.cshtml" />
+    <Content Include="Areas\Admin\Views\Designation\_UpdateDesignation.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
@@ -686,6 +690,7 @@
     <Content Include="Scripts\toastr.min.js" />
     <Content Include="Scripts\View js\Admin\City\CityList.js" />
     <Content Include="Scripts\View js\Admin\Country\List.js" />
+    <Content Include="Scripts\View js\Admin\Designation\List.js" />
     <Content Include="Scripts\View js\Admin\District\DistrictList.js" />
     <Content Include="Scripts\View js\Admin\Office\AddOffice.js" />
     <Content Include="Scripts\View js\Admin\Office\ListOffice.js" />

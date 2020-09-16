@@ -39,7 +39,7 @@ namespace BT.AdminRepository.Repository
 
         public IQueryable<DesignationModel> GetDesgnations()
         {
-            var model = gWork.Repository<bt_Designation>().AsQuerable().Select(x=>new DesignationModel {
+            var model = gWork.Repository<bt_Designation>().AsQuerable().Where(x=>x.IsDeleted==!true).Select(x=>new DesignationModel {
                 DesignationId = x.DesignationId,
                 Name = x.Name,
                 Code = x.Code,

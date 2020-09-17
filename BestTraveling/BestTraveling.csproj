@@ -164,51 +164,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BestTraveling.Context.cs">
-      <DependentUpon>BestTraveling.Context.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Models\BestTraveling.cs">
-      <DependentUpon>BestTraveling.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Models\BestTraveling.Designer.cs">
-      <DependentUpon>BestTraveling.edmx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Models\bt_City.cs">
-      <DependentUpon>BestTraveling.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\bt_College.cs">
-      <DependentUpon>BestTraveling.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\bt_CollegeBranches.cs">
-      <DependentUpon>BestTraveling.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\bt_CollegeDirector.cs">
-      <DependentUpon>BestTraveling.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\bt_Country.cs">
-      <DependentUpon>BestTraveling.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\bt_District.cs">
-      <DependentUpon>BestTraveling.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\bt_Gender.cs">
-      <DependentUpon>BestTraveling.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\bt_Roles.cs">
-      <DependentUpon>BestTraveling.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\bt_State.cs">
-      <DependentUpon>BestTraveling.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\bt_User.cs">
-      <DependentUpon>BestTraveling.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -508,16 +463,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\BestTraveling.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BestTraveling.edmx</DependentUpon>
-      <LastGenOutput>BestTraveling.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\BestTraveling.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BestTraveling.edmx</DependentUpon>
-      <LastGenOutput>BestTraveling.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\adminlte.min.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -529,13 +474,6 @@
     <Content Include="Areas\College\Views\_ViewStart.cshtml" />
     <Content Include="Areas\College\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\College\Views\College\Create.cshtml" />
-    <EntityDeploy Include="Models\BestTraveling.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BestTraveling.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\BestTraveling.edmx.diagram">
-      <DependentUpon>BestTraveling.edmx</DependentUpon>
-    </Content>
     <Content Include="Areas\Admin\Views\City\List.cshtml" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="libman.json" />
@@ -726,6 +664,7 @@
     <Folder Include="Areas\Admin\Views\Operators\" />
     <Folder Include="Areas\College\Models\" />
     <Folder Include="Content\UIContentFiles\images\" />
+    <Folder Include="Models\" />
     <Folder Include="Scripts\View js\College\" />
     <Folder Include="Views\CommonData\" />
   </ItemGroup>

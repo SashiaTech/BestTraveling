@@ -12,15 +12,39 @@ namespace BT_College_Repository.Repository
 {
     public class CollegeRepo : ICollegeRepo
     {
-        GUnitWork gWork = new GUnitWork(new BestTravelingEntities());
-        BestTravelingEntities db = new BestTravelingEntities();
-        public string Create()
+        GUnitWork gWork = null;
+        public CollegeRepo()
         {
-            return "Create Test";
+            gWork = new GUnitWork(new BestTravelingEntities());
         }
 
-        public void Create(CollegeModel college)
+        public void CreateCollege(CollegeModel model)
         {
+            //bt_College college = new bt_College();
+            //college.CollegeId = model.CollegeId;
+            //college.Name = model.Name;
+            //college.Code = model.Code;
+            //college.
+        }
+
+        public void DeleteCollege(Guid CollegeId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public CollegeModel GetCollegeById(Guid CollegeModel)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IQueryable<CollegeModel> GetColleges()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateCollege(CollegeModel model)
+        {
+            throw new NotImplementedException();
         }
     }
 }

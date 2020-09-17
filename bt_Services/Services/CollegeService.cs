@@ -8,21 +8,40 @@ using System.Threading.Tasks;
 using BT_College_Repository;
 using BT_College_Repository.IRepository;
 using BT_College_Repository.Repository;
+using BT_Model.CollegeModel;
 
 namespace bt_Services.Services
 {
     public class CollegeService : ICollegeService
     {
-        ICollegeRepo _collegeRepo = null;
-
+        private readonly ICollegeRepo _collegeRepo = null;
         public CollegeService()
         {
             _collegeRepo = new CollegeRepo();
         }
-
-        public string Create()
+        public void CreateCollege(CollegeModel model)
         {
-            return _collegeRepo.Create();
+            throw new NotImplementedException();
+        }
+
+        public void DeleteCollege(Guid CollegeId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public CollegeModel GetCollegeById(Guid CollegeModel)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IQueryable<CollegeModel> GetColleges()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateCollege(CollegeModel model)
+        {
+            throw new NotImplementedException();
         }
     }
 }

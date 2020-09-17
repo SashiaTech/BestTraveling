@@ -18,6 +18,7 @@ namespace BT_Data.BT_EDMX
         public bt_Designation()
         {
             this.bt_OfficeOperator = new HashSet<bt_OfficeOperator>();
+            this.bt_User = new HashSet<bt_User>();
         }
     
         public System.Guid DesignationId { get; set; }
@@ -29,5 +30,7 @@ namespace BT_Data.BT_EDMX
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_OfficeOperator> bt_OfficeOperator { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<bt_User> bt_User { get; set; }
     }
 }

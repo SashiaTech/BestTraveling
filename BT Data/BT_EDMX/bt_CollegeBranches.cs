@@ -19,5 +19,6 @@ namespace BT_Data.BT_EDMX
         public System.Guid CollegeId { get; set; }
     
         public virtual bt_College bt_College { get; set; }
+        public virtual bt_College bt_College1 { get; set; }
     }
 }

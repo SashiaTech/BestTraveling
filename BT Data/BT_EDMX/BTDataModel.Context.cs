@@ -28,7 +28,6 @@ namespace BT_Data.BT_EDMX
         }
     
         public virtual DbSet<bt_CollegeBranches> bt_CollegeBranches { get; set; }
-        public virtual DbSet<bt_CollegeDirector> bt_CollegeDirector { get; set; }
         public virtual DbSet<bt_State> bt_State { get; set; }
         public virtual DbSet<bt_Roles2> bt_Roles2 { get; set; }
         public virtual DbSet<bt_Country> bt_Country { get; set; }
@@ -40,9 +39,11 @@ namespace BT_Data.BT_EDMX
         public virtual DbSet<bt_Address> bt_Address { get; set; }
         public virtual DbSet<bt_Designation> bt_Designation { get; set; }
         public virtual DbSet<bt_OfficeOperator> bt_OfficeOperator { get; set; }
-        public virtual DbSet<bt_College> bt_College { get; set; }
         public virtual DbSet<bt_Gender> bt_Gender { get; set; }
         public virtual DbSet<bt_User> bt_User { get; set; }
+        public virtual DbSet<bt_Fares> bt_Fares { get; set; }
+        public virtual DbSet<bt_College> bt_College { get; set; }
+        public virtual DbSet<bt_CollegeDirector> bt_CollegeDirector { get; set; }
     
         public virtual int usp_AddOffice(string officeAddressXml, string officeDetailXml)
         {

@@ -19,8 +19,8 @@ namespace BT_Data.BT_EDMX
         {
             this.bt_Office = new HashSet<bt_Office>();
             this.bt_OfficeOperator = new HashSet<bt_OfficeOperator>();
-            this.bt_College = new HashSet<bt_College>();
             this.bt_User = new HashSet<bt_User>();
+            this.bt_College = new HashSet<bt_College>();
         }
     
         public System.Guid AddressId { get; set; }
@@ -43,8 +43,8 @@ namespace BT_Data.BT_EDMX
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_OfficeOperator> bt_OfficeOperator { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<bt_College> bt_College { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_User> bt_User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<bt_College> bt_College { get; set; }
     }
 }

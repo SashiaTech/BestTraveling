@@ -94,6 +94,9 @@
     <Compile Include="BT_EDMX\bt_District.cs">
       <DependentUpon>BTDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BT_EDMX\bt_Fares.cs">
+      <DependentUpon>BTDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="BT_EDMX\bt_Gender.cs">
       <DependentUpon>BTDataModel.tt</DependentUpon>
     </Compile>

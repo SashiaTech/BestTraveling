@@ -24,9 +24,9 @@ namespace BT_Data.BT_EDMX
     
         public System.Guid CollegeId { get; set; }
         public string Name { get; set; }
-        public string DirecotrName { get; set; }
         public string Code { get; set; }
         public Nullable<System.Guid> AddressId { get; set; }
+        public Nullable<System.Guid> DirectorId { get; set; }
     
         public virtual bt_Address bt_Address { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -119,6 +119,8 @@
           <Property Name="XLat" Type="nvarchar" MaxLength="50" />
           <Property Name="YLat" Type="nvarchar" MaxLength="50" />
           <Property Name="NumberOfStops" Type="int" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="DistrictId" Type="uniqueidentifier" />
         </EntityType>
         <EntityType Name="bt_Gender">
           <Key>
@@ -862,19 +864,6 @@
             <End Role="bt_Roles" EntitySet="bt_Roles" />
             <End Role="bt_User" EntitySet="bt_User" />
           </AssociationSet>
-          <EntitySet Name="bt_Fares" EntityType="BestTravelingModel.bt_Fares" />
-          <AssociationSet Name="FK_bt_Fares_bt_City_CityId" Association="BestTravelingModel.FK_bt_Fares_bt_City_CityId">
-            <End Role="bt_City" EntitySet="bt_City" />
-            <End Role="bt_Fares" EntitySet="bt_Fares" />
-          </AssociationSet>
-          <AssociationSet Name="FK_bt_Fares_bt_Country_CountryId" Association="BestTravelingModel.FK_bt_Fares_bt_Country_CountryId">
-            <End Role="bt_Country" EntitySet="bt_Country" />
-            <End Role="bt_Fares" EntitySet="bt_Fares" />
-          </AssociationSet>
-          <AssociationSet Name="FK_bt_Fares_bt_State_StateId" Association="BestTravelingModel.FK_bt_Fares_bt_State_StateId">
-            <End Role="bt_State" EntitySet="bt_State" />
-            <End Role="bt_Fares" EntitySet="bt_Fares" />
-          </AssociationSet>
           <EntitySet Name="bt_College" EntityType="BestTravelingModel.bt_College" />
           <EntitySet Name="bt_CollegeDirector" EntityType="BestTravelingModel.bt_CollegeDirector" />
           <AssociationSet Name="FK_bt_College_bt_Address_AddressId" Association="BestTravelingModel.FK_bt_College_bt_Address_AddressId">
@@ -909,6 +898,19 @@
             <End Role="bt_State" EntitySet="bt_State" />
             <End Role="bt_CollegeDirector" EntitySet="bt_CollegeDirector" />
           </AssociationSet>
+          <EntitySet Name="bt_Fares" EntityType="BestTravelingModel.bt_Fares" />
+          <AssociationSet Name="FK_bt_Fares_bt_City_CityId" Association="BestTravelingModel.FK_bt_Fares_bt_City_CityId">
+            <End Role="bt_City" EntitySet="bt_City" />
+            <End Role="bt_Fares" EntitySet="bt_Fares" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bt_Fares_bt_Country_CountryId" Association="BestTravelingModel.FK_bt_Fares_bt_Country_CountryId">
+            <End Role="bt_Country" EntitySet="bt_Country" />
+            <End Role="bt_Fares" EntitySet="bt_Fares" />
+          </AssociationSet>
+          <AssociationSet Name="FK_bt_Fares_bt_State_StateId" Association="BestTravelingModel.FK_bt_Fares_bt_State_StateId">
+            <End Role="bt_State" EntitySet="bt_State" />
+            <End Role="bt_Fares" EntitySet="bt_Fares" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="bt_State">
           <Key>
@@ -926,8 +928,8 @@
           <NavigationProperty Name="bt_City" Relationship="BestTravelingModel.fk_bt_City_bt_State_StateId" FromRole="bt_State" ToRole="bt_City" />
           <NavigationProperty Name="bt_District" Relationship="BestTravelingModel.fk_bt_District_bt_State_StateId" FromRole="bt_State" ToRole="bt_District" />
           <NavigationProperty Name="bt_Address" Relationship="BestTravelingModel.Fk_bt_Address_bt_State_StateId" FromRole="bt_State" ToRole="bt_Address" />
-          <NavigationProperty Name="bt_Fares" Relationship="BestTravelingModel.FK_bt_Fares_bt_State_StateId" FromRole="bt_State" ToRole="bt_Fares" />
           <NavigationProperty Name="bt_CollegeDirector" Relationship="BestTravelingModel.FK_bt_CollegeDirector_bt_State_StateId" FromRole="bt_State" ToRole="bt_CollegeDirector" />
+          <NavigationProperty Name="bt_Fares" Relationship="BestTravelingModel.FK_bt_Fares_bt_State_StateId" FromRole="bt_State" ToRole="bt_Fares" />
         </EntityType>
         <EntityType Name="bt_Roles2">
           <Key>
@@ -998,8 +1000,8 @@
           <NavigationProperty Name="bt_State" Relationship="BestTravelingModel.fk_bt_City_bt_State_StateId" FromRole="bt_City" ToRole="bt_State" />
           <NavigationProperty Name="bt_District" Relationship="BestTravelingModel.FK_bt_City_bt_District" FromRole="bt_City" ToRole="bt_District" />
           <NavigationProperty Name="bt_Address" Relationship="BestTravelingModel.Fk_bt_Address_bt_City_CityId" FromRole="bt_City" ToRole="bt_Address" />
-          <NavigationProperty Name="bt_Fares" Relationship="BestTravelingModel.FK_bt_Fares_bt_City_CityId" FromRole="bt_City" ToRole="bt_Fares" />
           <NavigationProperty Name="bt_CollegeDirector" Relationship="BestTravelingModel.FK_bt_CollegeDirector_bt_City_CityId" FromRole="bt_City" ToRole="bt_CollegeDirector" />
+          <NavigationProperty Name="bt_Fares" Relationship="BestTravelingModel.FK_bt_Fares_bt_City_CityId" FromRole="bt_City" ToRole="bt_Fares" />
         </EntityType>
         <Association Name="bt_City_bt_Country_CountryId">
           <End Type="BestTravelingModel.bt_Country" Role="bt_Country" Multiplicity="0..1" />
@@ -1361,60 +1363,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="bt_Fares">
-          <Key>
-            <PropertyRef Name="FareId" />
-          </Key>
-          <Property Name="FareId" Type="Guid" Nullable="false" />
-          <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="CountryId" Type="Guid" />
-          <Property Name="StateId" Type="Guid" />
-          <Property Name="CityId" Type="Guid" />
-          <Property Name="ZipCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="XLat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="YLat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NumberOfStops" Type="Int32" />
-          <NavigationProperty Name="bt_City" Relationship="BestTravelingModel.FK_bt_Fares_bt_City_CityId" FromRole="bt_Fares" ToRole="bt_City" />
-          <NavigationProperty Name="bt_Country" Relationship="BestTravelingModel.FK_bt_Fares_bt_Country_CountryId" FromRole="bt_Fares" ToRole="bt_Country" />
-          <NavigationProperty Name="bt_State" Relationship="BestTravelingModel.FK_bt_Fares_bt_State_StateId" FromRole="bt_Fares" ToRole="bt_State" />
-        </EntityType>
-        <Association Name="FK_bt_Fares_bt_City_CityId">
-          <End Type="BestTravelingModel.bt_City" Role="bt_City" Multiplicity="0..1" />
-          <End Type="BestTravelingModel.bt_Fares" Role="bt_Fares" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="bt_City">
-              <PropertyRef Name="CityId" />
-            </Principal>
-            <Dependent Role="bt_Fares">
-              <PropertyRef Name="CityId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_bt_Fares_bt_Country_CountryId">
-          <End Type="BestTravelingModel.bt_Country" Role="bt_Country" Multiplicity="0..1" />
-          <End Type="BestTravelingModel.bt_Fares" Role="bt_Fares" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="bt_Country">
-              <PropertyRef Name="CountryId" />
-            </Principal>
-            <Dependent Role="bt_Fares">
-              <PropertyRef Name="CountryId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_bt_Fares_bt_State_StateId">
-          <End Type="BestTravelingModel.bt_State" Role="bt_State" Multiplicity="0..1" />
-          <End Type="BestTravelingModel.bt_Fares" Role="bt_Fares" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="bt_State">
-              <PropertyRef Name="StateId" />
-            </Principal>
-            <Dependent Role="bt_Fares">
-              <PropertyRef Name="StateId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="bt_College">
           <Key>
             <PropertyRef Name="CollegeId" />
@@ -1545,6 +1493,62 @@
               <PropertyRef Name="StateId" />
             </Principal>
             <Dependent Role="bt_CollegeDirector">
+              <PropertyRef Name="StateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="bt_Fares">
+          <Key>
+            <PropertyRef Name="FareId" />
+          </Key>
+          <Property Name="FareId" Type="Guid" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CountryId" Type="Guid" />
+          <Property Name="StateId" Type="Guid" />
+          <Property Name="CityId" Type="Guid" />
+          <Property Name="ZipCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="XLat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YLat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NumberOfStops" Type="Int32" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="DistrictId" Type="Guid" />
+          <NavigationProperty Name="bt_City" Relationship="BestTravelingModel.FK_bt_Fares_bt_City_CityId" FromRole="bt_Fares" ToRole="bt_City" />
+          <NavigationProperty Name="bt_Country" Relationship="BestTravelingModel.FK_bt_Fares_bt_Country_CountryId" FromRole="bt_Fares" ToRole="bt_Country" />
+          <NavigationProperty Name="bt_State" Relationship="BestTravelingModel.FK_bt_Fares_bt_State_StateId" FromRole="bt_Fares" ToRole="bt_State" />
+        </EntityType>
+        <Association Name="FK_bt_Fares_bt_City_CityId">
+          <End Type="BestTravelingModel.bt_City" Role="bt_City" Multiplicity="0..1" />
+          <End Type="BestTravelingModel.bt_Fares" Role="bt_Fares" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_City">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="bt_Fares">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_bt_Fares_bt_Country_CountryId">
+          <End Type="BestTravelingModel.bt_Country" Role="bt_Country" Multiplicity="0..1" />
+          <End Type="BestTravelingModel.bt_Fares" Role="bt_Fares" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="bt_Fares">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_bt_Fares_bt_State_StateId">
+          <End Type="BestTravelingModel.bt_State" Role="bt_State" Multiplicity="0..1" />
+          <End Type="BestTravelingModel.bt_Fares" Role="bt_Fares" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bt_State">
+              <PropertyRef Name="StateId" />
+            </Principal>
+            <Dependent Role="bt_Fares">
               <PropertyRef Name="StateId" />
             </Dependent>
           </ReferentialConstraint>
@@ -1757,22 +1761,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="bt_Fares">
-            <EntityTypeMapping TypeName="BestTravelingModel.bt_Fares">
-              <MappingFragment StoreEntitySet="bt_Fares">
-                <ScalarProperty Name="NumberOfStops" ColumnName="NumberOfStops" />
-                <ScalarProperty Name="YLat" ColumnName="YLat" />
-                <ScalarProperty Name="XLat" ColumnName="XLat" />
-                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
-                <ScalarProperty Name="CityId" ColumnName="CityId" />
-                <ScalarProperty Name="StateId" ColumnName="StateId" />
-                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="FareId" ColumnName="FareId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="bt_College">
             <EntityTypeMapping TypeName="BestTravelingModel.bt_College">
               <MappingFragment StoreEntitySet="bt_College">
@@ -1801,6 +1789,24 @@
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="DirectorId" ColumnName="DirectorId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bt_Fares">
+            <EntityTypeMapping TypeName="BestTravelingModel.bt_Fares">
+              <MappingFragment StoreEntitySet="bt_Fares">
+                <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="NumberOfStops" ColumnName="NumberOfStops" />
+                <ScalarProperty Name="YLat" ColumnName="YLat" />
+                <ScalarProperty Name="XLat" ColumnName="XLat" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="StateId" ColumnName="StateId" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="FareId" ColumnName="FareId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

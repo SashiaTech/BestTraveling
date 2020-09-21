@@ -41,9 +41,9 @@ namespace BT_Data.BT_EDMX
         public virtual DbSet<bt_OfficeOperator> bt_OfficeOperator { get; set; }
         public virtual DbSet<bt_Gender> bt_Gender { get; set; }
         public virtual DbSet<bt_User> bt_User { get; set; }
-        public virtual DbSet<bt_Fares> bt_Fares { get; set; }
         public virtual DbSet<bt_College> bt_College { get; set; }
         public virtual DbSet<bt_CollegeDirector> bt_CollegeDirector { get; set; }
+        public virtual DbSet<bt_Fares> bt_Fares { get; set; }
     
         public virtual int usp_AddOffice(string officeAddressXml, string officeDetailXml)
         {

@@ -20,8 +20,8 @@ namespace BT_Data.BT_EDMX
             this.bt_City = new HashSet<bt_City>();
             this.bt_District = new HashSet<bt_District>();
             this.bt_Address = new HashSet<bt_Address>();
-            this.bt_Fares = new HashSet<bt_Fares>();
             this.bt_CollegeDirector = new HashSet<bt_CollegeDirector>();
+            this.bt_Fares = new HashSet<bt_Fares>();
         }
     
         public System.Guid StateId { get; set; }
@@ -41,8 +41,8 @@ namespace BT_Data.BT_EDMX
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_Address> bt_Address { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<bt_Fares> bt_Fares { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<bt_CollegeDirector> bt_CollegeDirector { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<bt_Fares> bt_Fares { get; set; }
     }
 }

@@ -24,6 +24,8 @@ namespace BT_Data.BT_EDMX
         public string XLat { get; set; }
         public string YLat { get; set; }
         public Nullable<int> NumberOfStops { get; set; }
+        public bool IsDeleted { get; set; }
+        public Nullable<System.Guid> DistrictId { get; set; }
     
         public virtual bt_City bt_City { get; set; }
         public virtual bt_Country bt_Country { get; set; }

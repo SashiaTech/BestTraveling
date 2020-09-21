@@ -38,10 +38,6 @@
         <AssociationConnector Association="BestTravelingModel.FK_bt_User_bt_Gender" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_User_bt_Gender_GenderId" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_User_bt_User" />
-        <EntityTypeShape EntityType="BestTravelingModel.bt_Fares" Width="1.5" PointX="18.25" PointY="14.375" />
-        <AssociationConnector Association="BestTravelingModel.FK_bt_Fares_bt_City_CityId" />
-        <AssociationConnector Association="BestTravelingModel.FK_bt_Fares_bt_Country_CountryId" />
-        <AssociationConnector Association="BestTravelingModel.FK_bt_Fares_bt_State_StateId" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_College" Width="1.5" PointX="15.5" PointY="3.125" />
         <EntityTypeShape EntityType="BestTravelingModel.bt_CollegeDirector" Width="1.5" PointX="20.75" PointY="5.625" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_College_bt_Address_AddressId" />
@@ -52,6 +48,10 @@
         <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_District_DistrictId" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_Gender_GenderId" />
         <AssociationConnector Association="BestTravelingModel.FK_bt_CollegeDirector_bt_State_StateId" />
+        <EntityTypeShape EntityType="BestTravelingModel.bt_Fares" Width="1.5" PointX="13.25" PointY="4.25" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_Fares_bt_City_CityId" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_Fares_bt_Country_CountryId" />
+        <AssociationConnector Association="BestTravelingModel.FK_bt_Fares_bt_State_StateId" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
